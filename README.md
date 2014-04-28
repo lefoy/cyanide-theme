@@ -14,6 +14,6 @@ Unzip the theme inside your `Packages` folder and add this inside your configura
 
 ![lefoy](http://i.imgur.com/kTlT4vU.png)
 
-![lefoy](http://i.imgur.com/uynKXfk)
+![lefoy](http://i.imgur.com/uynKXfk.png)
 
-![lefoy](http://i.imgur.com/ShgnOJv)
+![lefoy](http://i.imgur.com/ShgnOJv.png)

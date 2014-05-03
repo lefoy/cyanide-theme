@@ -1,7 +1,7 @@
 lefoy-sublime-theme
 ===================
 
-This theme is based on [Centurion](https://github.com/allanhortle/Centurion).
+This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
 
 ## Installation
 

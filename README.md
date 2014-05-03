@@ -1,7 +1,7 @@
 lefoy-sublime-theme
 ===================
 
-My Sublime Text 3 theme
+This theme is based on [Centurion](https://github.com/allanhortle/Centurion).
 
 ## Installation
 
@@ -12,8 +12,6 @@ Unzip the theme inside your `Packages` folder and add this inside your configura
 
 ## Screenshots
 
-![lefoy](http://i.imgur.com/kTlT4vU.png)
+![lefoy](http://i.imgur.com/j0r26Is.png)
 
-![lefoy](http://i.imgur.com/uynKXfk.png)
-
-![lefoy](http://i.imgur.com/ShgnOJv.png)
+![lefoy](http://i.imgur.com/EvIL3Ju.png)

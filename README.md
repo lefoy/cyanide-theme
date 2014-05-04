@@ -1,4 +1,4 @@
-Theme - Cyanide
+Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
 
 A minimal dark theme for Sublime Text 3.

@@ -1,6 +1,8 @@
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
 
+<script data-gittip-username="lefoy" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
+
 A minimal dark theme for Sublime Text 3.
 
  ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
@@ -37,3 +39,5 @@ This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).
 
 If you want a custom color for this theme, you can also contact me and I'll be happy to make one for you!
+
+<script data-gittip-username="lefoy" src="//gttp.co/v1.js"></script>

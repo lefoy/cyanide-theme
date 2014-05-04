@@ -12,6 +12,6 @@ Unzip the theme inside your `Packages` folder and add this inside your configura
 
 ## Screenshots
 
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/11UPXA5.png)
-
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EYvvp8K.png)
+ ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
+  
+ ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)

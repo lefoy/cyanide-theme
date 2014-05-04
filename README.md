@@ -1,4 +1,4 @@
-lefoy-sublime-theme
+Theme - Cyanide
 ===================
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
@@ -7,11 +7,11 @@ This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and
 
 Unzip the theme inside your `Packages` folder and add this inside your configuration file:
 
-    "color_scheme": "Packages/Theme - lefoy/lefoy.tmTheme",
-    "theme": "lefoy.sublime-theme"
+    "color_scheme": "Packages/Theme - Cyanide/cyanide.tmTheme",
+    "theme": "cyanide.sublime-theme"
 
 ## Screenshots
 
-![lefoy](http://i.imgur.com/j0r26Is.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
 
-![lefoy](http://i.imgur.com/EvIL3Ju.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)

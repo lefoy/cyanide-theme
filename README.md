@@ -1,20 +1,23 @@
 Theme - Cyanide
 ===================
 
+A minimal dark theme for Sublime Text 3.
+
  ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
   
  ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)
 
-# Installation
+Installation
+------------------------------------------------------------------------
 
-## Package Control
+###Package Control
 
 Install the theme and update your `Settings - User` file.
 
     "color_scheme": "Packages/Theme - Cyanide/cyanide.tmTheme",
     "theme": "cyanide.sublime-theme"
 
-## Manual
+### Manual
 
 Clone the theme inside your packages folder. Be sure that the name of the folder is `Theme - Cyanide`.
 
@@ -26,7 +29,8 @@ Update your `Settings - User` file to activate the theme.
     "color_scheme": "Packages/Theme - Cyanide/cyanide.tmTheme",
     "theme": "cyanide.sublime-theme"
 
-# Credit
+Credit
+------------------------------------------------------------------------
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
 

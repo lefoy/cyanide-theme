@@ -1,8 +1,6 @@
 Theme - Cyanide
 ===================
 
-# Screenshots
-
  ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
   
  ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)

@@ -34,12 +34,12 @@ Settings
 
 You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-[Tabs height](http://i.imgur.com/Mt4taK9.png)
+![Tabs height](http://i.imgur.com/Mt4taK9.png)
 
-```json
+```
 "tabs_medium": true
 ```
-```json
+```
 "tabs_large": true
 ```
 

@@ -18,8 +18,8 @@ Installation
 
 Install the theme and update your `Settings - User` file.
 
-    "color_scheme": "Packages/Theme - Cyanide/cyanide.tmTheme",
-    "theme": "cyanide.sublime-theme"
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+    "theme": "Cyanide.sublime-theme"
 
 ### Manual
 
@@ -30,8 +30,8 @@ Clone the theme inside your packages folder. Be sure that the name of the folder
 
 Update your `Settings - User` file to activate the theme.
 
-    "color_scheme": "Packages/Theme - Cyanide/cyanide.tmTheme",
-    "theme": "cyanide.sublime-theme"
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+    "theme": "Cyanide.sublime-theme"
 
 Credit
 ------------------------------------------------------------------------

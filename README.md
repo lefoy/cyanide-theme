@@ -3,9 +3,9 @@ Cyanide Theme for Sublime Text
         
 A minimal dark theme for Sublime Text 3.
 
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/cX8C6gm.png)
   
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/3xN1zxq.png)
 
 Installation
 ------------------------------------------------------------------------
@@ -34,12 +34,12 @@ Settings
 
 You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-[Tabs height](http://i.imgur.com/Mt4taK9.png)
+![Tabs height](http://i.imgur.com/0NCrXVF.png)
 
-```json
+```
 "tabs_medium": true
 ```
-```json
+```
 "tabs_large": true
 ```
 

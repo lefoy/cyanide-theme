@@ -3,9 +3,9 @@ Cyanide Theme for Sublime Text
         
 A minimal dark theme for Sublime Text 3.
 
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/cX8C6gm.png)
   
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/3xN1zxq.png)
 
 Installation
 ------------------------------------------------------------------------

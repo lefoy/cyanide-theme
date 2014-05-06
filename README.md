@@ -1,15 +1,11 @@
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
-
-<script data-gittip-username="lefoy"
-        data-gittip-widget="button"
-        src="//gttp.co/v1.js"></script>
         
 A minimal dark theme for Sublime Text 3.
 
- ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/j0r26Is.png)
   
- ![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)
+![Cyanide Theme for Sublime Text 3](http://i.imgur.com/EvIL3Ju.png)
 
 Installation
 ------------------------------------------------------------------------
@@ -33,6 +29,20 @@ Update your `Settings - User` file to activate the theme.
     "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
 
+Settings
+------------------------------------------------------------------------
+
+You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+
+[Tabs height](http://i.imgur.com/Mt4taK9.png)
+
+```json
+"tabs_medium": true
+```
+```json
+"tabs_large": true
+```
+
 Credit
 ------------------------------------------------------------------------
 
@@ -41,6 +51,3 @@ This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).
 
 If you want a custom color for this theme, you can also contact me and I'll be happy to make one for you!
-
-<script data-gittip-username="lefoy"
-        src="//gttp.co/v1.js"></script>

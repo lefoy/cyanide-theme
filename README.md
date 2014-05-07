@@ -14,7 +14,7 @@ Installation
 
 Install the theme and update your `Settings - User` file.
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
 
 ### Manual
@@ -26,7 +26,7 @@ Clone the theme inside your packages folder. Be sure that the name of the folder
 
 Update your `Settings - User` file to activate the theme.
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
 
 Settings
@@ -42,6 +42,12 @@ You can change tabs height with `tabs_medium` and `tabs_large` settings. Just ad
 ```
 "tabs_large": true
 ```
+
+## Color Scheme
+
+Cyanide Theme also includes few color scheme to match the theme. Feel free to ask me if you want me to edit your color scheme to match this theme.
+
+![Cyanide Color Scheme](http://i.imgur.com/L31Vc7p.png)
 
 Credit
 ------------------------------------------------------------------------

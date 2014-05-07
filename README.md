@@ -39,7 +39,9 @@ You can change tabs height with `tabs_medium` and `tabs_large` settings. Just ad
 ```
 "tabs_medium": true
 ```
+
 or
+
 ```
 "tabs_large": true
 ```

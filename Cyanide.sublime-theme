@@ -225,7 +225,6 @@
 },
 {
     "class": "auto_complete_label",
-    "font.face": "Ubuntu Mono",
     "fg": [210,210,210],
     "match_fg": [100,178,219],
     "selected_fg": [255,255,255],
@@ -305,7 +304,6 @@
 },
 {
     "class": "quick_panel_label",
-    "font.face": "Ubuntu Mono",
     "fg": [240,240,240],
     "match_fg": [100,178,219],
     "selected_fg": [255,255,255],
@@ -313,7 +311,6 @@
 },
 {
     "class": "quick_panel_path_label",
-    "font.face": "Ubuntu Mono",
     "fg": [130,130,130,0],
     "match_fg": [220,220,220],
     "selected_fg": [255,255,255],
@@ -321,7 +318,6 @@
 },
 {
     "class": "quick_panel_score_label",
-    "font.face": "Ubuntu Mono",
     "fg": [150,150,150],
     "selected_fg": [255,255,255]
 },
@@ -532,7 +528,6 @@
 // Sidebar entry
 {
     "class": "sidebar_label",
-    "font.face": "Ubuntu Mono",
     "color": [125,125,125],
     "shadow_color": [0,0,0],
     "shadow_offset": [0,0]
@@ -723,7 +718,6 @@
 // Status bar label
 {
     "class": "label_control",
-    "font.face": "Ubuntu Mono",
     "parents": [{"class": "status_bar"}],
     "color": [60,60,60],
     "shadow_offset": [0,0]
@@ -817,7 +811,6 @@
 
 {
     "class": "tab_label",
-    "font.face": "Ubuntu Mono",
     "fade": true,
     "fg": [170,170,170],
     "shadow_color": [25,25,25],
@@ -988,7 +981,6 @@
 // General labels
 {
     "class": "label_control",
-    "font.face": "Ubuntu Mono",
     "color": [120,120,120]
 },
 
@@ -1021,8 +1013,63 @@
 // Tooltip content
 {
     "class": "tool_tip_label_control",
-    "font.face": "Ubuntu Mono",
     "color": [230,230,230]
-}
+},
+
+// FONT SIZE SETTINGS
+{
+    "class": "auto_complete_label",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "quick_panel_label",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "quick_panel_path_label",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "quick_panel_score_label",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "sidebar_label",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "label_control",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "tab_label",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "label_control",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
+{
+    "class": "tool_tip_label_control",
+    "settings": ["ubuntu_mono_ui"],
+    "font.family": "Ubuntu Mono",
+    "font.size": 14
+},
 
 ]

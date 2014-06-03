@@ -226,7 +226,6 @@
 {
     "class": "auto_complete_label",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "fg": [210,210,210],
     "match_fg": [100,178,219],
     "selected_fg": [255,255,255],
@@ -307,7 +306,6 @@
 {
     "class": "quick_panel_label",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "fg": [240,240,240],
     "match_fg": [100,178,219],
     "selected_fg": [255,255,255],
@@ -316,7 +314,6 @@
 {
     "class": "quick_panel_path_label",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "fg": [130,130,130,0],
     "match_fg": [220,220,220],
     "selected_fg": [255,255,255],
@@ -325,7 +322,6 @@
 {
     "class": "quick_panel_score_label",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "fg": [150,150,150],
     "selected_fg": [255,255,255]
 },
@@ -537,7 +533,6 @@
 {
     "class": "sidebar_label",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "color": [125,125,125],
     "shadow_color": [0,0,0],
     "shadow_offset": [0,0]
@@ -729,7 +724,6 @@
 {
     "class": "label_control",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "parents": [{"class": "status_bar"}],
     "color": [60,60,60],
     "shadow_offset": [0,0]
@@ -824,7 +818,6 @@
 {
     "class": "tab_label",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "fade": true,
     "fg": [170,170,170],
     "shadow_color": [25,25,25],
@@ -996,7 +989,6 @@
 {
     "class": "label_control",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "color": [120,120,120]
 },
 
@@ -1030,7 +1022,6 @@
 {
     "class": "tool_tip_label_control",
     "font.face": "Ubuntu Mono",
-    "font.size": 14,
     "color": [230,230,230]
 }
 

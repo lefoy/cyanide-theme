@@ -17,6 +17,7 @@
     "layer0.tint": [10,10,10],
     "layer0.inner_margin": [6,6]
 },
+
 // Hover button state
 {
     "class": "button_control",
@@ -24,6 +25,7 @@
     "layer0.texture": "",
     "layer0.tint": [35,35,35]
 },
+
 // Pressed button state
 {
     "class": "button_control",
@@ -31,7 +33,6 @@
     "layer0.texture": "",
     "layer0.tint": [40,40,40]
 },
-
 
 //
 // BOTTOM PANEL BUTTONS
@@ -57,37 +58,6 @@
     "layer1.tint":[40,40,40]
 },
 
-// /** Small Icon Buttons **/
-// {
-//     "class": "icon_button_control",
-//     "layer0.texture": "Theme - Cyanide/Cyanide/middle_button.png",
-//     "layer0.inner_margin": [6, 6],
-//     "layer0.opacity": 1.0,
-//     "layer2.texture": "Theme - Cyanide/Cyanide/blue_highlight.png",
-//     "layer2.opacity": { "target": 0.0, "speed": 1.33, "interpolation": "smoothstep" },
-//     "content_margin": [4, 4]
-// },
-// {
-//     "class": "icon_button_control",
-//     "attributes": ["left"],
-//     "layer0.texture": "Theme - Cyanide/Cyanide/left_button.png",
-//     "layer0.opacity": 1.0
-// },
-// {
-//     "class": "icon_button_control",
-//     "attributes": ["right"],
-//     "layer0.texture": "Theme - Cyanide/Cyanide/right_button.png",
-//     "layer0.opacity": 1.0
-// },
-// {
-//     "class": "icon_button_control",
-//     "attributes": ["left", "right"],
-//     "layer0.texture": "Theme - Cyanide/Cyanide/mini_button.png",
-//     "layer0.opacity": 1.0,
-//     "layer0.draw_center": true
-// },
-
-
 //
 // BOTTOM PANEL ICONS - GROUP 1
 //
@@ -105,6 +75,7 @@
     "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
     "layer0.opacity": 1
 },
+
 // Case sensitive search button
 {
     "class": "icon_case",
@@ -117,6 +88,7 @@
     "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
     "layer0.opacity": 1
 },
+
 // Match whole word search button
 {
     "class": "icon_whole_word",
@@ -146,6 +118,7 @@
     "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
     "layer0.opacity": 1
 },
+
 // Use search buffer
 {
     "class": "icon_use_buffer",
@@ -175,6 +148,7 @@
     "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
     "layer0.opacity": 1
 },
+
 // Search wrap button
 {
     "class": "icon_wrap",
@@ -187,6 +161,7 @@
     "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
     "layer0.opacity": 1
 },
+
 // Search in selection button
 {
     "class": "icon_in_selection",
@@ -250,6 +225,8 @@
 },
 {
     "class": "auto_complete_label",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "fg": [210,210,210],
     "match_fg": [100,178,219],
     "selected_fg": [255,255,255],
@@ -266,35 +243,33 @@
     "class": "table_row",
     "attributes": ["selected"],
     "layer0.opacity": 1
-}
+},
 
-
-,//
+//
 // FOLD BUTTONS
 //
 
-    {
-        "class": "fold_button_control",
-        "layer0.texture": "Theme - Cyanide/Cyanide/arrow.png",
-        "layer0.opacity": 0.4,
-        "layer0.inner_margin": 0,
-        "content_margin": [8,8]
-    },
-    {
-        "class": "fold_button_control",
-        "attributes": ["hover"],
-        "layer0.opacity": 0.8
-    },
-    {
-        "class": "fold_button_control",
-        "attributes": ["expanded"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/arrow-down.png"
-    },
-    {
-        "class": "fold_button_control",
-        "attributes": ["expanded","hover"]
-    }
-,
+{
+    "class": "fold_button_control",
+    "layer0.texture": "Theme - Cyanide/Cyanide/arrow.png",
+    "layer0.opacity": 0.4,
+    "layer0.inner_margin": 0,
+    "content_margin": [8,8]
+},
+{
+    "class": "fold_button_control",
+    "attributes": ["hover"],
+    "layer0.opacity": 0.8
+},
+{
+    "class": "fold_button_control",
+    "attributes": ["expanded"],
+    "layer0.texture": "Theme - Cyanide/Cyanide/arrow-down.png"
+},
+{
+    "class": "fold_button_control",
+    "attributes": ["expanded","hover"]
+},
 
 // Quick panel background
 {
@@ -315,7 +290,6 @@
     "row_padding": 10,
     "layer0.tint": [15,15,15],
     "layer0.opacity": 1
-    //"dark_content": true
 },
 {
     "class": "quick_panel_row",
@@ -330,17 +304,19 @@
     "layer0.texture": "",
     "layer0.tint": [100,178,219]
 },
-
 {
     "class": "quick_panel_label",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "fg": [240,240,240],
     "match_fg": [100,178,219],
     "selected_fg": [255,255,255],
     "selected_match_fg": [255,255,255]
 },
-
 {
     "class": "quick_panel_path_label",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "fg": [130,130,130,0],
     "match_fg": [220,220,220],
     "selected_fg": [255,255,255],
@@ -348,6 +324,8 @@
 },
 {
     "class": "quick_panel_score_label",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "fg": [150,150,150],
     "selected_fg": [255,255,255]
 },
@@ -368,125 +346,136 @@
     "layer0.texture": "",
     "layer0.tint": [100,178,219]
 },
+
 //
 // STANDARD SCROLLBARS
 //
 
-    // Standard vertical scroll bar
-    {
-        "class": "scroll_bar_control",
-        "layer0.texture": "",
-        "layer0.tint":[20,20,20],
-        "layer0.opacity": 1,
-        "layer0.inner_margin": [0,0],
-        "blur": false
-    },
-    // Standard horizontal scroll bar
-    {
-        "class": "scroll_bar_control",
-        "attributes": ["horizontal"],
-        "layer0.texture": "",
-        "layer0.tint":[20,20,20],
-        "layer0.inner_margin": [0,0],
-        "blur": false
-    },
-    // Standard scroll bar corner
-    {
-        "class": "scroll_corner_control",
-        "layer0.texture": "",
-        "layer0.tint":[20,20,20],
-        "layer0.inner_margin": [0,0],
-        "layer0.opacity": 1
-    },
-    // Standard vertical scroll puck
-    {
-        "class": "puck_control",
-        "layer0.texture": "",
-        "layer0.tint":[60,60,60],
-        "layer0.opacity": 1,
-        "layer0.inner_margin": [0,0],
-        "content_margin": [6,0],
-        "blur": false
-    },
-    // Standard horizontal scroll puck
-    {
-        "class": "puck_control",
-        "attributes": ["horizontal"],
-        "layer0.texture": "",
-        "layer0.tint":[60,60,60],
-        "layer0.inner_margin": [0,0],
-        "content_margin": [12,6],
-        "blur": false
-    },
+// Standard vertical scroll bar
+{
+    "class": "scroll_bar_control",
+    "layer0.texture": "",
+    "layer0.tint":[20,20,20],
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [0,0],
+    "blur": false
+},
+
+// Standard horizontal scroll bar
+{
+    "class": "scroll_bar_control",
+    "attributes": ["horizontal"],
+    "layer0.texture": "",
+    "layer0.tint":[20,20,20],
+    "layer0.inner_margin": [0,0],
+    "blur": false
+},
+
+// Standard scroll bar corner
+{
+    "class": "scroll_corner_control",
+    "layer0.texture": "",
+    "layer0.tint":[20,20,20],
+    "layer0.inner_margin": [0,0],
+    "layer0.opacity": 1
+},
+
+// Standard vertical scroll puck
+{
+    "class": "puck_control",
+    "layer0.texture": "",
+    "layer0.tint":[60,60,60],
+    "layer0.opacity": 1,
+    "layer0.inner_margin": [0,0],
+    "content_margin": [6,0],
+    "blur": false
+},
+
+// Standard horizontal scroll puck
+{
+    "class": "puck_control",
+    "attributes": ["horizontal"],
+    "layer0.texture": "",
+    "layer0.tint":[60,60,60],
+    "layer0.inner_margin": [0,0],
+    "content_margin": [12,6],
+    "blur": false
+},
 
 //
 // OVERLAY SCROLLBARS
 //
 
-    // Overlay toggle scroll bar
-    {
-        "class": "scroll_area_control",
-        "settings": ["overlay_scroll_bars"],
-        "overlay": true
-    },
-    {
-        "class": "scroll_area_control",
-        "settings": ["!overlay_scroll_bars"],
-        "overlay": false
-    },
-    // Overlay vertical scroll bar
-    {
-        "class": "scroll_bar_control",
-        "settings": ["overlay_scroll_bars"],
-        "layer0.texture": "",
-        "layer0.tint": [40,40,40],
-        "layer0.inner_margin": 0,
-        "blur": false
-    },
-    // Overlay horizontal scroll bar
-    {
-        "class": "scroll_bar_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal"],
-        "layer0.inner_margin": [5,0],
-        "blur": true
-    },
-    // Overlay vertical puck
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "layer0.texture": "",
-        "layer0.inner_margin": [0,0],
-        "content_margin": [1,20],
-        "blur": true
-    },
-    // Overlay horizontal puck
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal"],
-        "layer0.texture": "",
-        "layer0.inner_margin": [5,0],
-        "content_margin": [20,1],
-        "blur": true
-    },
-    // Overlay light puck (for dark content)
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["dark"],
-        "layer0.texture": "",
-        "layer0.tint": [100,178,219]
+// Overlay toggle scroll bar
+{
+    "class": "scroll_area_control",
+    "settings": ["overlay_scroll_bars"],
+    "overlay": true
+},
+{
+    "class": "scroll_area_control",
+    "settings": ["!overlay_scroll_bars"],
+    "overlay": false
+},
 
-    },
-    // Overlay light horizontal puck (for dark content)
-    {
-        "class": "puck_control",
-        "settings": ["overlay_scroll_bars"],
-        "attributes": ["horizontal","dark"],
-        "layer0.texture": "",
-        "layer0.tint": [100,178,219]
-    },
+// Overlay vertical scroll bar
+{
+    "class": "scroll_bar_control",
+    "settings": ["overlay_scroll_bars"],
+    "layer0.texture": "",
+    "layer0.tint": [40,40,40],
+    "layer0.inner_margin": 0,
+    "blur": false
+},
+
+// Overlay horizontal scroll bar
+{
+    "class": "scroll_bar_control",
+    "settings": ["overlay_scroll_bars"],
+    "attributes": ["horizontal"],
+    "layer0.inner_margin": [5,0],
+    "blur": true
+},
+
+// Overlay vertical puck
+{
+    "class": "puck_control",
+    "settings": ["overlay_scroll_bars"],
+    "layer0.texture": "",
+    "layer0.inner_margin": [0,0],
+    "content_margin": [1,20],
+    "blur": true
+},
+
+// Overlay horizontal puck
+{
+    "class": "puck_control",
+    "settings": ["overlay_scroll_bars"],
+    "attributes": ["horizontal"],
+    "layer0.texture": "",
+    "layer0.inner_margin": [5,0],
+    "content_margin": [20,1],
+    "blur": true
+},
+
+// Overlay light puck (for dark content)
+{
+    "class": "puck_control",
+    "settings": ["overlay_scroll_bars"],
+    "attributes": ["dark"],
+    "layer0.texture": "",
+    "layer0.tint": [100,178,219]
+
+},
+
+// Overlay light horizontal puck (for dark content)
+{
+    "class": "puck_control",
+    "settings": ["overlay_scroll_bars"],
+    "attributes": ["horizontal","dark"],
+    "layer0.texture": "",
+    "layer0.tint": [100,178,219]
+},
 
 //
 // SIDEBAR
@@ -501,6 +490,7 @@
     "layer0.inner_margin": [1,5,2,1],
     "content_margin": [0,4,0,0]
 },
+
 // Sidebar tree
 {
     "class": "sidebar_tree",
@@ -510,6 +500,7 @@
     "indent_top_level": false,
     "dark_content": true
 },
+
 // Sidebar rows
 {
     "class": "tree_row",
@@ -518,12 +509,14 @@
     "layer0.opacity": 0,
     "layer0.inner_margin": [1,1]
 },
+
 // Sidebar row selected
 {
     "class": "tree_row",
     "attributes": ["selected"],
     "layer0.opacity": 1
 },
+
 // Sidebar heading
 {
     "class": "sidebar_heading",
@@ -532,19 +525,24 @@
     "shadow_color": [0,0,0],
     "shadow_offset": [0,0]
 },
+
 // Sidebar heading selected
 {
     "class": "sidebar_heading",
     "parents": [{"class": "tree_row","attributes": ["selected"]}],
     "shadow_offset": [0,0]
 },
+
 // Sidebar entry
 {
     "class": "sidebar_label",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "color": [125,125,125],
     "shadow_color": [0,0,0],
     "shadow_offset": [0,0]
 },
+
 // Sidebar folder entry
 {
     "class": "sidebar_label",
@@ -562,6 +560,7 @@
     "settings": ["bold_folder_labels"],
     "font.bold": true
 },
+
 // Sidebar entry selected
 {
     "class": "sidebar_label",
@@ -590,6 +589,7 @@
     "layer0.opacity": 1,
     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png"
 },
+
 // Sidebar file dirty
 {
     "class": "close_button",
@@ -611,6 +611,7 @@
     "layer0.texture": "Theme - Cyanide/Cyanide/cross.png",
     "layer0.opacity": 1
 },
+
 // Sidebar file close hover
 {
     "class": "close_button",
@@ -646,6 +647,7 @@
     "class": "disclosure_button_control",
     "parents": [{"class": "tree_row","attributes": ["selected"]}]
 },
+
 // Sidebar folder closed
 {
     "class": "disclosure_button_control",
@@ -663,6 +665,7 @@
     "parents": [{"class": "tree_row","attributes": ["selected"]}],
     "layer0.texture": "Theme - Cyanide/Cyanide/folder-closed.png"
 },
+
 // Sidebar group open
 {
     "class": "disclosure_button_control",
@@ -680,6 +683,7 @@
     "parents": [{"class": "tree_row","attributes": ["selected"]}],
     "layer0.texture": "Theme - Cyanide/Cyanide/folder-open.png"
 },
+
 // Sidebar folder open
 {
     "class": "disclosure_button_control",
@@ -701,6 +705,7 @@
     "parents": [{"class": "tree_row","attributes": ["selected"]}],
     "layer0.texture": "Theme - Cyanide/Cyanide/folder-open.png"
 },
+
 //
 // STATUS BAR
 //
@@ -713,18 +718,23 @@
     "layer0.inner_margin": 0,
     "content_margin": [8,8,8,8]
 },
+
 // Status bar button
 {
     "class": "status_button",
     "content_margin": [8,0,0,0]
 },
+
 // Status bar label
 {
     "class": "label_control",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "parents": [{"class": "status_bar"}],
     "color": [60,60,60],
     "shadow_offset": [0,0]
 },
+
 //
 // TAB BUTTONS
 //
@@ -805,12 +815,16 @@
     "settings": ["show_tab_close_buttons"],
     "attributes": ["pressed"],
     "layer0.opacity":0.8
-},//
+},
+
+//
 // TAB LABELS
 //
 
 {
     "class": "tab_label",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "fade": true,
     "fg": [170,170,170],
     "shadow_color": [25,25,25],
@@ -851,6 +865,7 @@
 //
 // TABS (MEDIUM)
 //
+
 {
     "class": "tabset_control",
     "settings": ["tabs_medium"],
@@ -860,6 +875,7 @@
 //
 // TABS (LARGE)
 //
+
 {
     "class": "tabset_control",
     "settings": ["tabs_large"],
@@ -870,6 +886,7 @@
     "settings": ["mouse_wheel_switches_tabs"],
     "mouse_wheel_switch": true
 },
+
 // Tab element
 {
     "class": "tab_control",
@@ -881,12 +898,14 @@
     "layer0.inner_margin": [5,5],
     "layer0.opacity": 1
 },
+
 // Tab close state
 {
     "class": "tab_control",
     "settings": ["show_tab_close_buttons"],
     "content_margin": [8,0]
 },
+
 // Tab hover state
 {
     "class": "tab_control",
@@ -894,14 +913,15 @@
     "layer0.texture": "",
     "layer0.tint": [20,20,20]
 },
+
 // Tab active state
 {
     "class": "tab_control",
     "attributes": ["selected"],
-    //"layer0.texture": "Theme - Cyanide/Cyanide/tab.png",
     "layer0.tint": [17, 17, 17],
     "layer0.opacity": 1
 },
+
 // Tab dirty state (close button hidden)
 {
     "class": "tab_control",
@@ -975,6 +995,8 @@
 // General labels
 {
     "class": "label_control",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "color": [120,120,120]
 },
 
@@ -1003,8 +1025,13 @@
     "layer0.opacity": 1,
     "content_margin": [4,4]
 },
+
 // Tooltip content
 {
     "class": "tool_tip_label_control",
+    "font.face": "Ubuntu Mono",
+    "font.size": 12,
     "color": [230,230,230]
-},{}]
+}
+
+]

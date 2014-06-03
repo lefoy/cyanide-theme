@@ -1021,55 +1021,55 @@
     "class": "auto_complete_label",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "quick_panel_label",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "sidebar_label",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "label_control",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "tab_label",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "label_control",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["ubuntu_mono_ui"],
     "font.face": "Ubuntu Mono",
-    "font.size": 12
+    "font.size": 14
 },
 
 ]

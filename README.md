@@ -56,7 +56,7 @@ I really like the Ubuntu Mono font so I decided to add a setting to change the d
 
 ### Default UI without the Ubuntu Mono
 
-![Default UI of Cyanide Theme for Sublime Text](http://i.imgur.com/dgxnlew)
+![Default UI of Cyanide Theme for Sublime Text](http://i.imgur.com/dgxnlew.png)
 
 ## Color Scheme
 

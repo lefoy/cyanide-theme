@@ -54,7 +54,7 @@ I really like the Ubuntu Mono font so I decided to add a setting to change the d
 "ubuntu_mono_ui": true
 ```
 
-### Default UI without the Ubuntu Mono
+### Default UI without the Ubuntu Mono font
 
 ![Default UI of Cyanide Theme for Sublime Text](http://i.imgur.com/dgxnlew.png)
 

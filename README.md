@@ -3,9 +3,9 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/cX8C6gm.png)
+![Cyanide Theme for Sublime Text](http://i.imgur.com/V84HobR.png)
 
-![Cyanide Theme for Sublime Text 3](http://i.imgur.com/3xN1zxq.png)
+![Cyanide Theme for Sublime Text](http://i.imgur.com/yJ1QjuZ.png)
 
 Installation
 ------------------------------------------------------------------------
@@ -48,11 +48,15 @@ or
 
 ## Ubuntu Mono UI
 
-I really like the Ubuntu Mono font so I decided to add a setting to change the default UI font to Ubuntu Mono. To change the UI font, add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+I really like the Ubuntu Mono font so I decided to add a setting to change the default UI font to Ubuntu Mono. To change the UI font, add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`. You can download the Ubuntu Mono font from the [Ubuntu website](http://font.ubuntu.com/).
 
 ```
 "ubuntu_mono_ui": true
 ```
+
+### Default UI without the Ubuntu Mono
+
+![Default UI of Cyanide Theme for Sublime Text](http://i.imgur.com/dgxnlew)
 
 ## Color Scheme
 

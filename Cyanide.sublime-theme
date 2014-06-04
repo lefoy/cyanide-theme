@@ -1,10 +1,7 @@
 [
 
 //
-// STANDARD TEXT BUTTONS [64,140,91]
-// GREEN [173,204,20]
-// BLUE [64,189,255]
-// BLUE ALT [100,178,219]
+// Cyanide Theme for Sublime Text
 //
 
 // Default button state
@@ -1016,7 +1013,9 @@
     "color": [230,230,230]
 },
 
-// FONT SIZE SETTINGS
+// ======================
+// Ubuntu Mono UI Setting
+// ======================
 {
     "class": "auto_complete_label",
     "settings": ["ubuntu_mono_ui"],
@@ -1071,5 +1070,6 @@
     "font.face": "Ubuntu Mono",
     "font.size": 14
 },
+// END Ubuntu Mono UI Setting
 
 ]

@@ -58,8 +58,6 @@ I really like the Ubuntu Mono font so I decided to add a setting to change the d
 
 Cyanide Theme also includes few color scheme to match the theme. Feel free to ask me if you want me to edit your color scheme to match this theme.
 
-![Cyanide Color Scheme](http://i.imgur.com/L31Vc7p.png)
-
 Credit
 ------------------------------------------------------------------------
 

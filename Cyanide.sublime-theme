@@ -1070,4 +1070,52 @@
 },
 // END Ubuntu Mono UI Setting
 
+// Large UI font setting
+{
+    "class": "auto_complete_label",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "quick_panel_label",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "quick_panel_path_label",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "quick_panel_score_label",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "sidebar_label",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "label_control",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "tab_label",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "label_control",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+{
+    "class": "tool_tip_label_control",
+    "settings": ["large_ui_font"],
+    "font.size": 16
+},
+// END Large UI font setting
+
 ]

@@ -1074,47 +1074,47 @@
 {
     "class": "auto_complete_label",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "quick_panel_label",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "sidebar_label",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "label_control",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "tab_label",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "label_control",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["large_ui_font"],
-    "font.size": 16
+    "font.size": 15
 },
 // END Large UI font setting
 

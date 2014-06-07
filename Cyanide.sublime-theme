@@ -1017,56 +1017,47 @@
 {
     "class": "auto_complete_label",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "quick_panel_label",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "sidebar_label",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "label_control",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "tab_label",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "label_control",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["ubuntu_mono_ui"],
-    "font.face": "Ubuntu Mono",
-    "font.size": 14
+    "font.face": "Ubuntu Mono"
 },
 // END Ubuntu Mono UI Setting
 
@@ -1074,47 +1065,47 @@
 {
     "class": "auto_complete_label",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "quick_panel_label",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "sidebar_label",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "label_control",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "tab_label",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "label_control",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["large_ui_font"],
-    "font.size": 15
+    "font.size": 14
 }
 // END Large UI font setting
 

@@ -1115,7 +1115,7 @@
     "class": "tool_tip_label_control",
     "settings": ["large_ui_font"],
     "font.size": 15
-},
+}
 // END Large UI font setting
 
 ]

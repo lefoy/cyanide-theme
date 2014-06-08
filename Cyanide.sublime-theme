@@ -1106,7 +1106,55 @@
     "class": "tool_tip_label_control",
     "settings": ["large_ui_font"],
     "font.size": 14
-}
+},
 // END Large UI font setting
+
+// Small UI font setting
+{
+    "class": "auto_complete_label",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "quick_panel_label",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "quick_panel_path_label",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "quick_panel_score_label",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "sidebar_label",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "label_control",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "tab_label",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "label_control",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+},
+{
+    "class": "tool_tip_label_control",
+    "settings": ["small_ui_font"],
+    "font.size": 12.5
+}
+// END Small UI font setting
 
 ]

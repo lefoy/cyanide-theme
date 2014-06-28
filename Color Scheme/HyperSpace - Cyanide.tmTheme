@@ -26,7 +26,7 @@
 				<key>lineHighlight</key>
 				<string>#0a0a0a</string>
 				<key>selection</key>
-				<string>#252525</string>
+				<string>#DDF0FF33</string>
 				<key>guide</key>
 				<string>#141414</string>
 			</dict>

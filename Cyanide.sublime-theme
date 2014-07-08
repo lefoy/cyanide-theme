@@ -1061,6 +1061,63 @@
 },
 // END Ubuntu Mono UI Setting
 
+// Inconsolata-g UI Setting
+{
+    "class": "auto_complete_label",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "quick_panel_label",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "quick_panel_path_label",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "quick_panel_score_label",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "sidebar_label",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "label_control",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "tab_label",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "label_control",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+{
+    "class": "tool_tip_label_control",
+    "settings": ["inconsolata_ui"],
+    "font.face": "Inconsolata-g",
+    "font.size": 14
+},
+// END Inconsolata-g UI Setting
+
 // Large UI font setting
 {
     "class": "auto_complete_label",

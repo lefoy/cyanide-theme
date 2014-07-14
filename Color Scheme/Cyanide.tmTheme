@@ -155,21 +155,6 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>Deprecated</string>
-				<key>scope</key>
-				<string>invalid.deprecated</string>
-				<key>settings</key>
-				<dict>
-					<key>background</key>
-					<string>#CC99CC</string>
-					<key>fontStyle</key>
-					<string />
-					<key>foreground</key>
-					<string>#CDCDCD</string>
-				</dict>
-			</dict>
-			<dict>
-				<key>name</key>
 				<string>Diff foreground</string>
 				<key>scope</key>
 				<string>markup.inserted.diff, markup.deleted.diff, meta.diff.header.to-file, meta.diff.header.from-file</string>

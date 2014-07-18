@@ -1017,47 +1017,47 @@
 {
     "class": "auto_complete_label",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "quick_panel_label",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "sidebar_label",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "label_control",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "tab_label",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "label_control",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["ubuntu_mono_ui"],
-    "font_face": "Ubuntu Mono"
+    "font.face": "Ubuntu Mono"
 },
 // END Ubuntu Mono UI Setting
 
@@ -1065,56 +1065,56 @@
 {
     "class": "auto_complete_label",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "quick_panel_label",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "sidebar_label",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "label_control",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "tab_label",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "label_control",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["inconsolata_ui"],
-    "font_face": "Inconsolata-g",
-    "font_size": 12
+    "font.face": "Inconsolata-g",
+    "font.size": 12
 },
 // END Inconsolata-g UI Setting
 
@@ -1122,47 +1122,47 @@
 {
     "class": "auto_complete_label",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "quick_panel_label",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "sidebar_label",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "label_control",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "tab_label",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "label_control",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["large_ui_font"],
-    "font_size": 14
+    "font.size": 14
 },
 // END Large UI font setting
 
@@ -1170,47 +1170,47 @@
 {
     "class": "auto_complete_label",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "quick_panel_label",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "quick_panel_path_label",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "quick_panel_score_label",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "sidebar_label",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "label_control",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "tab_label",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "label_control",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 },
 {
     "class": "tool_tip_label_control",
     "settings": ["small_ui_font"],
-    "font_size": 12.5
+    "font.size": 12.5
 }
 // END Small UI font setting
 

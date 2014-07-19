@@ -1085,7 +1085,7 @@
     "class": "tab_label",
     "settings": ["large_ui_font"],
     "font.size": 12.5
-},
+}
 // END Small UI font setting
 
 ]

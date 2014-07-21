@@ -3,15 +3,16 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-![Cyanide Theme for Sublime Text](http://i.imgur.com/IS3aJ8H.png)
-![Cyanide Theme for Sublime Text](http://i.imgur.com/l4qrU08.png)
+### Default Theme
+
+![Default Theme Screenshot](http://i.imgur.com/QsiAWLt.png)
 
 Installation
 ------------------------------------------------------------------------
 
-###Package Control
+### Package Control
 
-Install the theme and update your `Settings - User` file.
+Install the theme with the command palette and update your `Settings - User` file.
 
     "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
@@ -27,6 +28,44 @@ Update your `Settings - User` file to activate the theme.
 
     "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
+
+Themes
+------------------------------------------------------------------------
+
+### Acid Theme
+
+![Acid Screenshot](http://i.imgur.com/sCdoKNs.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Acid.tmTheme",
+    "theme": "Cyanide - Acid.sublime-theme"
+
+### Golden Theme
+
+![Golden Screenshot](http://i.imgur.com/mYWfNJH.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Golden.tmTheme",
+    "theme": "Cyanide - Golden.sublime-theme"
+
+### Purple Theme
+
+![Purple Screenshot](http://i.imgur.com/40eBX8q.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Purple.tmTheme",
+    "theme": "Cyanide - Purple.sublime-theme"
+
+### Salmon Theme
+
+![Salmon Screenshot](http://i.imgur.com/KYvnGjT.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Salmon.tmTheme",
+    "theme": "Cyanide - Salmon.sublime-theme"
+
+### Wood Theme
+
+![Wood Screenshot](http://i.imgur.com/JX51ORb.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Wood.tmTheme",
+    "theme": "Cyanide - Wood.sublime-theme"
 
 Settings
 ------------------------------------------------------------------------
@@ -53,13 +92,10 @@ I really like the Ubuntu Mono font so I decided to add a setting to change the d
 "ubuntu_mono_ui": true
 ```
 
-### Default UI without the Ubuntu Mono font
+## Custom themes
 
-![Default UI of Cyanide Theme for Sublime Text](http://i.imgur.com/dgxnlew.png)
-
-## Color Scheme
-
-Cyanide Theme also includes few color scheme to match the theme. Feel free to ask me if you want me to edit your color scheme to match this theme.
+If you want a custom color, please create a new issue and I will be happy to create one for you.
+I'm working on a grunt task to create custom color theme from the command line.
 
 Credit
 ------------------------------------------------------------------------
@@ -67,5 +103,3 @@ Credit
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
 
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).
-
-If you want a custom color for this theme, you can also contact me and I'll be happy to make one for you!

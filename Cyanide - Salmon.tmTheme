@@ -1,3 +1,20 @@
+<!--
+    //   Cyanide Theme for Sublime Text
+    //   https://github.com/lefoy/cyanide-theme
+    //
+    //   by lefoy
+    //   http://lefoy.net
+    //
+    //   based on Afterglow
+    //   http://yabatadesign.github.io/afterglow-theme/
+    //
+
+    //
+    //  Salmon Theme
+    //  Custom color (rgb): 255,83,13
+    //  Custom color (hex): FF786D
+    //
+-->
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -74,7 +91,7 @@
 					<key>fontStyle</key>
 					<string />
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -100,7 +117,7 @@
 					<key>fontStyle</key>
 					<string />
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -137,7 +154,7 @@
 					<key>fontStyle</key>
 					<string />
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -150,7 +167,7 @@
 					<key>background</key>
 					<string>#222222</string>
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -220,7 +237,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -231,7 +248,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -242,7 +259,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -253,7 +270,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>
@@ -264,7 +281,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#b6db51</string>
+					<string>#FF786D</string>
 				</dict>
 			</dict>
 			<dict>

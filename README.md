@@ -14,7 +14,7 @@ Installation
 
 Install the theme with the command palette and update your `Settings - User` file.
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
 
 ### Manual
@@ -26,7 +26,7 @@ Clone the theme inside your packages folder. Be sure that the name of the folder
 
 Update your `Settings - User` file to activate the theme.
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
 
 Themes
@@ -36,35 +36,35 @@ Themes
 
 ![Acid Screenshot](http://i.imgur.com/sCdoKNs.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Acid.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
     "theme": "Cyanide - Acid.sublime-theme"
 
 ### Golden Theme
 
 ![Golden Screenshot](http://i.imgur.com/mYWfNJH.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Golden.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
     "theme": "Cyanide - Golden.sublime-theme"
 
 ### Purple Theme
 
 ![Purple Screenshot](http://i.imgur.com/40eBX8q.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Purple.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
     "theme": "Cyanide - Purple.sublime-theme"
 
 ### Salmon Theme
 
 ![Salmon Screenshot](http://i.imgur.com/KYvnGjT.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Salmon.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
     "theme": "Cyanide - Salmon.sublime-theme"
 
 ### Wood Theme
 
 ![Wood Screenshot](http://i.imgur.com/JX51ORb.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Color Scheme/Cyanide - Wood.tmTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
     "theme": "Cyanide - Wood.sublime-theme"
 
 Settings

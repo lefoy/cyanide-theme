@@ -5,7 +5,7 @@ A minimal dark theme for Sublime Text 3.
 
 ### Default Theme
 
-![Default Theme Screenshot](http://i.imgur.com/QsiAWLt.png)
+![Default Theme Screenshot](http://i.imgur.com/LICW0me.png)
 
 Installation
 ------------------------------------------------------------------------
@@ -34,35 +34,35 @@ Themes
 
 ### Acid Theme
 
-![Acid Screenshot](http://i.imgur.com/sCdoKNs.png)
+![Acid Screenshot](http://i.imgur.com/cWWNpx5.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
     "theme": "Cyanide - Acid.sublime-theme"
 
 ### Golden Theme
 
-![Golden Screenshot](http://i.imgur.com/mYWfNJH.png)
+![Golden Screenshot](http://i.imgur.com/tEFHHwE.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
     "theme": "Cyanide - Golden.sublime-theme"
 
 ### Purple Theme
 
-![Purple Screenshot](http://i.imgur.com/40eBX8q.png)
+![Purple Screenshot](http://i.imgur.com/Phy65L5.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
     "theme": "Cyanide - Purple.sublime-theme"
 
 ### Salmon Theme
 
-![Salmon Screenshot](http://i.imgur.com/KYvnGjT.png)
+![Salmon Screenshot](http://i.imgur.com/v98RZaU.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
     "theme": "Cyanide - Salmon.sublime-theme"
 
 ### Wood Theme
 
-![Wood Screenshot](http://i.imgur.com/JX51ORb.png)
+![Wood Screenshot](http://i.imgur.com/10nS4n4.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
     "theme": "Cyanide - Wood.sublime-theme"

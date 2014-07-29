@@ -1095,7 +1095,45 @@
         "settings": ["contrasted_tabs"],
         "attributes": ["selected"],
         "layer0.tint": [30,30,30]
-    }
+    },
     // END Contrasted tab setting
+
+    // Contrasted light sidebar setting
+    {
+        "class": "sidebar_container",
+        "settings": ["contrasted_light_sidebar"],
+        "layer0.tint": [45,45,45]
+    },
+    {
+        "class": "tree_row",
+        "settings": ["contrasted_light_sidebar"],
+        "layer0.tint": [30,30,30]
+    },
+    // END Contrasted light sidebar setting
+
+    // Contrasted light tab setting
+    {
+        "class": "tabset_control",
+        "settings": ["contrasted_light_tabs"],
+        "layer0.tint": [45,45,45]
+    },
+    {
+        "class": "tab_control",
+        "settings": ["contrasted_light_tabs"],
+        "layer0.tint": [45,45,45]
+    },
+    {
+        "class": "tab_control",
+        "settings": ["contrasted_light_tabs"],
+        "attributes": ["hover"],
+        "layer0.tint": [30,30,30]
+    },
+    {
+        "class": "tab_control",
+        "settings": ["contrasted_light_tabs"],
+        "attributes": ["selected"],
+        "layer0.tint": [30,30,30]
+    }
+    // END Contrasted light tab setting
 
 ]

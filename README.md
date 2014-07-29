@@ -99,6 +99,13 @@ You can change the color of the sidebar and tabs to contrast the editor. Just ad
 "contrasted_tabs": true
 ```
 
+You can also use this setting to make the UI even much lighter.
+
+```
+"contrasted_light_sidebar": true,
+"contrasted_light_tabs": true
+```
+
 ## Ubuntu Mono UI
 
 I really like the Ubuntu Mono font so I decided to add a setting to change the default UI font to Ubuntu Mono. To change the UI font, add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`. You can download the Ubuntu Mono font from the [Ubuntu website](http://font.ubuntu.com/).

@@ -5,7 +5,9 @@ A minimal dark theme for Sublime Text 3.
 
 ### Default Theme
 
-![Default Theme Screenshot](http://i.imgur.com/LICW0me.png)
+![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
+
+![Acid Theme Screenshot](http://i.imgur.com/snmvuB4.png)
 
 ![Contrasted UI Screenshot](http://i.imgur.com/pA8MhEY.png)
 
@@ -74,9 +76,9 @@ Settings
 
 #### Tabs height
 
-You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
-
 ![Tabs height](http://i.imgur.com/0NCrXVF.png)
+
+You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "tabs_medium": true
@@ -90,9 +92,9 @@ or
 
 #### Contrasted UI
 
-You can change the color of the sidebar and tabs to contrast the editor. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
-
 ![Contrasted UI](http://i.imgur.com/pA8MhEY.png)
+
+You can change the color of the sidebar and tabs to contrast the editor. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "contrasted_sidebar": true,

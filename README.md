@@ -92,6 +92,12 @@ I really like the Ubuntu Mono font so I decided to add a setting to change the d
 "ubuntu_mono_ui": true
 ```
 
+### Known issues
+
+**Ubuntu Mono UI cuts off the tabs font**<br>
+![Screenshot - Ubuntu Mono UI cuts off the tabs font](http://i.imgur.com/jdKUPoE.png)<br>
+Unfortunatly, this a Sublime Text bug and it hasn't been fixed yet. To temporarely fix this issue, you can add the setting `"small_ui_font": true` inside your setting file. If this setting doesn't fix the bug, please fill a new issue on GitHub.
+
 ## Custom themes
 
 If you want a custom color, please create a new issue and I will be happy to create one for you.

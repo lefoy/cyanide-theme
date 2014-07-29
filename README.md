@@ -7,6 +7,8 @@ A minimal dark theme for Sublime Text 3.
 
 ![Default Theme Screenshot](http://i.imgur.com/LICW0me.png)
 
+![Contrasted UI Screenshot](http://i.imgur.com/pA8MhEY.png)
+
 Installation
 ------------------------------------------------------------------------
 
@@ -44,7 +46,7 @@ Themes
 ![Golden Screenshot](http://i.imgur.com/tEFHHwE.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
-    "theme": "Cyanide - Golden.sublime-theme"
+    "theme": " Cyanide - Golden.sublime-theme"
 
 ### Purple Theme
 
@@ -70,6 +72,8 @@ Themes
 Settings
 ------------------------------------------------------------------------
 
+#### Tabs height
+
 You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ![Tabs height](http://i.imgur.com/0NCrXVF.png)
@@ -82,6 +86,17 @@ or
 
 ```
 "tabs_large": true
+```
+
+#### Contrasted UI
+
+You can change the color of the sidebar and tabs to contrast the editor. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+
+![Contrasted UI](http://i.imgur.com/pA8MhEY.png)
+
+```
+"contrasted_sidebar": true,
+"contrasted_tabs": true
 ```
 
 ## Ubuntu Mono UI

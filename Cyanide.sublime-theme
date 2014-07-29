@@ -1057,7 +1057,44 @@
         "class": "tab_label",
         "settings": ["small_ui_font"],
         "font.size": 12.5
-    }
+    },
     // END Small UI font setting
+
+    // Contrasted sidebar setting
+    {
+        "class": "sidebar_container",
+        "settings": ["contrasted_sidebar"],
+        "layer0.tint": [18,18,18]
+    },
+    {
+        "class": "tree_row",
+        "layer0.tint": [30,30,30]
+    },
+    // END Contrasted sidebar setting
+
+    // Contrasted tab setting
+    {
+        "class": "tabset_control",
+        "settings": ["contrasted_tabs"],
+        "layer0.tint": [18,18,18]
+    },
+    {
+        "class": "tab_control",
+        "settings": ["contrasted_tabs"],
+        "layer0.tint": [18,18,18]
+    },
+    {
+        "class": "tab_control",
+        "settings": ["contrasted_tabs"],
+        "attributes": ["hover"],
+        "layer0.tint": [30,30,30]
+    },
+    {
+        "class": "tab_control",
+        "settings": ["contrasted_tabs"],
+        "attributes": ["selected"],
+        "layer0.tint": [30,30,30]
+    }
+    // END Contrasted tab setting
 
 ]

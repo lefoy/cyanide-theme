@@ -142,6 +142,6 @@ Credit
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
 
-Thanks to [@pds2k12](https://github.com/pds2k12) and [@renkun-ken](https://github.com/renkun-ken) for helping me with bug reports.
+Thanks to [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
 
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).

@@ -99,7 +99,7 @@ You can change the color of the sidebar and tabs to contrast the editor. Just ad
 "contrasted_tabs": true
 ```
 
-You can also use this setting to make the UI even much lighter.
+You can also use these settings to make the UI even much lighter.
 
 ```
 "contrasted_light_sidebar": true,

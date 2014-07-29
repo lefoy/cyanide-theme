@@ -107,6 +107,22 @@ I really like the Ubuntu Mono font so I decided to add a setting to change the d
 "ubuntu_mono_ui": true
 ```
 
+### Known issues
+
+**Ubuntu Mono UI cuts off the tabs font**<br>
+![Screenshot - Ubuntu Mono UI cuts off the tabs font](http://i.imgur.com/jdKUPoE.png)<br>
+Unfortunatly, this a Sublime Text bug and it hasn't been fixed yet. To temporarely fix this issue, you can add the setting `"small_ui_font": true` inside your setting file. If this setting doesn't fix the bug, please fill a new issue on GitHub.
+
+## Plugins support
+
+This theme currently support these Sublime Text plugins:
+
+* [GitGutter](https://sublime.wbond.net/packages/GitGutter)
+* [SublimeLinter3](https://github.com/SublimeLinter/SublimeLinter3)
+
+<!--* [PlainTasks](https://sublime.wbond.net/packages/PlainTasks)-->
+<!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->
+
 ## Custom themes
 
 If you want a custom color, please create a new issue and I will be happy to create one for you.
@@ -116,5 +132,7 @@ Credit
 ------------------------------------------------------------------------
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
+
+Thanks to [@pds2k12](https://github.com/pds2k12) and [@renkun-ken](https://github.com/renkun-ken) for helping me with bug reports.
 
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).

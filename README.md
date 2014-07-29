@@ -3,8 +3,6 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-### Default Theme
-
 ![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
 
 ![Acid Theme Screenshot](http://i.imgur.com/snmvuB4.png)

@@ -72,7 +72,7 @@ Themes
 Settings
 ------------------------------------------------------------------------
 
-#### Tabs height
+### Tabs height
 
 ![Tabs height](http://i.imgur.com/0NCrXVF.png)
 
@@ -88,7 +88,7 @@ or
 "tabs_large": true
 ```
 
-#### Contrasted UI
+### Contrasted UI
 
 ![Contrasted UI](http://i.imgur.com/pA8MhEY.png)
 

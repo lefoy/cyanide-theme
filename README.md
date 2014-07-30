@@ -96,14 +96,16 @@ You can change the color of the sidebar and tabs to contrast the editor. Just ad
 
 ```
 "contrasted_sidebar": true,
-"contrasted_tabs": true
+"contrasted_tabs": true,
+"contrasted_quick_panel": true
 ```
 
 You can also use these settings to make the UI even much lighter.
 
 ```
 "contrasted_light_sidebar": true,
-"contrasted_light_tabs": true
+"contrasted_light_tabs": true,
+"contrasted_light_quick_panel": true
 ```
 
 ## Ubuntu Mono UI

@@ -172,7 +172,7 @@ I'm working on a grunt task to create custom color theme from the command line.
 Credit
 ------------------------------------------------------------------------
 
-This theme is based on [Centurion](https://github.com/allanhortle/Centurion) and [Afterglow](http://yabatadesign.github.io/afterglow-theme/).
+This theme is based on [Centurion](https://github.com/allanhortle/Centurion), [Afterglow](http://yabatadesign.github.io/afterglow-theme/). and [Spacefunk](https://github.com/Twiebie/ST-Spacefunk).
 
 Thanks to [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
 

@@ -1225,7 +1225,28 @@
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
         "layer0.texture": "Theme - Cyanide/Cyanide/afterglow-folder-open.png"
-    }
+    },
     // END Afterglow folder icons
+
+    // Spacefunk folder icons
+    {
+        "class": "disclosure_button_control",
+        "settings": ["spacefunk_folder_icons"],
+        "layer0.texture": "Theme - Cyanide/Cyanide/spacefunk-folder-closed.png",
+    },
+    {
+        "class": "disclosure_button_control",
+        "settings": ["spacefunk_folder_icons"],
+        "attributes": ["expanded"],
+        "layer0.texture": "Theme - Cyanide/Cyanide/spacefunk-folder-open.png"
+    },
+    {
+        "class": "disclosure_button_control",
+        "settings": ["spacefunk_folder_icons"],
+        "attributes": ["expanded"],
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "layer0.texture": "Theme - Cyanide/Cyanide/spacefunk-folder-open.png"
+    }
+    // END Spacefunk folder icons
 
 ]

@@ -74,7 +74,7 @@ Settings
 
 ### Centurion sidebar folder icons
 
-![Sidebar folder icons](http://i.imgur.com/yYrEfR0.png)
+![Sidebar folder icons](http://i.imgur.com/QVwmrGh.png)
 
 You can change the sidebar folder icons to use the one from the Centurion theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
@@ -84,12 +84,22 @@ You can change the sidebar folder icons to use the one from the Centurion theme.
 
 ### Afterglow sidebar folder icons
 
-![Sidebar folder icons](http://i.imgur.com/MYovU4e.png)
+![Sidebar folder icons](http://i.imgur.com/Ov5hnv2.png)
 
 You can change the sidebar folder icons to use the one from the Afterglow theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "afterglow_folder_icons": true
+```
+
+### Spacefunk sidebar folder icons
+
+![Sidebar folder icons](http://i.imgur.com/Xz2FqEG.png)
+
+You can change the sidebar folder icons to use the one from the Spacefunk theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+
+```
+"spacefunk_folder_icons": true
 ```
 
 ### Tabs height

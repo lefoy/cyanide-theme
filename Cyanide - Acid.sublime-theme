@@ -1064,7 +1064,7 @@
     {
         "class": "sidebar_container",
         "settings": ["contrasted_sidebar"],
-        "layer0.tint": [18,18,18]
+        "layer0.tint": [20,20,20]
     },
     {
         "class": "tree_row",
@@ -1077,12 +1077,12 @@
     {
         "class": "tabset_control",
         "settings": ["contrasted_tabs"],
-        "layer0.tint": [18,18,18]
+        "layer0.tint": [20,20,20]
     },
     {
         "class": "tab_control",
         "settings": ["contrasted_tabs"],
-        "layer0.tint": [18,18,18]
+        "layer0.tint": [20,20,20]
     },
     {
         "class": "tab_control",
@@ -1133,7 +1133,57 @@
         "settings": ["contrasted_light_tabs"],
         "attributes": ["selected"],
         "layer0.tint": [30,30,30]
-    }
+    },
     // END Contrasted light tab setting
+
+    // Contrasted quick panel setting
+    {
+        "class": "quick_panel",
+        "settings": ["contrasted_quick_panel"],
+        "layer0.tint": [20,20,20]
+    },
+    {
+        "class": "quick_panel_row",
+        "settings": ["contrasted_quick_panel"],
+        "layer0.tint": [20,20,20]
+    },
+    {
+        "class": "mini_quick_panel_row",
+        "settings": ["contrasted_quick_panel"],
+        "layer0.tint": [20,20,20]
+    },
+    {
+        "class": "mini_quick_panel_row",
+        "settings": ["contrasted_quick_panel"],
+        "attributes": ["selected"],
+        "layer0.texture": "",
+        "layer0.tint": [182,219,81]
+    },
+    // END Contrasted quick panel setting
+
+    // Contrasted light quick panel setting
+    {
+        "class": "quick_panel",
+        "settings": ["contrasted_light_quick_panel"],
+        "layer0.tint": [35,35,35]
+    },
+    {
+        "class": "quick_panel_row",
+        "settings": ["contrasted_light_quick_panel"],
+        "layer0.tint": [35,35,35]
+    },
+    {
+        "class": "mini_quick_panel_row",
+        "settings": ["contrasted_light_quick_panel"],
+        "layer0.tint": [35,35,35]
+    },
+    {
+        "class": "mini_quick_panel_row",
+        "settings": ["contrasted_light_quick_panel"],
+        "attributes": ["selected"],
+        "layer0.texture": "",
+        "layer0.tint": [182,219,81]
+    }
+    // END Contrasted light quick panel setting
 
 ]

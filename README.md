@@ -7,7 +7,7 @@ A minimal dark theme for Sublime Text 3.
 
 ![Acid Theme Screenshot](http://i.imgur.com/snmvuB4.png)
 
-![Contrasted UI Screenshot](http://i.imgur.com/pA8MhEY.png)
+![Contrasted UI Screenshot](http://i.imgur.com/cfYkL92.png)
 
 Installation
 ------------------------------------------------------------------------
@@ -72,6 +72,16 @@ Themes
 Settings
 ------------------------------------------------------------------------
 
+### Sidebar folder icons
+
+![Sidebar folder icons](http://i.imgur.com/RJTHZLi.png)
+
+You can change the sidebar folder icons to use the one from the Centurion theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+
+```
+"centurion_folder_icons": true
+```
+
 ### Tabs height
 
 ![Tabs height](http://i.imgur.com/0NCrXVF.png)
@@ -90,7 +100,7 @@ or
 
 ### Contrasted UI
 
-![Contrasted UI](http://i.imgur.com/pA8MhEY.png)
+![Contrasted UI](http://i.imgur.com/cfYkL92.png)
 
 You can change the color of the sidebar and tabs to contrast the editor. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 

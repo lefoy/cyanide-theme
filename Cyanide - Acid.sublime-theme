@@ -1183,7 +1183,28 @@
         "attributes": ["selected"],
         "layer0.texture": "",
         "layer0.tint": [182,219,81]
-    }
+    },
     // END Contrasted light quick panel setting
+
+    // Centurion folder icons
+    {
+        "class": "disclosure_button_control",
+        "settings": ["centurion_folder_icons"],
+        "layer0.texture": "Theme - Cyanide/Cyanide/centurion-folder-closed.png",
+    },
+    {
+        "class": "disclosure_button_control",
+        "settings": ["centurion_folder_icons"],
+        "attributes": ["expanded"],
+        "layer0.texture": "Theme - Cyanide/Cyanide/centurion-folder-open.png"
+    },
+    {
+        "class": "disclosure_button_control",
+        "settings": ["centurion_folder_icons"],
+        "attributes": ["expanded"],
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "layer0.texture": "Theme - Cyanide/Cyanide/centurion-folder-open.png"
+    }
+    // END Centurion folder icons
 
 ]

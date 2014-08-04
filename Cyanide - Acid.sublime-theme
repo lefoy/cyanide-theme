@@ -1189,7 +1189,7 @@
     {
         "class": "disclosure_button_control",
         "settings": ["centurion_folder_icons"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/centurion-folder-closed.png",
+        "layer0.texture": "Theme - Cyanide/Cyanide/centurion-folder-closed.png"
     },
     {
         "class": "disclosure_button_control",
@@ -1210,7 +1210,7 @@
     {
         "class": "disclosure_button_control",
         "settings": ["afterglow_folder_icons"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/afterglow-folder-closed.png",
+        "layer0.texture": "Theme - Cyanide/Cyanide/afterglow-folder-closed.png"
     },
     {
         "class": "disclosure_button_control",
@@ -1231,7 +1231,7 @@
     {
         "class": "disclosure_button_control",
         "settings": ["spacefunk_folder_icons"],
-        "layer0.texture": "Theme - Cyanide/Cyanide/spacefunk-folder-closed.png",
+        "layer0.texture": "Theme - Cyanide/Cyanide/spacefunk-folder-closed.png"
     },
     {
         "class": "disclosure_button_control",

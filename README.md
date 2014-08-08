@@ -138,12 +138,14 @@ You can also use these settings to make the UI even much lighter.
 "contrasted_light_quick_panel": true
 ```
 
-## Ubuntu Mono UI
+## Custom UI font
 
-I really like the Ubuntu Mono font so I decided to add a setting to change the default UI font to Ubuntu Mono. To change the UI font, add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`. You can download the Ubuntu Mono font from the [Ubuntu website](http://font.ubuntu.com/).
+You can change the UI font with these settings:
 
 ```
-"ubuntu_mono_ui": true
+"ubuntu_mono_ui": true // Ubuntu Mono UI font
+"monaco_ui": true // Monaco UI font
+"inconsolata_ui": true // Inconsolata UI font
 ```
 
 ## Known issues

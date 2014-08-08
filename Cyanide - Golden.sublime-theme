@@ -1002,6 +1002,24 @@
     },
     // END Ubuntu Mono UI Setting
 
+    // Monaco Setting
+    {
+        "class": "sidebar_label",
+        "settings": ["monaco_ui"],
+        "font.face": "Monaco"
+    },
+    {
+        "class": "label_control",
+        "settings": ["monaco_ui"],
+        "font.face": "Monaco"
+    },
+    {
+        "class": "tab_label",
+        "settings": ["monaco_ui"],
+        "font.face": "Monaco"
+    },
+    // END Monaco Setting
+
     // Inconsolata-g UI Setting
     {
         "class": "sidebar_label",

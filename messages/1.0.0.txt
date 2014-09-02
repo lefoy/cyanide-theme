@@ -1,0 +1,9 @@
+Cyanide 1.0.0
+===============
+
+* Update theme for Sublime Text build 3065
+
+Thanks for downloading Cyanide Theme!
+Feel free to open an issue on Github if you have any problem with the theme.
+
+https://github.com/lefoy/cyanide-theme

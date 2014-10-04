@@ -30,6 +30,9 @@ body {
         display: inline-block;
         & + li {
             margin-left: 20px;
+            @include respond-to(767px) {
+                margin-left: 12px;
+            }
         }
     }
 }
@@ -44,6 +47,12 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    @include respond-to(767px) {
+        position: static;
+        text-align: right;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
     ul {
         @extend .nobullet;
     }
@@ -62,6 +71,11 @@ body {
     height: 500px;
     padding-top: 80px;
     @include clearfix();
+    @include respond-to(767px) {
+        height: auto;
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
 }
 
 .project-content {
@@ -76,6 +90,10 @@ body {
     width: 30%;
     padding-right: 30px;
     @include clearfix();
+    @include respond-to(767px) {
+        float: none;
+        width: auto;
+    }
 }
 
 .project-content-right {
@@ -83,6 +101,10 @@ body {
     float: right;
     width: 70%;
     @include clearfix();
+    @include respond-to(767px) {
+        float: none;
+        width: auto;
+    }
     & > :first-child {
         margin-top: 0;
     }
@@ -90,6 +112,9 @@ body {
 
 .project-content-navigation {
     max-width: 220px;
+    @include respond-to(767px) {
+        display: none;
+    }
 }
 
 .project-content-navigation ol {

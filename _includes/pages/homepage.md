@@ -16,20 +16,26 @@ Installation
 
 Install the theme with the command palette and update your `Settings - User` file.
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
-    "theme": "Cyanide.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+"theme": "Cyanide.sublime-theme"
+```
 
 ### Manual
 
 Clone the theme inside your packages folder. Be sure that the name of the folder is `Theme - Cyanide`.
 
-    cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-    git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
+````
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
+```
 
 Update your `Settings - User` file to activate the theme.
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
-    "theme": "Cyanide.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+"theme": "Cyanide.sublime-theme"
+```
 
 Themes
 ------------------------------------------------------------------------
@@ -38,36 +44,46 @@ Themes
 
 ![Acid Screenshot](http://i.imgur.com/cWWNpx5.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
-    "theme": "Cyanide - Acid.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
+"theme": "Cyanide - Acid.sublime-theme"
+```
 
 ### Golden Theme
 
 ![Golden Screenshot](http://i.imgur.com/tEFHHwE.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
-    "theme": " Cyanide - Golden.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
+"theme": " Cyanide - Golden.sublime-theme"
+```
 
 ### Purple Theme
 
 ![Purple Screenshot](http://i.imgur.com/Phy65L5.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
-    "theme": "Cyanide - Purple.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
+"theme": "Cyanide - Purple.sublime-theme"
+```
 
 ### Salmon Theme
 
 ![Salmon Screenshot](http://i.imgur.com/v98RZaU.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
-    "theme": "Cyanide - Salmon.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
+"theme": "Cyanide - Salmon.sublime-theme"
+```
 
 ### Wood Theme
 
 ![Wood Screenshot](http://i.imgur.com/10nS4n4.png)
 
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
-    "theme": "Cyanide - Wood.sublime-theme"
+````javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
+"theme": "Cyanide - Wood.sublime-theme"
+```
 
 Settings
 ------------------------------------------------------------------------
@@ -78,7 +94,7 @@ Settings
 
 You can change the sidebar folder icons to use the one from the Centurion theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-```
+```javascript
 "centurion_folder_icons": true
 ```
 
@@ -88,7 +104,7 @@ You can change the sidebar folder icons to use the one from the Centurion theme.
 
 You can change the sidebar folder icons to use the one from the Afterglow theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-```
+```javascript
 "afterglow_folder_icons": true
 ```
 
@@ -98,7 +114,7 @@ You can change the sidebar folder icons to use the one from the Afterglow theme.
 
 You can change the sidebar folder icons to use the one from the Spacefunk theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-```
+```javascript
 "spacefunk_folder_icons": true
 ```
 
@@ -108,13 +124,13 @@ You can change the sidebar folder icons to use the one from the Spacefunk theme.
 
 You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-```
+```javascript
 "tabs_medium": true
 ```
 
 or
 
-```
+```javascript
 "tabs_large": true
 ```
 
@@ -124,7 +140,7 @@ or
 
 You can change the color of the sidebar and tabs to contrast the editor. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
-```
+```javascript
 "contrasted_sidebar": true,
 "contrasted_tabs": true,
 "contrasted_quick_panel": true
@@ -132,7 +148,7 @@ You can change the color of the sidebar and tabs to contrast the editor. Just ad
 
 You can also use these settings to make the UI even much lighter.
 
-```
+```javascript
 "contrasted_light_sidebar": true,
 "contrasted_light_tabs": true,
 "contrasted_light_quick_panel": true
@@ -142,7 +158,7 @@ You can also use these settings to make the UI even much lighter.
 
 You can change the UI font with these settings:
 
-```
+```javascript
 "ubuntu_mono_ui": true // Ubuntu Mono UI font
 "monaco_ui": true // Monaco UI font
 "inconsolata_ui": true // Inconsolata UI font

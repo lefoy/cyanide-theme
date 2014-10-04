@@ -74,12 +74,15 @@ body {
     position: relative;
     float: left;
     width: 30%;
+    padding-right: 30px;
+    @include clearfix();
 }
 
 .project-content-right {
     position: relative;
     float: right;
     width: 70%;
+    @include clearfix();
     & > :first-child {
         margin-top: 0;
     }

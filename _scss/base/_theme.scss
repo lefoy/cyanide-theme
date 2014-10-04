@@ -41,7 +41,8 @@
 .project-header {
     background-image: url(http://lefoy.net/cyanide-theme/public/img/background.jpg);
     background-attachment: fixed;
-    background-size: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .project-buttons {
@@ -61,7 +62,7 @@
     @include border-radius(30px);
     @include transition-property(all);
     @include transition-duration(150ms);
-    @include respond-to(767px){
+    @include respond-to(767px) {
         margin-top: 10px;
         margin-bottom: 10px;
     }

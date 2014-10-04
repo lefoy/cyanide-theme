@@ -7,6 +7,9 @@ var layout = (function(window, document, $) {
             stickOnScroll();
             navigation();
 
+            var height = $(window).height() - $('.project-header').outerHeight() - $('.copyright').outerHeight();
+            $('.project-content').css('min-height', height);
+
         },
 
         stickOnScroll = function() {

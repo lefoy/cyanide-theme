@@ -61,6 +61,10 @@
     @include border-radius(30px);
     @include transition-property(all);
     @include transition-duration(150ms);
+    @include respond-to(767px){
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     &:hover {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.1);

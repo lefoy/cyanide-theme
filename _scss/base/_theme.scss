@@ -1,0 +1,112 @@
+/*=============================
+=            Theme            =
+=============================*/
+
+.single-header {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo,
+.project-title a,
+.single-header-navigation a {
+    position: relative;
+    font-size: rem(13px);
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        opacity: 0;
+        background-color: #fff;
+        @include transition-property(all);
+        @include transition-duration(150ms);
+    }
+    &:hover:after {
+        height: 4px;
+        opacity: 1;
+    }
+}
+
+.project-header {
+    background-image: url(http://lefoy.net/cyanide-theme/public/img/background.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.project-buttons {
+    margin-top: 60px;
+    text-align: center;
+}
+.project-buttons a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 20px 30px;
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #555;
+    background-color: #fff;
+    @include border-radius(30px);
+    @include transition-property(all);
+    @include transition-duration(150ms);
+    &:hover {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.project-title {
+    text-align: center;
+}
+.project-title,
+.project-title a {
+    margin: 0;
+    font-size: rem(60px);
+    font-weight: 100;
+    letter-spacing: normal;
+    text-transform: none;
+    color: #fff;
+}
+
+.project-tagline {
+    margin: 0;
+    margin-top: 1em;
+    font-size: rem(18px);
+    font-weight: 100;
+    text-align: center;
+    color: #fff;
+}
+
+.project-stats {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    position: relative;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:after {
+        content: ": ";
+    }
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.1);
+    p {
+        font-size: 14px;
+    }
+}

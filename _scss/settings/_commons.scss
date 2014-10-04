@@ -1,0 +1,62 @@
+/*===============================
+=            Commons            =
+===============================*/
+
+@mixin ir {
+    overflow: hidden;
+    text-indent: -9999px;
+    border: 0;
+    background-color: transparent;
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+.ir {
+    @include ir;
+}
+
+@mixin invisible {
+    visibility: hidden;
+}
+.invisible {
+    @include invisible;
+}
+
+@mixin visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+.visuallyhidden {
+    @include visuallyhidden;
+}
+
+@mixin clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.clearfix {
+    @include clearfix;
+}
+
+.nobullet {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

@@ -1,0 +1,21 @@
+# Setup
+title           : Cyanide Theme
+description     : "Minimal dark theme for Sublime Text 3"
+keywords        : "minimal dark theme sublime text"
+url             : http://lefoy.net/cyanide-theme/
+
+author          : lefoy
+name            : "lefoy"
+website         : http://lefoy.net/
+
+version         : 1.0.0
+markdown        : redcarpet
+highlighter     : pygments
+
+github          : https://github.com/lefoy
+repo            : https://github.com/lefoy/cyanide-theme
+
+# Assets
+sass:
+  sass_dir: _scss
+  style: :compressed

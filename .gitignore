@@ -1,2 +1,4 @@
-.DS_Store
-cyanide.todo
+_site/
+.sass-cache/
+node_modules/
+.sublime-grunt.cache

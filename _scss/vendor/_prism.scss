@@ -1,0 +1,218 @@
+/* http://prismjs.com/download.html?themes=prism&languages=markup+twig+css+css-extras+clike+javascript+php+php-extras+scss+bash+python+ruby+apacheconf+git&plugins=line-highlight+line-numbers */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: Consolas, Monaco, "Andale Mono", monospace;
+    line-height: 1.5;
+    white-space: pre;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+      -o-tab-size: 4;
+         tab-size: 4;
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+            hyphens: none;
+    color: black;
+    text-shadow: 0 1px white;
+
+    direction: ltr;
+        -ms-hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    overflow: auto;
+    margin: 0.5em 0;
+    padding: 1em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #a67f59;
+    background: hsla(0, 0%, 100%, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function {
+    color: #dd4a68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important {
+    font-weight: bold;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+pre[data-line] {
+    position: relative;
+    padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: 1em; /* Same as .prism’s padding-top */
+    padding: inherit 0;
+    line-height: inherit;
+    white-space: pre;
+    pointer-events: none;
+    background: hsla(24, 20%, 50%,0.08);
+    background:    -moz-linear-gradient(left, hsla(24, 20%, 50%,0.1) 70%, hsla(24, 20%, 50%,0));
+    background: -webkit-linear-gradient(left, hsla(24, 20%, 50%,0.1) 70%, hsla(24, 20%, 50%,0));
+    background:      -o-linear-gradient(left, hsla(24, 20%, 50%,0.1) 70%, hsla(24, 20%, 50%,0));
+    background:         linear-gradient(left, hsla(24, 20%, 50%,0.1) 70%, hsla(24, 20%, 50%,0));
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+    content: attr(data-start);
+    vertical-align: 0.3em;
+    position: absolute;
+    top: 0.4em;
+    left: 0.6em;
+    min-width: 1em;
+    padding: 0 0.5em;
+    font: bold 65%/1.5 sans-serif;
+    text-align: center;
+    color: hsl(24, 20%, 95%);
+    border-radius: 999px;
+    background-color: hsla(24, 20%, 50%,0.4);
+    box-shadow: 0 1px white;
+    text-shadow: none;
+}
+
+.line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: 0.4em;
+}
+pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+    position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    top: 0;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    font-size: 100%;
+    letter-spacing: -1px;
+    pointer-events: none;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    pointer-events: none;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+    color: #999;
+}

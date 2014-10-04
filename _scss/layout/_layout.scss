@@ -1,0 +1,120 @@
+/*==============================
+=            Layout            =
+==============================*/
+
+body {
+    @include clearfix();
+}
+
+.l-page-wrapper {
+    width: 920px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.single-header {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 80px;
+    @include clearfix();
+    .single-header-wrapper {
+        position: relative;
+        margin: 0 20px;
+        @include clearfix();
+    }
+    .single-header-navigation li {
+        display: inline-block;
+        & + li {
+            margin-left: 20px;
+        }
+    }
+}
+
+.logo {
+    display: inline-block;
+    margin: 0;
+    line-height: 1em;
+}
+
+.single-header-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    ul {
+        @extend .nobullet;
+    }
+}
+
+.project {
+    position: relative;
+    min-height: 500px;
+    padding: 100px 20px 20px;
+}
+
+.project-header {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1920px;
+    height: 500px;
+    padding-top: 80px;
+    @include clearfix();
+}
+
+.project-content {
+    min-height: 800px;
+    padding: 60px 0;
+    @include clearfix();
+}
+
+.project-content-left {
+    position: relative;
+    float: left;
+    width: 30%;
+}
+
+.project-content-right {
+    position: relative;
+    float: right;
+    width: 70%;
+    & > :first-child {
+        margin-top: 0;
+    }
+}
+
+.project-content-navigation ol {
+    margin: 0;
+    padding: 0;
+}
+
+.stat-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1920px;
+    height: 60px;
+    text-align: center;
+    h2,
+    p {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.copyright {
+    p {
+        margin: 0;
+    }
+    .left,
+    .right {
+        display: table-cell;
+        vertical-align: middle;
+        width: 1920px;
+        height: 60px;
+    }
+    .right {
+        text-align: right;
+    }
+}

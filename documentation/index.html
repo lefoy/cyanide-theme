@@ -1,0 +1,17 @@
+---
+layout: default
+title: Home
+---
+
+{% include header.html back="true" %}
+
+<div class="project-content">
+    <div class="project-content-wrapper l-page-wrapper">
+        <div class="project-content-left"></div>
+        <div class="project-content-right">
+            {% capture documentation %}{% include pages/documentation.md %}{% endcapture %} {{ documentation | markdownify }}
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

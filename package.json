@@ -1,0 +1,13 @@
+{
+  "name": "jekyll-project-template",
+  "repository": "https://github.com/lefoy/jekyll-project-template",
+  "version": "2.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.16",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
+    "matchdep": "^0.3.0"
+  }
+}

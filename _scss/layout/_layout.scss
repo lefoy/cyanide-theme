@@ -49,9 +49,9 @@ body {
     right: 0;
     @include respond-to(767px) {
         position: static;
-        text-align: center;
         margin-bottom: 20px;
         line-height: 1;
+        text-align: center;
     }
     ul {
         @extend .nobullet;
@@ -70,8 +70,8 @@ body {
     width: 1920px;
     height: 500px;
     padding-top: 80px;
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
     @include clearfix();
     @include respond-to(767px) {
         height: auto;
@@ -121,6 +121,7 @@ body {
 
 .project-content-navigation ol {
     margin: 0;
+    margin-left: 20px;
     padding: 0;
 }
 

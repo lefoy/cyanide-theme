@@ -19,3 +19,6 @@ repo            : https://github.com/lefoy/cyanide-theme
 sass:
   sass_dir: _scss
   style: :compressed
+
+gems:
+  - jekyll-mentions

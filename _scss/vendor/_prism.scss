@@ -8,8 +8,8 @@
 code,
 pre {
     font-family: Consolas, Monaco, "Andale Mono", monospace;
+    font-size: 1rem;
     line-height: 1.5;
-    white-space: pre;
     text-align: left;
     word-spacing: normal;
     word-break: normal;
@@ -21,7 +21,6 @@ pre {
             hyphens: none;
     color: black;
     text-shadow: 0 1px white;
-
     direction: ltr;
         -ms-hyphens: none;
 }

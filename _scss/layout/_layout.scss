@@ -100,7 +100,7 @@ body {
 
 .project-content-right {
     position: relative;
-    float: right;
+    margin: 0 auto;
     width: 70%;
     @include clearfix();
     @include respond-to(767px) {

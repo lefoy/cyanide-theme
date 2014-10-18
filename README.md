@@ -3,7 +3,7 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-Current version: v1.0.0
+Current version: v1.0.1
 
 ![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
 

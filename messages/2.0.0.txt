@@ -1,0 +1,12 @@
+Cyanide 2.0.0
+===============
+
+* Create custom theme color with the new grunt Cyanide Theme Builder.
+  See http://lefoy.net/cyanide-theme/documentation/ for more information.
+
+* Add travis-ci support
+
+Thanks for downloading Cyanide Theme!
+Feel free to open an issue on Github if you have any problem with the theme.
+
+https://github.com/lefoy/cyanide-theme

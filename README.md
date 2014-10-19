@@ -3,7 +3,9 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-Current version: v1.0.1
+Current version: v2.0.0
+
+**NEW 2.0.0: [Cyanide Theme Builder](#cyanide-theme-builder)**
 
 ![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
 
@@ -149,6 +151,18 @@ You can change the UI font with these settings:
 "monaco_ui": true // Monaco UI font
 "inconsolata_ui": true // Inconsolata UI font
 ```
+
+## Cyanide Theme Builder
+
+*You must install the Cyanide theme manually if you want to use the Cyanide Theme Builder.*
+
+You can create your own custom Cyanide theme with the theme builder. First, you need to have [grunt](http://gruntjs.com/) installed on your computer. After you have installed grunt, go to your local Cyanide theme folder and run this command:
+
+```
+npm install
+```
+
+Now that you have everything installed, you can edit the `colors.json` file to add your own custom color. After you saved the file, run the `grunt build` command and your theme will be generated. You can now update your Sublime Text settings to use your new theme.
 
 ## Known issues
 

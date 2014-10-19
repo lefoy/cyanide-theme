@@ -3,6 +3,8 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
+**NEW: [Cyanide Theme Builder](https://github.com/lefoy/cyanide-theme#cyanide-theme-builder)**
+
 ![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
 
 ![Acid Theme Screenshot](http://i.imgur.com/snmvuB4.png)
@@ -16,7 +18,7 @@ Installation
 
 Install the theme with the command palette and update your `Settings - User` file.
 
-````javascript
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
 "theme": "Cyanide.sublime-theme"
 ```
@@ -25,14 +27,14 @@ Install the theme with the command palette and update your `Settings - User` fil
 
 Clone the theme inside your packages folder. Be sure that the name of the folder is `Theme - Cyanide`.
 
-````
+```
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
 ```
 
 Update your `Settings - User` file to activate the theme.
 
-````javascript
+```javascript
 "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
 "theme": "Cyanide.sublime-theme"
 ```
@@ -40,50 +42,87 @@ Update your `Settings - User` file to activate the theme.
 Themes
 ------------------------------------------------------------------------
 
-### Acid Theme
+### Acid theme
 
-![Acid Screenshot](http://i.imgur.com/cWWNpx5.png)
+![Acid screenshot](http://i.imgur.com/GbB80Aj.png)
 
-````javascript
+```javascript
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
 "theme": "Cyanide - Acid.sublime-theme"
 ```
 
-### Golden Theme
+### Alert theme
 
-![Golden Screenshot](http://i.imgur.com/tEFHHwE.png)
+![Alert screenshot](http://i.imgur.com/fSXNPYH.png)
 
-````javascript
-"color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
-"theme": " Cyanide - Golden.sublime-theme"
+```javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Alert.tmTheme",
+"theme": "Cyanide - Alert.sublime-theme"
 ```
 
-### Purple Theme
+### Golden theme
 
-![Purple Screenshot](http://i.imgur.com/Phy65L5.png)
+![Golden screenshot](http://i.imgur.com/XpNt7rM.png)
 
-````javascript
+```javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
+"theme": "Cyanide - Golden.sublime-theme"
+```
+
+### Love theme
+
+![Love screenshot](http://i.imgur.com/cJPqBtT.png)
+
+```javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Love.tmTheme",
+"theme": "Cyanide - Love.sublime-theme"
+```
+
+### Mint theme
+
+![Mint screenshot](http://i.imgur.com/9PkgNGu.png)
+
+```javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Mint.tmTheme",
+"theme": "Cyanide - Mint.sublime-theme"
+```
+
+### Purple theme
+
+![Purple screenshot](http://i.imgur.com/YT1QGvH.png)
+
+```javascript
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
 "theme": "Cyanide - Purple.sublime-theme"
 ```
 
-### Salmon Theme
+### Salmon theme
 
-![Salmon Screenshot](http://i.imgur.com/v98RZaU.png)
+![Salmon screenshot](http://i.imgur.com/1SO5oms.png)
 
-````javascript
+```javascript
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
 "theme": "Cyanide - Salmon.sublime-theme"
 ```
 
-### Wood Theme
+### Sky theme
 
-![Wood Screenshot](http://i.imgur.com/10nS4n4.png)
+![Sky screenshot](http://i.imgur.com/L8egKdc.png)
 
-````javascript
+```javascript
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Sky.tmTheme",
+"theme": "Cyanide - Sky.sublime-theme"
+```
+
+### Wood theme
+
+![Wood screenshot](http://i.imgur.com/zTc44p7.png)
+
+```javascript
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
 "theme": "Cyanide - Wood.sublime-theme"
 ```
+
 
 Settings
 ------------------------------------------------------------------------
@@ -163,6 +202,18 @@ You can change the UI font with these settings:
 "monaco_ui": true // Monaco UI font
 "inconsolata_ui": true // Inconsolata UI font
 ```
+
+## Cyanide Theme Builder
+
+*You must install the Cyanide theme manually if you want to use the Cyanide Theme Builder.*
+
+You can create your own custom Cyanide theme with the theme builder. First, you need to have [grunt](http://gruntjs.com/) installed on your computer. After you have installed grunt, go to your local Cyanide theme folder and run this command:
+
+```javascript
+npm install
+```
+
+Now that you have everything installed, you can edit the `colors.json` file to add your own custom color. After you saved the file, run the `grunt build` command and your theme will be generated. You can now update your Sublime Text settings to use your new theme.
 
 ## Known issues
 

@@ -1095,7 +1095,7 @@
     {
         "class": "sidebar_container",
         "settings": ["contrasted_sidebar"],
-        "layer0.tint": [20,20,20]
+        "layer0.tint": [18,18,18]
     },
     {
         "class": "tree_row",
@@ -1108,12 +1108,12 @@
     {
         "class": "tabset_control",
         "settings": ["contrasted_tabs"],
-        "layer0.tint": [20,20,20]
+        "layer0.tint": [18,18,18]
     },
     {
         "class": "tab_control",
         "settings": ["contrasted_tabs"],
-        "layer0.tint": [20,20,20]
+        "layer0.tint": [18,18,18]
     },
     {
         "class": "tab_control",

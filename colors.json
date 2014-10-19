@@ -1,0 +1,34 @@
+{
+  "colors": [
+    {
+      "name": "default",
+      "hex": "64b2db",
+      "rgb": "100,178,219"
+    },
+    {
+      "name": "Acid",
+      "hex": "b6db51",
+      "rgb": "182,219,81"
+    },
+    {
+      "name": "Golden",
+      "hex": "FFBF3B",
+      "rgb": "255,191,59"
+    },
+    {
+      "name": "Purple",
+      "hex": "D952AA",
+      "rgb": "217,82,170"
+    },
+    {
+      "name": "Salmon",
+      "hex": "FF786D",
+      "rgb": "255,120,109"
+    },
+    {
+      "name": "Wood",
+      "hex": "9C684F",
+      "rgb": "156,104,79"
+    }
+  ]
+}

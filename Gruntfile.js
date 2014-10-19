@@ -124,9 +124,13 @@ module.exports = function(grunt) {
         grunt.task.run('clean');
 
         for (var i = 0, l = colorsJSON.colors.length; i < l; i++) {
+            var colors = colorsJSON.colors[i].name + ':' +
+                colorsJSON.colors[i].rgb + ':' +
+                colorsJSON.colors[i].hex;
+
             grunt.task.run([
                 'setName:' + colorsJSON.colors[i].name,
-                'setColors:' + colorsJSON.colors[i].name + ':' + colorsJSON.colors[i].rgb + ':' + colorsJSON.colors[i].hex,
+                'setColors:' + colors,
                 'copy',
                 'replace'
             ]);
@@ -163,16 +167,20 @@ module.exports = function(grunt) {
     // Set theme color
     grunt.registerTask('setColors', 'Set RGB color', function(name, rgb, hex) {
 
-        var replacements = [{
-            from: '{{name}}',
-            to: name
-        }, {
-            from: '{{rgb}}',
-            to: rgb
-        }, {
-            from: '{{hex}}',
-            to: hex
-        }];
+        var widgetName = (name === 'default' ? 'Widget - Cyanide' : 'Widget - Cyanide - ' + name),
+            replacements = [{
+                from: '{{widgetName}}',
+                to: widgetName
+            }, {
+                from: '{{name}}',
+                to: name
+            }, {
+                from: '{{rgb}}',
+                to: rgb
+            }, {
+                from: '{{hex}}',
+                to: hex
+            }];
 
         grunt.config.set('replace.themes.replacements', replacements);
     });

@@ -3,9 +3,7 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-Current version: v2.0.0
-
-**NEW 2.0.0: [Cyanide Theme Builder](https://github.com/lefoy/cyanide-theme#cyanide-theme-builder)**
+**NEW: [Cyanide Theme Builder](https://github.com/lefoy/cyanide-theme#cyanide-theme-builder)**
 
 ![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
 

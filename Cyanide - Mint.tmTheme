@@ -9,9 +9,9 @@
     //
 
     //
-    //  Salmon Theme
-    //  Custom color (rgb): 255,120,109
-    //  Custom color (hex): ff786d
+    //  Mint Theme
+    //  Custom color (rgb): 183,199,117
+    //  Custom color (hex): b7c775
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>
@@ -90,7 +90,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -116,7 +116,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -153,7 +153,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -166,7 +166,7 @@
                     <key>background</key>
                     <string>#222222</string>
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -236,7 +236,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -247,7 +247,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -258,7 +258,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -269,7 +269,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>
@@ -280,7 +280,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#ff786d</string>
+                    <string>#b7c775</string>
                 </dict>
             </dict>
             <dict>

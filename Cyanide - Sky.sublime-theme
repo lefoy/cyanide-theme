@@ -11,9 +11,9 @@
     //
 
     //
-    //  Golden Theme
-    //  Custom color (rgb): 255,191,59
-    //  Custom color (hex): ffbf3b
+    //  Sky Theme
+    //  Custom color (rgb): 147,214,214
+    //  Custom color (hex): 93d6d6
     //
 
     // Default button state
@@ -234,14 +234,14 @@
     {
         "class": "auto_complete_label",
         "fg": [210,210,210],
-        "match_fg": [255,191,59],
+        "match_fg": [147,214,214],
         "selected_fg": [255,255,255],
         "selected_match_fg": [255,255,255]
     },
     {
         "class": "table_row",
         "layer0.texture": "",
-        "layer0.tint":[255,191,59],
+        "layer0.tint":[147,214,214],
         "layer0.opacity": 0,
         "layer0.inner_margin": [3,1]
     },
@@ -308,12 +308,12 @@
         "class": "quick_panel_row",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
     },
     {
         "class": "quick_panel_label",
         "fg": [240,240,240],
-        "match_fg": [255,191,59],
+        "match_fg": [147,214,214],
         "selected_fg": [255,255,255],
         "selected_match_fg": [255,255,255]
     },
@@ -344,7 +344,7 @@
         "class": "mini_quick_panel_row",
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
     },
 
     //
@@ -464,7 +464,7 @@
         "settings": ["overlay_scroll_bars"],
         "attributes": ["dark"],
         "layer0.texture": "",
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
 
     },
 
@@ -474,7 +474,7 @@
         "settings": ["overlay_scroll_bars"],
         "attributes": ["horizontal","dark"],
         "layer0.texture": "",
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
     },
 
     //
@@ -594,7 +594,7 @@
         "attributes": ["dirty"],
         "layer0.texture": "Theme - Cyanide/Cyanide/circle.png",
         "layer0.opacity": 1,
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
     },
     {
         "class": "close_button",
@@ -646,14 +646,14 @@
         "class": "disclosure_button_control",
         "content_margin": [8,8],
         "layer0.texture": "Theme - Cyanide/Cyanide/folder-closed.png",
-        "layer0.tint": [255,191,59],
+        "layer0.tint": [147,214,214],
         "layer0.opacity": 1,
         "layer0.inner_margin": 0
     },
     {
         "class": "disclosure_button_control",
         "parents": [{"class": "tree_row","attributes": ["hover"]}],
-        "layer0.tint":[255,191,59]
+        "layer0.tint":[147,214,214]
     },
     {
         "class": "disclosure_button_control",
@@ -725,7 +725,7 @@
         "class": "tab_close_button",
         "parents": [{"class": "tab_control","attributes": ["hover"]}],
         "layer0.opacity": 1,
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
 
     },
     {
@@ -739,7 +739,7 @@
         "class": "tab_close_button",
         "parents": [{"class": "tab_control","attributes": ["dirty"]}],
         "layer0.texture": "Theme - Cyanide/Cyanide/circle.png",
-        "layer0.tint": [255,191,59],
+        "layer0.tint": [147,214,214],
         "layer0.opacity": 1
     },
     {
@@ -1188,7 +1188,7 @@
         "settings": ["contrasted_quick_panel"],
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
     },
     // END Contrasted quick panel setting
 
@@ -1213,7 +1213,7 @@
         "settings": ["contrasted_light_quick_panel"],
         "attributes": ["selected"],
         "layer0.texture": "",
-        "layer0.tint": [255,191,59]
+        "layer0.tint": [147,214,214]
     },
     // END Contrasted light quick panel setting
 

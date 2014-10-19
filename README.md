@@ -38,40 +38,69 @@ Update your `Settings - User` file to activate the theme.
 Themes
 ------------------------------------------------------------------------
 
-### Acid Theme
+### Acid theme
 
-![Acid Screenshot](http://i.imgur.com/cWWNpx5.png)
+![Acid screenshot](http://i.imgur.com/GbB80Aj.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
     "theme": "Cyanide - Acid.sublime-theme"
 
-### Golden Theme
+### Alert theme
 
-![Golden Screenshot](http://i.imgur.com/tEFHHwE.png)
+![Alert screenshot](http://i.imgur.com/fSXNPYH.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Alert.tmTheme",
+    "theme": "Cyanide - Alert.sublime-theme"
+
+### Golden theme
+
+![Golden screenshot](http://i.imgur.com/XpNt7rM.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
-    "theme": " Cyanide - Golden.sublime-theme"
+    "theme": "Cyanide - Golden.sublime-theme"
 
-### Purple Theme
+### Love theme
 
-![Purple Screenshot](http://i.imgur.com/Phy65L5.png)
+![Love screenshot](http://i.imgur.com/cJPqBtT.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Love.tmTheme",
+    "theme": "Cyanide - Love.sublime-theme"
+
+### Mint theme
+
+![Mint screenshot](http://i.imgur.com/9PkgNGu.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Mint.tmTheme",
+    "theme": "Cyanide - Mint.sublime-theme"
+
+### Purple theme
+
+![Purple screenshot](http://i.imgur.com/YT1QGvH.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
     "theme": "Cyanide - Purple.sublime-theme"
 
-### Salmon Theme
+### Salmon theme
 
-![Salmon Screenshot](http://i.imgur.com/v98RZaU.png)
+![Salmon screenshot](http://i.imgur.com/1SO5oms.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
     "theme": "Cyanide - Salmon.sublime-theme"
 
-### Wood Theme
+### Sky theme
 
-![Wood Screenshot](http://i.imgur.com/10nS4n4.png)
+![Sky screenshot](http://i.imgur.com/L8egKdc.png)
+
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Sky.tmTheme",
+    "theme": "Cyanide - Sky.sublime-theme"
+
+### Wood theme
+
+![Wood screenshot](http://i.imgur.com/zTc44p7.png)
 
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
     "theme": "Cyanide - Wood.sublime-theme"
+
 
 Settings
 ------------------------------------------------------------------------

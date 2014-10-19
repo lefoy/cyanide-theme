@@ -11,7 +11,7 @@
     //
     //  Wood Theme
     //  Custom color (rgb): 156,104,79
-    //  Custom color (hex): 9C684F
+    //  Custom color (hex): 9c684f
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>
@@ -90,7 +90,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -116,7 +116,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -153,7 +153,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -166,7 +166,7 @@
                     <key>background</key>
                     <string>#222222</string>
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -236,7 +236,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -247,7 +247,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -258,7 +258,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -269,7 +269,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>
@@ -280,7 +280,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#9C684F</string>
+                    <string>#9c684f</string>
                 </dict>
             </dict>
             <dict>

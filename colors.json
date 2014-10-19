@@ -11,23 +11,43 @@
       "rgb": "182,219,81"
     },
     {
+      "name": "Alert",
+      "hex": "fa2f00",
+      "rgb": "250,47,0"
+    },
+    {
       "name": "Golden",
-      "hex": "FFBF3B",
+      "hex": "ffbf3b",
       "rgb": "255,191,59"
     },
     {
+      "name": "Love",
+      "hex": "f1416b",
+      "rgb": "214,65,107"
+    },
+    {
+      "name": "Mint",
+      "hex": "b7c775",
+      "rgb": "183,199,117"
+    },
+    {
       "name": "Purple",
-      "hex": "D952AA",
+      "hex": "d952aa",
       "rgb": "217,82,170"
     },
     {
       "name": "Salmon",
-      "hex": "FF786D",
+      "hex": "ff786d",
       "rgb": "255,120,109"
     },
     {
+      "name": "Sky",
+      "hex": "93d6d6",
+      "rgb": "147,214,214"
+    },
+    {
       "name": "Wood",
-      "hex": "9C684F",
+      "hex": "9c684f",
       "rgb": "156,104,79"
     }
   ]

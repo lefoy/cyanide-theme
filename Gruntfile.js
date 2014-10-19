@@ -38,7 +38,9 @@ module.exports = function(grunt) {
         // Clean task
         clean: [
             '*.sublime-theme',
-            '*.tmTheme'
+            '*.tmTheme',
+            'Cyanide/*.stTheme',
+            'Cyanide/*.sublime-settings'
         ],
 
         // Copy task
@@ -65,20 +67,36 @@ module.exports = function(grunt) {
                         return src.replace('template', filename).replace('hidden-', '');
                     }
                 }]
+            },
+            widgets: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    cwd: 'templates',
+                    src: [
+                        'template.sublime-settings',
+                        'template.stTheme'
+                    ],
+                    rename: function(dest, src) {
+                        var filename,
+                            name = grunt.config.get('name');
+
+                        if (name === 'default') {
+                            filename = 'Cyanide/Widget - Cyanide';
+                        } else {
+                            filename = 'Cyanide/Widget - Cyanide - ' + grunt.config.get('name');
+                        }
+
+                        return src.replace('template', filename).replace('hidden-', '');
+                    }
+                }]
             }
         },
 
         // Replace task
         replace: {
-            sublimeTheme: {
-                src: 'Cyanide - Acid.sublime-theme',
-                overwrite: true,
-                replacements: []
-            },
-            tmTheme: {
-                src: 'Cyanide - Acid.tmTheme',
-                overwrite: true,
-                replacements: []
+            themes: {
+                overwrite: true
             }
         }
 
@@ -119,17 +137,26 @@ module.exports = function(grunt) {
     // Set theme name
     grunt.registerTask('setName', 'Set theme name', function(name) {
 
+        if (name === 'default') {
+            var src = [
+                'Cyanide.sublime-theme',
+                'Cyanide.tmTheme',
+                'Cyanide/Widget - Cyanide.stTheme',
+                'Cyanide/Widget - Cyanide.sublime-settings'
+            ];
+        } else {
+            var src = [
+                'Cyanide - ' + name + '.sublime-theme',
+                'Cyanide - ' + name + '.tmTheme',
+                'Cyanide/Widget - Cyanide - ' + name + '.stTheme',
+                'Cyanide/Widget - Cyanide - ' + name + '.sublime-settings'
+            ];
+        }
+
         grunt.log.subhead('Generating ' + name + ' theme...');
 
         grunt.config.set('name', name);
-
-        if (name === 'default') {
-            grunt.config.set('replace.sublimeTheme.src', 'Cyanide.sublime-theme');
-            grunt.config.set('replace.tmTheme.src', 'Cyanide.tmTheme');
-        } else {
-            grunt.config.set('replace.sublimeTheme.src', 'Cyanide - ' + name + '.sublime-theme');
-            grunt.config.set('replace.tmTheme.src', 'Cyanide - ' + name + '.tmTheme');
-        }
+        grunt.config.set('replace.themes.src', src);
 
     });
 
@@ -147,8 +174,7 @@ module.exports = function(grunt) {
             to: hex
         }];
 
-        grunt.config.set('replace.sublimeTheme.replacements', replacements);
-        grunt.config.set('replace.tmTheme.replacements', replacements);
+        grunt.config.set('replace.themes.replacements', replacements);
     });
 
     // Load grunt config

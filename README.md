@@ -191,6 +191,8 @@ npm install
 
 Now that you have everything installed, you can edit the `colors.json` file to add your own custom color. After you saved the file, run the `grunt build` command and your theme will be generated. You can now update your Sublime Text settings to use your new theme.
 
+*More information about the theme builder will be added soon. Meanwhile, you can open an issue on GitHub and I will be happy to help you.*
+
 ## Known issues
 
 ### Ubuntu Mono UI cuts off the tabs font

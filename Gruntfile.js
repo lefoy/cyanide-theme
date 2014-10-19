@@ -116,7 +116,7 @@ module.exports = function(grunt) {
         var colorsJSON = grunt.config.get('colors'),
             message = '\nCyanide Theme Builder' + '\n' + '\n' +
             '----------------------------------------------------------' + '\n' +
-            'Current version: 1.1.0' + '\n' +
+            'Current version: ' + grunt.config.get('pkg.version') + '\n' +
             'Github repository: https://github.com/lefoy/cyanide-theme' + '\n' +
             '----------------------------------------------------------';
 

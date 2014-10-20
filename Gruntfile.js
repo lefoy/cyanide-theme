@@ -1,17 +1,20 @@
 'use strict';
 
 module.exports = function(grunt) {
-
     // Hide 'Running task' text from grunt output
     grunt.log.header = function() {};
 
     // Initial config
     var config = {
-
         // Read JSON files
         pkg: grunt.file.readJSON('package.json'),
         colors: grunt.file.readJSON('colors.json')
+    };
 
+    var renamer = function(dest, src, prefix) {
+        var name = grunt.config.get('name'),
+        filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
+        return src.replace('template', filename).replace('hidden-', '');
     };
 
     // Tasks options
@@ -55,16 +58,7 @@ module.exports = function(grunt) {
                         'template.hidden-tmTheme'
                     ],
                     rename: function(dest, src) {
-                        var filename,
-                            name = grunt.config.get('name');
-
-                        if (name === 'default') {
-                            filename = 'Cyanide';
-                        } else {
-                            filename = 'Cyanide - ' + grunt.config.get('name');
-                        }
-
-                        return src.replace('template', filename).replace('hidden-', '');
+                        return renamer(dest, src, '');
                     }
                 }]
             },
@@ -78,16 +72,7 @@ module.exports = function(grunt) {
                         'template.stTheme'
                     ],
                     rename: function(dest, src) {
-                        var filename,
-                            name = grunt.config.get('name');
-
-                        if (name === 'default') {
-                            filename = 'Cyanide/Widget - Cyanide';
-                        } else {
-                            filename = 'Cyanide/Widget - Cyanide - ' + grunt.config.get('name');
-                        }
-
-                        return src.replace('template', filename).replace('hidden-', '');
+                        return renamer(dest, src, 'Cyanide/Widget - ');
                     }
                 }]
             }

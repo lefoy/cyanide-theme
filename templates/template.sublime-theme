@@ -711,14 +711,14 @@
         {
             "keyframes":
             [
-                "cyanide-theme/Cyanide/spinner7.png",
-                "cyanide-theme/Cyanide/spinner6.png",
-                "cyanide-theme/Cyanide/spinner5.png",
-                "cyanide-theme/Cyanide/spinner4.png",
-                "cyanide-theme/Cyanide/spinner3.png",
-                "cyanide-theme/Cyanide/spinner2.png",
-                "cyanide-theme/Cyanide/spinner1.png",
-                "cyanide-theme/Cyanide/spinner.png",
+                "Theme - Cyanide/Cyanide/spinner7.png",
+                "Theme - Cyanide/Cyanide/spinner6.png",
+                "Theme - Cyanide/Cyanide/spinner5.png",
+                "Theme - Cyanide/Cyanide/spinner4.png",
+                "Theme - Cyanide/Cyanide/spinner3.png",
+                "Theme - Cyanide/Cyanide/spinner2.png",
+                "Theme - Cyanide/Cyanide/spinner1.png",
+                "Theme - Cyanide/Cyanide/spinner.png",
             ],
             "loop": true,
             "frame_time": 0.075

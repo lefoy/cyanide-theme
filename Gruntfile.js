@@ -8,14 +8,18 @@ module.exports = function(grunt) {
     var config = {
         // Read JSON files
         pkg: grunt.file.readJSON('package.json'),
-        colors: grunt.file.readJSON('colors.json')
+        colors: grunt.file.readJSON('colors.json'),
+        languages: grunt.file.readJSON('languages.json'),
     };
 
-    var renamer = function(dest, src, prefix) {
-        var name = grunt.config.get('name'),
-        filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
-        return src.replace('template', filename).replace('hidden-', '');
-    };
+    var renameTheme = function(src, prefix) {
+            var name = grunt.config.get('name'),
+            filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
+            return src.replace('template', filename).replace('hidden-', '');
+        },
+        renameLanguage = function(language) {
+            return 'icon_' + language + '.tmPreferences';
+        }
 
     // Tasks options
     var tasks = {
@@ -42,46 +46,68 @@ module.exports = function(grunt) {
         clean: [
             '*.sublime-theme',
             '*.tmTheme',
+
             'Cyanide/*.stTheme',
-            'Cyanide/*.sublime-settings'
+            'Cyanide/*.sublime-settings',
+
+            'icon_*.tmPreferences'
         ],
 
         // Copy task
         copy: {
-            theme: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    cwd: 'templates',
-                    src: [
-                        'template.sublime-theme',
-                        'template.hidden-tmTheme'
-                    ],
-                    rename: function(dest, src) {
-                        return renamer(dest, src, '');
+            themes: {
+                files: [
+                    // theme:
+                    {
+                        expand: true,
+                        flatten: true,
+                        cwd: 'templates',
+                        src: [
+                            'template.sublime-theme',
+                            'template.hidden-tmTheme'
+                        ],
+                        rename: function(dest, src) {
+                            return renameTheme(src, '');
+                        }
+                    },
+                    // widget:
+                    {
+                        expand: true,
+                        flatten: true,
+                        cwd: 'templates',
+                        src: [
+                            'template.sublime-settings',
+                            'template.stTheme'
+                        ],
+                        rename: function(dest, src) {
+                            return renameTheme(src, 'Cyanide/Widget - ');
+                        }
                     }
-                }]
+                ]
             },
-            widgets: {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    cwd: 'templates',
-                    src: [
-                        'template.sublime-settings',
-                        'template.stTheme'
-                    ],
-                    rename: function(dest, src) {
-                        return renamer(dest, src, 'Cyanide/Widget - ');
-                    }
-                }]
-            }
         },
 
         // Replace task
         replace: {
             themes: {
                 overwrite: true
+            },
+            languages: {
+                src: 'templates/icon.tmPreferences',
+                replacements: [
+                    {
+                        from: '{{icon}}',
+                        to: function(matchedWord) {
+                            return grunt.config.get('icon')
+                        }
+                    },
+                    {
+                        from: '{{scopes}}',
+                        to: function(matchedWord) {
+                            return grunt.config.get('scopes')
+                        }
+                    }
+                ]
             }
         }
 
@@ -97,27 +123,71 @@ module.exports = function(grunt) {
 
     // Validate task
     grunt.registerTask('build', 'Build custom themes', function() {
-
-        var colorsJSON = grunt.config.get('colors'),
-            message = '\nCyanide Theme Builder' + '\n' + '\n' +
+        var message = '\nCyanide Theme Builder' + '\n' + '\n' +
             '----------------------------------------------------------' + '\n' +
             'Current version: ' + grunt.config.get('pkg.version') + '\n' +
             'Github repository: https://github.com/lefoy/cyanide-theme' + '\n' +
-            '----------------------------------------------------------';
+            '----------------------------------------------------------' + '\n';
 
-        grunt.log.subhead(message);
+        grunt.log.subhead(message)
         grunt.task.run('clean');
 
-        for (var i = 0, l = colorsJSON.colors.length; i < l; i++) {
-            var colors = colorsJSON.colors[i].name + ':' +
-                colorsJSON.colors[i].rgb + ':' +
-                colorsJSON.colors[i].hex;
+        grunt.task.run('themes');
+        grunt.task.run('languages')
+    });
+
+    // Languages task:
+    grunt.registerTask('languages', 'Build language files', function() {
+        var message =
+            '----------------------------------------------------------'
+             + '\n' + 'Building icon language files' + '\n' +
+            '----------------------------------------------------------';
+        grunt.log.subhead(message);
+
+        var languagesJSON = grunt.config.get('languages').languages;
+
+        for (var i = 0, l = languagesJSON.length; i < l; i++) {
+            var icon = languagesJSON[i].icon,
+                scopes = languagesJSON[i].scopes.join(',');
+
+            grunt.log.subhead('Generating ' + icon + ' icon-preference-file...');
 
             grunt.task.run([
-                'setName:' + colorsJSON.colors[i].name,
+                'setConfig:icon:' + icon,
+                'setConfig:scopes:' + scopes,
+                'setConfig:replace.languages.dest:' + renameLanguage( icon ),
+                'replace:languages'
+            ]);
+        }
+    });
+
+    grunt.registerTask('setConfig', 'Set config property', function(key, value) {
+
+        grunt.config.set(key, value);
+
+    });
+
+    // Themes task:
+    grunt.registerTask('themes', 'Build custom themes', function() {
+
+        var message =
+            '----------------------------------------------------------'
+             + '\n' + 'Building theme files' + '\n' +
+            '----------------------------------------------------------';
+        grunt.log.subhead(message);
+
+        var colorsJSON = grunt.config.get('colors').colors;
+
+        for (var i = 0, l = colorsJSON.length; i < l; i++) {
+            var colors = colorsJSON[i].name + ':' +
+                colorsJSON[i].rgb + ':' +
+                colorsJSON[i].hex;
+
+            grunt.task.run([
+                'setName:' + colorsJSON[i].name,
                 'setColors:' + colors,
-                'copy',
-                'replace'
+                'copy:themes',
+                'replace:themes'
             ]);
         }
 

@@ -1,0 +1,27 @@
+{
+  "languages": [
+    {"icon": "c#", "scopes": ["source.cs"]},
+    {"icon": "c", "scopes": ["source.c"]},
+    {"icon": "c++", "scopes": ["source.c++", "source.objc++"]},
+    {"icon": "coffescript", "scopes": ["source.coffee"]},
+    {"icon": "css", "scopes": ["source.css"]},
+    {"icon": "go", "scopes": ["source.go"]},
+    {"icon": "html", "scopes": ["text.html", "text.slim"]},
+    {"icon": "image", "scopes": ["text.xml.svg", "source.svg", "source.psd", "source.ai"]},
+    {"icon": "jade", "scopes": ["source.jade"]},
+    {"icon": "java", "scopes": ["source.java"]},
+    {"icon": "js", "scopes": ["source.js"]},
+    {"icon": "settings", "scopes": ["source.json"]},
+    {"icon": "markdown", "scopes": ["text.html.markdown", "text.html.markdown.multimarkdown"]},
+    {"icon": "mustache", "scopes": ["text.html.mustache", "text.html.hbs", "text.html.hgn"]},
+    {"icon": "php", "scopes": ["source.php"]},
+    {"icon": "python", "scopes": ["source.python"]},
+    {"icon": "rails", "scopes": ["text.html.ruby"]},
+    {"icon": "ruby", "scopes": ["source.ruby", "source.haml"]},
+    {"icon": "rust", "scopes": ["source.rust"]},
+    {"icon": "less", "scopes": ["source.less", "source.css.less"]},
+    {"icon": "sass", "scopes": ["source.sass", "source.css.sass"]},
+    {"icon": "scss", "scopes": ["source.scss", "source.css.scss"]},
+    {"icon": "stylus", "scopes": ["source.stylus", "source.styl"]}
+  ]
+}

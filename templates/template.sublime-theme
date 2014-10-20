@@ -679,6 +679,55 @@
     },
 
     //
+    // SIDEBAR - ICONS (build 3062+)
+    //
+    {
+        "class": "icon_file_type",
+        // layer0.texture is filled in by code with the relevant icon name
+        "layer0.tint": [255, 255, 255],
+        "layer0.opacity": 1,
+        "content_margin": [8, 8]
+    },
+    {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row","attributes": ["hover"]}],
+        "layer0.opacity": 1
+    },
+    {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "layer0.opacity": 1
+    },
+    {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row","attributes": ["selected", "hover"]}],
+        "layer0.opacity": 1
+    },
+
+    // Icon folder loading
+    {
+        "class": "icon_folder_loading",
+        "layer0.texture":
+        {
+            "keyframes":
+            [
+                "cyanide-theme/Cyanide/spinner7.png",
+                "cyanide-theme/Cyanide/spinner6.png",
+                "cyanide-theme/Cyanide/spinner5.png",
+                "cyanide-theme/Cyanide/spinner4.png",
+                "cyanide-theme/Cyanide/spinner3.png",
+                "cyanide-theme/Cyanide/spinner2.png",
+                "cyanide-theme/Cyanide/spinner1.png",
+                "cyanide-theme/Cyanide/spinner.png",
+            ],
+            "loop": true,
+            "frame_time": 0.075
+        },
+        "layer0.opacity": 1.0,
+        "content_margin": [8, 8]
+    },
+
+    //
     // STATUS BAR
     //
 

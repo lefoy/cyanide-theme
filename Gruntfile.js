@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             return src.replace('template', filename).replace('hidden-', '');
         },
         renameLanguage = function(language) {
-            return 'icon_' + language + '.tmPreferences';
+            return 'Cyanide/file_types/icon_' + language + '.tmPreferences';
         }
 
     // Tasks options
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             'Cyanide/*.stTheme',
             'Cyanide/*.sublime-settings',
 
-            'icon_*.tmPreferences'
+            'Cyanide/file_types/icon_*.tmPreferences'
         ],
 
         // Copy task

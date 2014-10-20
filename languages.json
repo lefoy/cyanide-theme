@@ -10,6 +10,7 @@
     {"icon": "image", "scopes": ["text.xml.svg", "source.svg", "source.psd", "source.ai"]},
     {"icon": "jade", "scopes": ["source.jade"]},
     {"icon": "java", "scopes": ["source.java"]},
+    {"icon": "groovy", "scopes": ["source.groovy"]},
     {"icon": "js", "scopes": ["source.js"]},
     {"icon": "settings", "scopes": ["source.json"]},
     {"icon": "markdown", "scopes": ["text.html.markdown", "text.html.markdown.multimarkdown"]},

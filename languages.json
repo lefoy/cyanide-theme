@@ -1,5 +1,6 @@
 {
   "languages": [
+    {"icon": "actionscript", "scopes": ["source.actionscript"]},
     {"icon": "c#", "scopes": ["source.cs"]},
     {"icon": "c", "scopes": ["source.c"]},
     {"icon": "c++", "scopes": ["source.c++", "source.objc++"]},
@@ -16,14 +17,22 @@
     {"icon": "groovy", "scopes": ["source.groovy"]},
     {"icon": "scala", "scopes": ["source.scala"]},
     {"icon": "gradle", "scopes": ["source.gradle"]},
+    {"icon": "gruntfile", "scopes": ["source.gruntfile"]},
+    {"icon": "gulpfile", "scopes": ["source.gulpfile"]},
+    {"icon": "npm", "scopes": ["source.json.npm"]},
+    {"icon": "bower", "scopes": ["source.json.bower"]},
     {"icon": "js", "scopes": ["source.js"]},
+    {"icon": "lua", "scopes": ["source.lua"]},
+    {"icon": "lisp", "scopes": ["source.lisp"]},
     {"icon": "settings", "scopes": ["source.json"]},
     {"icon": "markdown", "scopes": ["text.html.markdown", "text.html.markdown.multimarkdown"]},
     {"icon": "mustache", "scopes": ["text.html.mustache", "text.html.hbs", "text.html.hgn"]},
+    {"icon": "ocaml", "scopes": ["source.ocaml", "source.camlp4.ocaml", "source.ocamllex", "source.ocamlyacc"]},
     {"icon": "perl", "scopes": ["source.perl"]},
     {"icon": "php", "scopes": ["source.php"]},
     {"icon": "python", "scopes": ["source.python"]},
     {"icon": "puppet", "scopes": ["source.puppet"]},
+    {"icon": "procfile", "scopes": ["source.procfile"]},
     {"icon": "rails", "scopes": ["text.html.ruby"]},
     {"icon": "ruby", "scopes": ["source.ruby", "source.haml"]},
     {"icon": "rust", "scopes": ["source.rust"]},
@@ -32,6 +41,11 @@
     {"icon": "scss", "scopes": ["source.scss", "source.css.scss"]},
     {"icon": "stylus", "scopes": ["source.stylus", "source.styl"]},
     {"icon": "shell", "scopes": ["source.dosbatch", "source.shell"]},
-    {"icon": "yaml", "scopes": ["source.yaml"]}
+    {"icon": "sql", "scopes": ["source.sql"]},
+    {"icon": "tcl", "scopes": ["source.tcl", "text.html.tcl"]},
+    {"icon": "tex", "scopes": ["text.tex", "text.log.latex", "text.bibtex"]},
+    {"icon": "yaml", "scopes": ["source.yaml"]},
+    {"icon": "font", "scopes": ["font"]},
+    {"icon": "license", "scopes": ["license"]}
   ]
 }

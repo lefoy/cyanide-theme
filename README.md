@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master)](https://travis-ci.org/lefoy/cyanide-theme)
+[![Build Status](https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master)](https://travis-ci.org/lefoy/cyanide-theme) [![Bountysource](https://www.bountysource.com/badge/issue?issue_id=5319236)](https://www.bountysource.com/issues/5319236-license-monokai-file-type-icons?utm_source=5319236&utm_medium=shield&utm_campaign=ISSUE_BADGE)
 
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------

@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                 overwrite: true
             },
             languages: {
-                src: 'templates/icon.tmPreferences',
+                src: 'templates/icon.hidden-tmPreferences',
                 replacements: [
                     {
                         from: '{{icon}}',

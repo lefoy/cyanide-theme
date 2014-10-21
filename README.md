@@ -221,7 +221,7 @@ Your new theme is generated. Update the Sublime Text settings to use it.
 
 ![Screenshot - Ubuntu Mono UI cuts off the tabs font](http://i.imgur.com/jdKUPoE.png)
 
-Unfortunatly, this a Sublime Text bug. As a work-around, use the `"small_ui_font": true` setting. If this doesn't fix it, please file a new issue on GitHub.
+Unfortunatly, this is a Sublime Text bug. As a work-around, use the `"small_ui_font": true` setting. If this doesn't fix it, please file a new issue on GitHub.
 
 ## Plugins support
 
@@ -231,7 +231,7 @@ The following Sublime Text plugins are currently supported by Cyanide Theme:
 * [SublimeLinter3](https://github.com/SublimeLinter/SublimeLinter3)
 
 <!--* [PlainTasks](https://sublime.wbond.net/packages/PlainTasks)-->
-<!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->
+<!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->p
 
 Acknowledgements
 ------------------------------------------------------------------------

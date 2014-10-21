@@ -1,6 +1,6 @@
 {
   "name": "cyanide-theme",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-bump": "0.0.16",

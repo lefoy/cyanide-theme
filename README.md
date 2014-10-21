@@ -233,6 +233,6 @@ Credit
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion), [Afterglow](http://yabatadesign.github.io/afterglow-theme/). and [Spacefunk](https://github.com/Twiebie/ST-Spacefunk).
 
-Thanks to [Centril](https://github.com/Centril), [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
+Thanks to [@Centril](https://github.com/Centril), [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
 
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).

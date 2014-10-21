@@ -105,11 +105,21 @@ Themes
 Settings
 ------------------------------------------------------------------------
 
+### Sidebar file type icons
+
+![Sidebar file type icons](http://i.imgur.com/tRszn4V.png)
+
+Sublime Text 3 (build 3065) added sidebar icons and thanks to a great contribution by [Centril](https://github.com/Centril), Cyanide now support them! Just add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+
+```
+"icon_file_type_enable": true
+```
+
 ### Centurion sidebar folder icons
 
 ![Sidebar folder icons](http://i.imgur.com/QVwmrGh.png)
 
-You can change the sidebar folder icons to use the one from the Centurion theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+You can change the sidebar folder icons to use the one from the Centurion theme. Just add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "centurion_folder_icons": true
@@ -119,7 +129,7 @@ You can change the sidebar folder icons to use the one from the Centurion theme.
 
 ![Sidebar folder icons](http://i.imgur.com/Ov5hnv2.png)
 
-You can change the sidebar folder icons to use the one from the Afterglow theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+You can change the sidebar folder icons to use the one from the Afterglow theme. Just add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "afterglow_folder_icons": true
@@ -129,7 +139,7 @@ You can change the sidebar folder icons to use the one from the Afterglow theme.
 
 ![Sidebar folder icons](http://i.imgur.com/Xz2FqEG.png)
 
-You can change the sidebar folder icons to use the one from the Spacefunk theme. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+You can change the sidebar folder icons to use the one from the Spacefunk theme. Just add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "spacefunk_folder_icons": true
@@ -139,7 +149,7 @@ You can change the sidebar folder icons to use the one from the Spacefunk theme.
 
 ![Tabs height](http://i.imgur.com/0NCrXVF.png)
 
-You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+You can change tabs height with `tabs_medium` and `tabs_large` settings. Just add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "tabs_medium": true
@@ -155,7 +165,7 @@ or
 
 ![Contrasted UI](http://i.imgur.com/cfYkL92.png)
 
-You can change the color of the sidebar and tabs to contrast the editor. Just add the setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
+You can change the color of the sidebar and tabs to contrast the editor. Just add this setting inside your setting file `Sublime Text -> Preferences -> Settings - User`.
 
 ```
 "contrasted_sidebar": true,
@@ -223,6 +233,6 @@ Credit
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion), [Afterglow](http://yabatadesign.github.io/afterglow-theme/). and [Spacefunk](https://github.com/Twiebie/ST-Spacefunk).
 
-Thanks to [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
+Thanks to [Centril](https://github.com/Centril), [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
 
 You like this theme? I'd be glad to hear! Contact me on [Twitter](https://twitter.com/louisetiennefoy).

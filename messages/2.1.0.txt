@@ -1,0 +1,10 @@
+Cyanide 2.1.0
+===============
+
+* Add sidebar file icons (Build 3065)
+  --> Add "icon_file_type_enable": true inside your .sublime-settings file to activate icons.
+
+Thanks for downloading Cyanide Theme!
+Feel free to open an issue on Github if you have any problem with the theme.
+
+https://github.com/lefoy/cyanide-theme

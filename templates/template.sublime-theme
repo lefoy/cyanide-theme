@@ -683,6 +683,7 @@
     //
     {
         "class": "icon_file_type",
+        "settings": ["icon_file_type_enable"],
         // layer0.texture is filled in by code with the relevant icon name
         "layer0.tint": [255, 255, 255],
         "layer0.opacity": 1,
@@ -690,16 +691,19 @@
     },
     {
         "class": "icon_file_type",
+        "settings": ["icon_file_type_enable"],
         "parents": [{"class": "tree_row","attributes": ["hover"]}],
         "layer0.opacity": 1
     },
     {
         "class": "icon_file_type",
+        "settings": ["icon_file_type_enable"],
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
         "layer0.opacity": 1
     },
     {
         "class": "icon_file_type",
+        "settings": ["icon_file_type_enable"],
         "parents": [{"class": "tree_row","attributes": ["selected", "hover"]}],
         "layer0.opacity": 1
     },

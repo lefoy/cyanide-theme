@@ -165,7 +165,7 @@ or
 
 ### Contrasted UI
 
-Increased contrast for better legibility. 
+Increased contrast for better legibility.
 
 ```
 "contrasted_sidebar": true,
@@ -243,6 +243,6 @@ Acknowledgements
 
 This theme is based on [Centurion](https://github.com/allanhortle/Centurion), [Afterglow](http://yabatadesign.github.io/afterglow-theme/), [Spacefunk](https://github.com/Twiebie/ST-Spacefunk) and [Seti_UI](https://github.com/ctf0/Seti_ST3).
 
-Thanks to [@Centril](https://github.com/Centril), [@pds2k12](https://github.com/pds2k12), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
+Thanks to [@Centril](https://github.com/Centril), [@pds2k12](https://github.com/pds2k12), [@hraban](https://github.com/hraban), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
 
 Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy](https://twitter.com/louisetiennefoy)).

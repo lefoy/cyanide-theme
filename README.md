@@ -233,11 +233,6 @@ The following Sublime Text plugins are currently supported by Cyanide Theme:
 <!--* [PlainTasks](https://sublime.wbond.net/packages/PlainTasks)-->
 <!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->
 
-## Custom themes
-
-If you want a custom color, please create a new issue on GitHub and I will be happy to create one for you.
-I'm working on a grunt task to create custom color theme from the command line.
-
 Acknowledgements
 ------------------------------------------------------------------------
 

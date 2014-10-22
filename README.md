@@ -231,7 +231,7 @@ The following Sublime Text plugins are currently supported by Cyanide Theme:
 * [SublimeLinter3](https://github.com/SublimeLinter/SublimeLinter3)
 
 <!--* [PlainTasks](https://sublime.wbond.net/packages/PlainTasks)-->
-<!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->p
+<!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->
 
 Acknowledgements
 ------------------------------------------------------------------------

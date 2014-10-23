@@ -1336,7 +1336,27 @@
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row","attributes": ["selected"]}],
         "layer0.texture": "Theme - Cyanide/Cyanide/spacefunk-folder-open.png"
-    }
+    },
     // END Spacefunk folder icons
+
+    // Large scrollbars
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars", "large_scroll_bars"],
+        "layer0.texture": "",
+        "layer0.inner_margin": [0,0],
+        "content_margin": [4,20],
+        "blur": true
+    },
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars", "large_scroll_bars"],
+        "attributes": ["horizontal"],
+        "layer0.texture": "",
+        "layer0.inner_margin": [5,0],
+        "content_margin": [20,4],
+        "blur": true
+    },
+    // END Large scrollbars
 
 ]

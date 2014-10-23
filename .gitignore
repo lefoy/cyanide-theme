@@ -2,3 +2,5 @@
 thumbs.db
 .sublime-grunt.cache
 node_modules/
+*.todo
+*.todone

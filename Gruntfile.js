@@ -1,5 +1,7 @@
 'use strict';
 
+require('colors');
+
 module.exports = function(grunt) {
     // Hide 'Running task' text from grunt output
     grunt.log.header = function() {};
@@ -13,13 +15,25 @@ module.exports = function(grunt) {
     };
 
     var renameTheme = function(src, prefix) {
-            var name = grunt.config.get('name'),
+            var name = grunt.config('theme.name'),
             filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
             return src.replace('template', filename).replace('hidden-', '');
         },
         renameLanguage = function(language) {
             return 'Cyanide/file_types/icon_' + language + '.tmPreferences';
-        }
+        },
+        share = function(key, data) {
+            // tasks can share anything into grunt.config:
+            grunt.registerTask('__taskshare', '', function() {
+                grunt.config(key, data);
+            });
+            grunt.task.run('__taskshare');
+        },
+        header = function(msg, before) {
+            !before || grunt.log.write( '\n' + before.bold.yellow );
+            var d  = grunt.util.repeat(60, '-');
+            grunt.log.subhead( d + '\n' + msg.cyan + '\n' + d );
+        };
 
     // Tasks options
     var tasks = {
@@ -90,23 +104,19 @@ module.exports = function(grunt) {
         // Replace task
         replace: {
             themes: {
-                overwrite: true
+                overwrite: true,
+                replacements: [
+                    {from: '{{name}}',       to: '<%= theme.name %>'},
+                    {from: '{{rgb}}',        to: '<%= theme.rgb %>'},
+                    {from: '{{hex}}',        to: '<%= theme.hex %>'},
+                    {from: '{{widgetName}}', to: '<%= theme.widgetName %>'}
+                ]
             },
-            languages: {
+            icons: {
                 src: 'templates/icon.hidden-tmPreferences',
                 replacements: [
-                    {
-                        from: '{{icon}}',
-                        to: function(matchedWord) {
-                            return grunt.config.get('icon')
-                        }
-                    },
-                    {
-                        from: '{{scopes}}',
-                        to: function(matchedWord) {
-                            return grunt.config.get('scopes')
-                        }
-                    }
+                    {from: '{{icon}}',       to: '<%= icon.icon %>'},
+                    {from: '{{scopes}}',     to: "<%= icon.scopes.join(',') %>"}
                 ]
             }
         }
@@ -118,126 +128,66 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
 
-    // Define grunt tasks
+    // Define grunt tasks:
     grunt.registerTask('default', []);
 
     // Validate task
     grunt.registerTask('build', 'Build custom themes', function() {
-        var message = '\nCyanide Theme Builder' + '\n' + '\n' +
-            '----------------------------------------------------------' + '\n' +
-            'Current version: ' + grunt.config.get('pkg.version') + '\n' +
-            'Github repository: https://github.com/lefoy/cyanide-theme' + '\n' +
-            '----------------------------------------------------------' + '\n';
-
-        grunt.log.subhead(message)
-        grunt.task.run('clean');
-
-        grunt.task.run('themes');
-        grunt.task.run('languages')
+        header( 'Current version: ' + grunt.config('pkg.version') + '\n' +
+                'Github repository: https://github.com/lefoy/cyanide-theme',
+                'Cyanide Theme Builder');
+        grunt.log.writeln();
+        grunt.task.run(['clean', 'themes', 'languages']);
     });
 
     // Languages task:
     grunt.registerTask('languages', 'Build language files', function() {
-        var message =
-            '----------------------------------------------------------'
-             + '\n' + 'Building icon language files' + '\n' +
-            '----------------------------------------------------------';
-        grunt.log.subhead(message);
+        header( 'Building icon language files' );
+        var data = grunt.config('languages');
 
-        var languagesJSON = grunt.config.get('languages').languages;
-
-        for (var i = 0, l = languagesJSON.length; i < l; i++) {
-            var icon = languagesJSON[i].icon,
-                scopes = languagesJSON[i].scopes.join(',');
-
-            grunt.log.subhead('Generating ' + icon + ' icon-preference-file...');
-
-            grunt.task.run([
-                'setConfig:icon:' + icon,
-                'setConfig:scopes:' + scopes,
-                'setConfig:replace.languages.dest:' + renameLanguage( icon ),
-                'replace:languages'
-            ]);
-        }
-    });
-
-    grunt.registerTask('setConfig', 'Set config property', function(key, value) {
-
-        grunt.config.set(key, value);
+        // Generate icon tmPreferences:
+        data.icons.forEach(function(elem) {
+            grunt.log.subhead('Generating ' + elem.icon + ' icon-preference-file...');
+            share('icon', elem);
+            share('replace.languages.dest', renameLanguage( elem.icon ));
+            grunt.task.run('replace:icons');
+        });
 
     });
 
     // Themes task:
     grunt.registerTask('themes', 'Build custom themes', function() {
+        header( 'Building theme files' );
+        grunt.config('colors').colors.forEach(function(elem) {
+            grunt.log.subhead('Generating ' + elem.name + ' theme...');
 
-        var message =
-            '----------------------------------------------------------'
-             + '\n' + 'Building theme files' + '\n' +
-            '----------------------------------------------------------';
-        grunt.log.subhead(message);
+            elem.widgetName = elem.name === 'default'
+                            ? 'Widget - Cyanide'
+                            : 'Widget - Cyanide - ' + elem.name;
 
-        var colorsJSON = grunt.config.get('colors').colors;
+            if (elem.name === 'default') {
+                var src = [
+                    'Cyanide.sublime-theme',
+                    'Cyanide.tmTheme',
+                    'Cyanide/Widget - Cyanide.stTheme',
+                    'Cyanide/Widget - Cyanide.sublime-settings'
+                ];
+            } else {
+                var src = [
+                    'Cyanide - ' + elem.name + '.sublime-theme',
+                    'Cyanide - ' + elem.name + '.tmTheme',
+                    'Cyanide/Widget - Cyanide - ' + elem.name + '.stTheme',
+                    'Cyanide/Widget - Cyanide - ' + elem.name + '.sublime-settings'
+                ];
+            }
 
-        for (var i = 0, l = colorsJSON.length; i < l; i++) {
-            var colors = colorsJSON[i].name + ':' +
-                colorsJSON[i].rgb + ':' +
-                colorsJSON[i].hex;
-
+            share('theme', elem);
+            share('replace.themes.src', src);
             grunt.task.run([
-                'setName:' + colorsJSON[i].name,
-                'setColors:' + colors,
                 'copy:themes',
                 'replace:themes'
             ]);
-        }
-
-    });
-
-    // Set theme name
-    grunt.registerTask('setName', 'Set theme name', function(name) {
-
-        if (name === 'default') {
-            var src = [
-                'Cyanide.sublime-theme',
-                'Cyanide.tmTheme',
-                'Cyanide/Widget - Cyanide.stTheme',
-                'Cyanide/Widget - Cyanide.sublime-settings'
-            ];
-        } else {
-            var src = [
-                'Cyanide - ' + name + '.sublime-theme',
-                'Cyanide - ' + name + '.tmTheme',
-                'Cyanide/Widget - Cyanide - ' + name + '.stTheme',
-                'Cyanide/Widget - Cyanide - ' + name + '.sublime-settings'
-            ];
-        }
-
-        grunt.log.subhead('Generating ' + name + ' theme...');
-
-        grunt.config.set('name', name);
-        grunt.config.set('replace.themes.src', src);
-
-    });
-
-    // Set theme color
-    grunt.registerTask('setColors', 'Set RGB color', function(name, rgb, hex) {
-
-        var widgetName = (name === 'default' ? 'Widget - Cyanide' : 'Widget - Cyanide - ' + name),
-            replacements = [{
-                from: '{{widgetName}}',
-                to: widgetName
-            }, {
-                from: '{{name}}',
-                to: name
-            }, {
-                from: '{{rgb}}',
-                to: rgb
-            }, {
-                from: '{{hex}}',
-                to: hex
-            }];
-
-        grunt.config.set('replace.themes.replacements', replacements);
+        });
     });
 
     // Load grunt config

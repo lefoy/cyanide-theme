@@ -19,11 +19,8 @@ module.exports = function(grunt) {
             filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
             return src.replace('template', filename).replace('hidden-', '');
         },
-        renameLanguage = function(language) {
-            return 'Cyanide/file_types/icon_' + language + '.tmPreferences';
-        },
+        // tasks can share anything into grunt.config:
         share = function(key, data) {
-            // tasks can share anything into grunt.config:
             grunt.registerTask('__taskshare', '', function() {
                 grunt.config(key, data);
             });
@@ -33,11 +30,13 @@ module.exports = function(grunt) {
             !before || grunt.log.write( '\n' + before.bold.yellow );
             var d  = grunt.util.repeat(60, '-');
             grunt.log.subhead( d + '\n' + msg.cyan + '\n' + d );
+        },
+        generating = function(msg) {
+            grunt.log.subhead('Generating ' + msg + '...');
         };
 
     // Tasks options
     var tasks = {
-
         // Bump task
         bump: {
             options: {
@@ -55,7 +54,6 @@ module.exports = function(grunt) {
                 globalReplace: false
             }
         },
-
         // Clean task
         clean: [
             '*.sublime-theme',
@@ -66,7 +64,6 @@ module.exports = function(grunt) {
 
             'Cyanide/file_types/icon_*.tmPreferences'
         ],
-
         // Copy task
         copy: {
             themes: {
@@ -100,7 +97,6 @@ module.exports = function(grunt) {
                 ]
             },
         },
-
         // Replace task
         replace: {
             themes: {
@@ -117,6 +113,19 @@ module.exports = function(grunt) {
                 replacements: [
                     {from: '{{icon}}',       to: '<%= icon.icon %>'},
                     {from: '{{scopes}}',     to: "<%= icon.scopes.join(',') %>"}
+                ]
+            },
+            languages: {
+                src: 'templates/language.hidden-tmLanguage',
+                replacements: [
+                    {from: '{{lang}}',       to: '<%= lang.lang %>'},
+                    {from: '{{scopes}}',     to: "<%= lang.scopes.join(',') %>"},
+                    {from: '{{include}}',    to: '<%= lang.include %>'},
+                    {from: '{{files}}',      to: function() {
+                        return grunt.config('lang.files').map(function(f) {
+                            return '<string>' + f + '</string>'
+                        }).join('')
+                    }}
                 ]
             }
         }
@@ -145,27 +154,35 @@ module.exports = function(grunt) {
         header( 'Building icon language files' );
         var data = grunt.config('languages');
 
-        // Generate icon tmPreferences:
-        data.icons.forEach(function(elem) {
-            grunt.log.subhead('Generating ' + elem.icon + ' icon-preference-file...');
-            share('icon', elem);
-            share('replace.languages.dest', renameLanguage( elem.icon ));
+        // Generate icon_*.tmPreferences:
+        data.icons.forEach(function(icon) {
+            generating('icon_' + icon.icon + '.tmPreferences');
+            share('icon', icon);
+            share('replace.icons.dest', 'Cyanide/file_types/icon_' + icon.icon + '.tmPreferences');
             grunt.task.run('replace:icons');
         });
 
+        // Generate *.tmLanguage:
+        data.languages.forEach(function(lang) {
+            generating(lang.lang + '.tmLanguage');
+            lang.include = lang.scopes.length > 1 ? lang.scopes[0] : '';
+            share('lang', lang);
+            share('replace.languages.dest', 'Cyanide/file_types/' + lang.lang + '.tmLanguage');
+            grunt.task.run('replace:languages');
+        });
     });
 
     // Themes task:
     grunt.registerTask('themes', 'Build custom themes', function() {
         header( 'Building theme files' );
-        grunt.config('colors').colors.forEach(function(elem) {
-            grunt.log.subhead('Generating ' + elem.name + ' theme...');
+        grunt.config('colors').colors.forEach(function(theme) {
+            generating(theme.name + ' theme');
 
-            elem.widgetName = elem.name === 'default'
+            theme.widgetName = theme.name === 'default'
                             ? 'Widget - Cyanide'
-                            : 'Widget - Cyanide - ' + elem.name;
+                            : 'Widget - Cyanide - ' + theme.name;
 
-            if (elem.name === 'default') {
+            if (theme.name === 'default') {
                 var src = [
                     'Cyanide.sublime-theme',
                     'Cyanide.tmTheme',
@@ -174,14 +191,14 @@ module.exports = function(grunt) {
                 ];
             } else {
                 var src = [
-                    'Cyanide - ' + elem.name + '.sublime-theme',
-                    'Cyanide - ' + elem.name + '.tmTheme',
-                    'Cyanide/Widget - Cyanide - ' + elem.name + '.stTheme',
-                    'Cyanide/Widget - Cyanide - ' + elem.name + '.sublime-settings'
+                    'Cyanide - ' + theme.name + '.sublime-theme',
+                    'Cyanide - ' + theme.name + '.tmTheme',
+                    'Cyanide/Widget - Cyanide - ' + theme.name + '.stTheme',
+                    'Cyanide/Widget - Cyanide - ' + theme.name + '.sublime-settings'
                 ];
             }
 
-            share('theme', elem);
+            share('theme', theme);
             share('replace.themes.src', src);
             grunt.task.run([
                 'copy:themes',
@@ -195,5 +212,4 @@ module.exports = function(grunt) {
 
     // Load all npm tasks at once
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
 };

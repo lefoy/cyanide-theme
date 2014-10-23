@@ -49,14 +49,14 @@
     {"icon": "license", "scopes": ["license"]}
   ],
   "languages": [
-    {"name": "font", "scopes": ["font"], "files": ["ttf", "otf", "woff", "eot"]},
-    {"name": "license", "scopes": ["license"], "files": ["license"]},
-    {"name": "Gruntfile Coffee", "scopes": ["source.coffee", "source.gruntfile.coffee"], "files": ["gruntfile.coffee"]},
-    {"name": "Gruntfile JS", "scopes": ["source.js", "source.gruntfile.js"], "files": ["gruntfile.js"]},
-    {"name": "Gulpfile Coffee", "scopes": ["source.coffee", "source.gulpfile.coffee"], "files": ["gulpfile.coffee"]},
-    {"name": "Gulpfile JS", "scopes": ["source.js", "source.gulpfile.js"], "files": ["gulpfile.js"]},
-    {"name": "npm JSON", "scopes": ["source.json", "source.json.npm"], "files": ["package.json", ".npmignore"]},
-    {"name": "Procfile", "scopes": ["source.yaml", "source.procfile"], "files": ["procfile"]},
-    {"name": "Bower JSON", "scopes": ["source.json", "source.json.bower"], "files": ["bower.json"]}
+    {"lang": "font", "scopes": ["font"], "files": ["ttf", "otf", "woff", "eot"]},
+    {"lang": "license", "scopes": ["license"], "files": ["LICENSE"]},
+    {"lang": "Gruntfile Coffee", "scopes": ["source.coffee", "source.gruntfile.coffee"], "files": ["gruntfile.coffee"]},
+    {"lang": "Gruntfile JS", "scopes": ["source.js", "source.gruntfile.js"], "files": ["gruntfile.js"]},
+    {"lang": "Gulpfile Coffee", "scopes": ["source.coffee", "source.gulpfile.coffee"], "files": ["gulpfile.coffee"]},
+    {"lang": "Gulpfile JS", "scopes": ["source.js", "source.gulpfile.js"], "files": ["gulpfile.js"]},
+    {"lang": "npm JSON", "scopes": ["source.json", "source.json.npm"], "files": ["package.json", ".npmignore"]},
+    {"lang": "Procfile", "scopes": ["source.yaml", "source.procfile"], "files": ["Procfile"]},
+    {"lang": "Bower JSON", "scopes": ["source.json", "source.json.bower"], "files": ["bower.json"]}
   ]
 }

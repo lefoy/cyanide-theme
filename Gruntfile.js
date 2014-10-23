@@ -112,14 +112,14 @@ module.exports = function(grunt) {
                 src: 'templates/icon.hidden-tmPreferences',
                 replacements: [
                     {from: '{{icon}}',       to: '<%= icon.icon %>'},
-                    {from: '{{scopes}}',     to: "<%= icon.scopes.join(',') %>"}
+                    {from: '{{scopes}}',     to: "<%= icon.scopes.join(', ') %>"}
                 ]
             },
             languages: {
                 src: 'templates/language.hidden-tmLanguage',
                 replacements: [
                     {from: '{{lang}}',       to: '<%= lang.lang %>'},
-                    {from: '{{scopes}}',     to: "<%= lang.scopes.join(',') %>"},
+                    {from: '{{scopes}}',     to: "<%= lang.scopes.join(', ') %>"},
                     {from: '{{include}}',    to: '<%= lang.include %>'},
                     {from: '{{files}}',      to: function() {
                         return grunt.config('lang.files').map(function(f) {

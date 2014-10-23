@@ -193,6 +193,16 @@ Change the UI font:
 "inconsolata_ui": true // Inconsolata UI font
 ```
 
+## Large scrollbars
+
+Increased scrollbars size for better control.
+
+```
+"large_scroll_bars": true
+```
+
+![Large scrollbars](http://i.imgur.com/wfmZdzx.png)
+
 ## Cyanide Theme Builder
 
 *You must install the Cyanide Theme manually if you want to use the Cyanide Theme Builder.*

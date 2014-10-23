@@ -1356,7 +1356,7 @@
         "layer0.inner_margin": [5,0],
         "content_margin": [20,4],
         "blur": true
-    },
+    }
     // END Large scrollbars
 
 ]

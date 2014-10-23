@@ -151,8 +151,9 @@ module.exports = function(grunt) {
 
     // Languages task:
     grunt.registerTask('languages', 'Build language files', function() {
-        header( 'Building icon language files' );
         var data = grunt.config('languages');
+
+        header( 'Building icon_*.tmPreferences files' );
 
         // Generate icon_*.tmPreferences:
         data.icons.forEach(function(icon) {
@@ -161,6 +162,8 @@ module.exports = function(grunt) {
             share('replace.icons.dest', 'Cyanide/file_types/icon_' + icon.icon + '.tmPreferences');
             grunt.task.run('replace:icons');
         });
+
+        header( 'Building dummy *.tmLanguage files' );
 
         // Generate *.tmLanguage:
         data.languages.forEach(function(lang) {

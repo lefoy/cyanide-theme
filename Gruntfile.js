@@ -132,7 +132,7 @@ module.exports = function(grunt) {
         },
         'curl-dir': {
             monocyanide: {
-                src: [ monocyanideRepo + '{Monocyanide ColorScheme.tmTheme,LICENSE.md,CHANGES.md,README.md}'],
+                src: [ monocyanideRepo + '{Monocyanide ColorScheme.tmTheme,LICENSE.md,CHANGES.md}'],
                 dest: './',
                 router: function(url) {
                     var fn = url.replace(/^.*[\\\/]/, '');

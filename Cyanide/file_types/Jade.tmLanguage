@@ -18,12 +18,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>scope</key>
-    <string>text.html.basic, text.html, text.slim</string>
-    <key>settings</key>
-    <dict>
-        <key>icon</key>
-        <string>file_type_html</string>
-    </dict>
+	<key>name</key>
+	<string>Cyanide Jade</string>
+	<key>fileTypes</key>
+	<array>
+		<string>jade</string>
+	</array>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>source.css</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.css, source.jade</string>
 </dict>
 </plist>

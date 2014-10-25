@@ -19,11 +19,11 @@
 <plist version="1.0">
 <dict>
     <key>scope</key>
-    <string>text.html.basic, text.html, text.slim</string>
+    <string>source.matlab</string>
     <key>settings</key>
     <dict>
         <key>icon</key>
-        <string>file_type_html</string>
+        <string>file_type_matlab</string>
     </dict>
 </dict>
 </plist>

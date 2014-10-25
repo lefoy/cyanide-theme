@@ -33,7 +33,8 @@ module.exports = function(grunt) {
         },
         generating = function(msg) {
             grunt.log.subhead('Generating ' + msg + '...');
-        };
+        },
+        monocyanideRepo = "https://raw.githubusercontent.com/Centril/sublime-monocyanide-colorscheme/master/";
 
     // Tasks options
     var tasks = {
@@ -128,8 +129,17 @@ module.exports = function(grunt) {
                     }}
                 ]
             }
+        },
+        'curl-dir': {
+            monocyanide: {
+                src: [ monocyanideRepo + '{Monocyanide ColorScheme.tmTheme,LICENSE.md,CHANGES.md,README.md}'],
+                dest: './',
+                router: function(url) {
+                    var fn = url.replace(/^.*[\\\/]/, '');
+                    return fn.replace(/(\w+)\.md$/, 'Monocyanide ColorScheme.$1.md');
+                }
+            }
         }
-
     };
 
     // Merge tasks options with config
@@ -146,7 +156,7 @@ module.exports = function(grunt) {
                 'Github repository: https://github.com/lefoy/cyanide-theme',
                 'Cyanide Theme Builder');
         grunt.log.writeln();
-        grunt.task.run(['clean', 'themes', 'languages']);
+        grunt.task.run(['clean', 'themes', 'languages', 'curl-dir']);
     });
 
     // Languages task:

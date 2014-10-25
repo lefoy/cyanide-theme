@@ -63,7 +63,10 @@ module.exports = function(grunt) {
             'Cyanide/*.stTheme',
             'Cyanide/*.sublime-settings',
 
-            'Cyanide/file_types/icon_*.tmPreferences'
+            'Cyanide/file_types/icon_*.tmPreferences',
+
+            'Monocyanide ColorScheme.CHANGES.md',
+            'Monocyanide ColorScheme.LICENSE.md',
         ],
         // Copy task
         copy: {

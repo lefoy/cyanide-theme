@@ -352,6 +352,7 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 
 [@Centril]: https://github.com/Centril
 [@pds2k12]: https://github.com/pds2k12
+[@hraban]: https://github.com/hraban
 [@renkun-ken]: https://github.com/renkun-ken
 [@wfalkwallace]: https://github.com/wfalkwallace
 [@louisetiennefoy]: https://twitter.com/louisetiennefoy

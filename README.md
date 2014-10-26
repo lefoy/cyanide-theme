@@ -1,11 +1,13 @@
-[![Build Status](https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master)](https://travis-ci.org/lefoy/cyanide-theme) [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=1612287)](https://www.bountysource.com/trackers/1612287-cyanide-theme?utm_source=1612287&utm_medium=shield&utm_campaign=TRACKER_BADGE) [![Gittip](http://img.shields.io/gittip/lefoy.svg)](https://www.gittip.com/lefoy/) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lefoy/cyanide-theme/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master)](https://travis-ci.org/lefoy/cyanide-theme) [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=1612287)](https://www.bountysource.com/trackers/1612287-cyanide-theme?utm_source=1612287&utm_medium=shield&utm_campaign=TRACKER_BADGE) [![Gittip](http://img.shields.io/gittip/lefoy.svg)](https://www.gittip.com/lefoy/) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lefoy/cyanide-theme/blob/master/LICENSE) [![Semver](http://img.shields.io/badge/semver-2.0.0-blue.svg)](http://semver.org/spec/v2.0.0.html)
 
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
 
 A minimal dark theme for Sublime Text 3.
 
-**NEW: [Cyanide Theme Builder](https://github.com/lefoy/cyanide-theme#cyanide-theme-builder)**
+**NEW: [Monocyanide Colorscheme](#monocyanide-colorscheme)**
+**NEW: [Sidebar file type icons](#sidebar-file-type-icons)**
+**NEW: [Cyanide Theme Builder](#cyanide-theme-builder)**
 
 ![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
 
@@ -20,84 +22,127 @@ Installation
 
 Install the theme with the [Command Palette](http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/command_palette.html) and update your `Settings - User` file:
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
+```
 
 ### Manual
 
 Clone Cyanide Theme into your `packages` folder. Make sure the foldername is `Theme - Cyanide`:
 
-    cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+```shell
+    cd ~/"Library/Application Support/Sublime Text 3/Packages/"
     git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
+```
+
+If you are on Windows, instead run:
+
+```shell
+    cd %AppData%/Sublime Text 3/Packages/
+    git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
+```
 
 Update your `Settings - User` file to activate the theme:
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
     "theme": "Cyanide.sublime-theme"
+```
 
 Themes
 ------------------------------------------------------------------------
 
+### Monocyanide Colorscheme
+
+If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended), there's a colorscheme called [Monocyanide](https://github.com/Centril/sublime-monocyanide-colorscheme) that was developed specifically for Cyanide. It works with any of the themes.
+
+```json
+    "color_scheme": "Packages/Theme - Cyanide/Monocyanide ColorScheme.tmTheme",
+```
+
+![Monocyanide screenshot](http://i.imgur.com/GbB80Aj.png)
+
+@TODO @lefoy: add correct picture with same source as the themes.
+
 ### Acid theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
     "theme": "Cyanide - Acid.sublime-theme"
+```
 
 ![Acid screenshot](http://i.imgur.com/GbB80Aj.png)
 
 ### Alert theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Alert.tmTheme",
     "theme": "Cyanide - Alert.sublime-theme"
+```
 
 ![Alert screenshot](http://i.imgur.com/fSXNPYH.png)
 
 ### Golden theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
     "theme": "Cyanide - Golden.sublime-theme"
+```
 
 ![Golden screenshot](http://i.imgur.com/XpNt7rM.png)
 
 ### Love theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Love.tmTheme",
     "theme": "Cyanide - Love.sublime-theme"
+```
 
 ![Love screenshot](http://i.imgur.com/cJPqBtT.png)
 
 ### Mint theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Mint.tmTheme",
     "theme": "Cyanide - Mint.sublime-theme"
+```
 
 ![Mint screenshot](http://i.imgur.com/9PkgNGu.png)
 
 ### Purple theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
     "theme": "Cyanide - Purple.sublime-theme"
+```
 
 ![Purple screenshot](http://i.imgur.com/YT1QGvH.png)
 
 ### Salmon theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
     "theme": "Cyanide - Salmon.sublime-theme"
+```
 
 ![Salmon screenshot](http://i.imgur.com/1SO5oms.png)
 
 ### Sky theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Sky.tmTheme",
     "theme": "Cyanide - Sky.sublime-theme"
+```
 
 ![Sky screenshot](http://i.imgur.com/L8egKdc.png)
 
 ### Wood theme
 
+```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
     "theme": "Cyanide - Wood.sublime-theme"
+```
 
 ![Wood screenshot](http://i.imgur.com/zTc44p7.png)
 
@@ -111,7 +156,7 @@ These settings go into `Sublime Text -> Preferences -> Settings - User`.
 
 Sublime Text 3 added sidebar icons. Thanks to a great contribution by [Centril](https://github.com/Centril), now also supported in Cyanide!
 
-```
+```json
 "icon_file_type_enable": true
 ```
 
@@ -121,7 +166,7 @@ Sublime Text 3 added sidebar icons. Thanks to a great contribution by [Centril](
 
 Sidebar folder icons from the Centurion theme.
 
-```
+```json
 "centurion_folder_icons": true
 ```
 
@@ -131,7 +176,7 @@ Sidebar folder icons from the Centurion theme.
 
 Sidebar folder icons from the Afterglow theme.
 
-```
+```json
 "afterglow_folder_icons": true
 ```
 
@@ -141,7 +186,7 @@ Sidebar folder icons from the Afterglow theme.
 
 Sidebar folder icons from the Spacefunk theme.
 
-```
+```json
 "spacefunk_folder_icons": true
 ```
 
@@ -151,13 +196,13 @@ Sidebar folder icons from the Spacefunk theme.
 
 Vary tab height with either `tabs_medium` or `tabs_large`.
 
-```
+```json
 "tabs_medium": true
 ```
 
 or
 
-```
+```json
 "tabs_large": true
 ```
 
@@ -167,7 +212,7 @@ or
 
 Increased contrast for better legibility.
 
-```
+```json
 "contrasted_sidebar": true,
 "contrasted_tabs": true,
 "contrasted_quick_panel": true
@@ -177,7 +222,7 @@ Increased contrast for better legibility.
 
 Or use a lighter alternative:
 
-```
+```json
 "contrasted_light_sidebar": true,
 "contrasted_light_tabs": true,
 "contrasted_light_quick_panel": true
@@ -187,7 +232,7 @@ Or use a lighter alternative:
 
 Change the UI font:
 
-```
+```json
 "ubuntu_mono_ui": true // Ubuntu Mono UI font
 "monaco_ui": true      // Monaco UI font
 "inconsolata_ui": true // Inconsolata UI font
@@ -197,7 +242,7 @@ Change the UI font:
 
 Increased scrollbars size for better control.
 
-```
+```json
 "large_scroll_bars": true
 ```
 
@@ -211,19 +256,29 @@ Create your own custom Cyanide Theme with the Theme Builder. If you don't have [
 
 Go to your Cyanide Theme folder and run:
 
-```
+```shell
 npm install
 ```
 
-Edit the `colors.json` file to add your own custom color. Save the file, and run:
+Edit the `colors.json` file to add your own custom color.
+Edit the `languages.json` file to add your own custom sidebar icon. Match every new entry with images named `file_type_{icon}.png` (dimensions: `16x16`) and `file_type_{icon}@2x.png` (dimensions: `32x32`) in the icons/ directory.
 
-```
+Save the file, and run:
+
+```shell
 grunt build
 ```
 
 Your new theme is generated. Update the Sublime Text settings to use it.
 
-*More information about the theme builder coming soon. Meanwhile, feel free to open an issue on GitHub; I will be happy to help.*
+The tasks that are available are:
+```shell
+grunt
+    build       # Does all of the below.
+    themes      # Builds the theme files, do this when colors.json is updated.
+    languages   # Builds sidebar icon bindings and dummy syntax highlighting.
+    monocyanide # Pulls the latest version of Monocyanide from its repo.
+```
 
 ## Known issues
 

@@ -159,7 +159,13 @@ module.exports = function(grunt) {
                 'Github repository: https://github.com/lefoy/cyanide-theme',
                 'Cyanide Theme Builder');
         grunt.log.writeln();
-        grunt.task.run(['clean', 'themes', 'languages', 'curl-dir']);
+        grunt.task.run(['clean', 'themes', 'languages', 'monocyanide']);
+    });
+
+    // Monocyanide task:
+    grunt.registerTask('monocyanide', 'Pulls Monocyanide from its repository', function() {
+        header( 'Pulling Monocyanide Colorscheme from its repository.' );
+        grunt.task.run('curl-dir:monocyanide');
     });
 
     // Languages task:

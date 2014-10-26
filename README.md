@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master)](https://travis-ci.org/lefoy/cyanide-theme) [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=1612287)](https://www.bountysource.com/trackers/1612287-cyanide-theme?utm_source=1612287&utm_medium=shield&utm_campaign=TRACKER_BADGE) [![Gittip](http://img.shields.io/gittip/lefoy.svg)](https://www.gittip.com/lefoy/) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lefoy/cyanide-theme/blob/master/LICENSE) [![Semver](http://img.shields.io/badge/semver-2.0.0-blue.svg)](http://semver.org/spec/v2.0.0.html)
+[![Build Status](https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master)][Build Status] [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=1612287)][Bountysource] [![Gittip](http://img.shields.io/gittip/lefoy.svg)][Gittip] [![License](http://img.shields.io/badge/license-MIT-blue.svg)][License] [![Semver](http://img.shields.io/badge/semver-2.0.0-blue.svg)][Semver]
 
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
@@ -9,18 +9,18 @@ A minimal dark theme for Sublime Text 3.
 **NEW: [Sidebar file type icons](#sidebar-file-type-icons)**
 **NEW: [Cyanide Theme Builder](#cyanide-theme-builder)**
 
-![Default Theme Screenshot](http://i.imgur.com/NOOomrQ.png)
+![Default Theme Screenshot]
 
-![Acid Theme Screenshot](http://i.imgur.com/snmvuB4.png)
+![Acid Theme Screenshot]
 
-![Contrasted UI Screenshot](http://i.imgur.com/cfYkL92.png)
+![Contrasted UI Screenshot]
 
 Installation
 ------------------------------------------------------------------------
 
 ### Package Manager
 
-Install the theme with the [Command Palette](http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/command_palette.html) and update your `Settings - User` file:
+Install the theme with the [Command Palette] and update your `Settings - User` file:
 
 ```json
     "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
@@ -55,15 +55,13 @@ Themes
 
 ### Monocyanide Colorscheme
 
-If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended), there's a colorscheme called [Monocyanide](https://github.com/Centril/sublime-monocyanide-colorscheme) that was developed specifically for Cyanide. It works with any of the themes.
+If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that was developed specifically for Cyanide. It works with any of the themes.
 
 ```json
     "color_scheme": "Packages/Theme - Cyanide/Monocyanide ColorScheme.tmTheme",
 ```
 
-![Monocyanide screenshot](http://i.imgur.com/GbB80Aj.png)
-
-@TODO @lefoy: add correct picture with same source as the themes.
+![Monocyanide screenshot]
 
 ### Acid theme
 
@@ -72,7 +70,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Acid.sublime-theme"
 ```
 
-![Acid screenshot](http://i.imgur.com/GbB80Aj.png)
+![Acid screenshot]
 
 ### Alert theme
 
@@ -81,7 +79,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Alert.sublime-theme"
 ```
 
-![Alert screenshot](http://i.imgur.com/fSXNPYH.png)
+![Alert screenshot]
 
 ### Golden theme
 
@@ -90,7 +88,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Golden.sublime-theme"
 ```
 
-![Golden screenshot](http://i.imgur.com/XpNt7rM.png)
+![Golden screenshot]
 
 ### Love theme
 
@@ -99,7 +97,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Love.sublime-theme"
 ```
 
-![Love screenshot](http://i.imgur.com/cJPqBtT.png)
+![Love screenshot]
 
 ### Mint theme
 
@@ -108,7 +106,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Mint.sublime-theme"
 ```
 
-![Mint screenshot](http://i.imgur.com/9PkgNGu.png)
+![Mint screenshot]
 
 ### Purple theme
 
@@ -117,7 +115,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Purple.sublime-theme"
 ```
 
-![Purple screenshot](http://i.imgur.com/YT1QGvH.png)
+![Purple screenshot]
 
 ### Salmon theme
 
@@ -126,7 +124,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Salmon.sublime-theme"
 ```
 
-![Salmon screenshot](http://i.imgur.com/1SO5oms.png)
+![Salmon screenshot]
 
 ### Sky theme
 
@@ -135,7 +133,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Sky.sublime-theme"
 ```
 
-![Sky screenshot](http://i.imgur.com/L8egKdc.png)
+![Sky screenshot]
 
 ### Wood theme
 
@@ -144,7 +142,7 @@ If you like [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-
     "theme": "Cyanide - Wood.sublime-theme"
 ```
 
-![Wood screenshot](http://i.imgur.com/zTc44p7.png)
+![Wood screenshot]
 
 
 Settings
@@ -154,13 +152,13 @@ These settings go into `Sublime Text -> Preferences -> Settings - User`.
 
 ### Sidebar file type icons
 
-Sublime Text 3 added sidebar icons. Thanks to a great contribution by [Centril](https://github.com/Centril), now also supported in Cyanide!
+Sublime Text 3 added sidebar icons. Thanks to a great contribution by [@Centril], now also supported in Cyanide!
 
 ```json
 "icon_file_type_enable": true
 ```
 
-![Sidebar file type icons](http://i.imgur.com/tRszn4V.png)
+![Sidebar file type icons]
 
 ### Centurion sidebar folder icons
 
@@ -170,7 +168,7 @@ Sidebar folder icons from the Centurion theme.
 "centurion_folder_icons": true
 ```
 
-![Sidebar folder icons](http://i.imgur.com/QVwmrGh.png)
+![Sidebar folder icons]
 
 ### Afterglow sidebar folder icons
 
@@ -180,7 +178,7 @@ Sidebar folder icons from the Afterglow theme.
 "afterglow_folder_icons": true
 ```
 
-![Sidebar folder icons](http://i.imgur.com/Ov5hnv2.png)
+![Sidebar folder icons]
 
 ### Spacefunk sidebar folder icons
 
@@ -190,7 +188,7 @@ Sidebar folder icons from the Spacefunk theme.
 "spacefunk_folder_icons": true
 ```
 
-![Sidebar folder icons](http://i.imgur.com/Xz2FqEG.png)
+![Sidebar folder icons]
 
 ### Tabs height
 
@@ -206,7 +204,7 @@ or
 "tabs_large": true
 ```
 
-![Tabs height](http://i.imgur.com/0NCrXVF.png)
+![Tabs height]
 
 ### Contrasted UI
 
@@ -218,7 +216,7 @@ Increased contrast for better legibility.
 "contrasted_quick_panel": true
 ```
 
-![Contrasted UI](http://i.imgur.com/cfYkL92.png)
+![Contrasted UI]
 
 Or use a lighter alternative:
 
@@ -246,13 +244,13 @@ Increased scrollbars size for better control.
 "large_scroll_bars": true
 ```
 
-![Large scrollbars](http://i.imgur.com/wfmZdzx.png)
+![Large scrollbars]
 
 ## Cyanide Theme Builder
 
 *You must install the Cyanide Theme manually if you want to use the Cyanide Theme Builder.*
 
-Create your own custom Cyanide Theme with the Theme Builder. If you don't have [grunt](http://gruntjs.com/) installed, do that first.
+Create your own custom Cyanide Theme with the Theme Builder. If you don't have [grunt] installed, do that first.
 
 Go to your Cyanide Theme folder and run:
 
@@ -284,7 +282,7 @@ grunt
 
 ### Ubuntu Mono UI cuts off the tabs font
 
-![Screenshot - Ubuntu Mono UI cuts off the tabs font](http://i.imgur.com/jdKUPoE.png)
+![Screenshot - Ubuntu Mono UI cuts off the tabs font]
 
 Unfortunatly, this is a Sublime Text bug. As a work-around, use the `"small_ui_font": true` setting. If this doesn't fix it, please file a new issue on GitHub.
 
@@ -292,8 +290,8 @@ Unfortunatly, this is a Sublime Text bug. As a work-around, use the `"small_ui_f
 
 The following Sublime Text plugins are currently supported by Cyanide Theme:
 
-* [GitGutter](https://sublime.wbond.net/packages/GitGutter)
-* [SublimeLinter3](https://github.com/SublimeLinter/SublimeLinter3)
+* [GitGutter]
+* [SublimeLinter3]
 
 <!--* [PlainTasks](https://sublime.wbond.net/packages/PlainTasks)-->
 <!--* [FileBrowser](https://sublime.wbond.net/packages/FileBrowser)-->
@@ -301,8 +299,59 @@ The following Sublime Text plugins are currently supported by Cyanide Theme:
 Acknowledgements
 ------------------------------------------------------------------------
 
-This theme is based on [Centurion](https://github.com/allanhortle/Centurion), [Afterglow](http://yabatadesign.github.io/afterglow-theme/), [Spacefunk](https://github.com/Twiebie/ST-Spacefunk) and [Seti_UI](https://github.com/ctf0/Seti_ST3).
+This theme is based on [Centurion], [Afterglow], [Spacefunk] and [Seti_UI].
 
-Thanks to [@Centril](https://github.com/Centril), [@pds2k12](https://github.com/pds2k12), [@hraban](https://github.com/hraban), [@renkun-ken](https://github.com/renkun-ken) and [@wfalkwallace](https://github.com/wfalkwallace) for helping me with bug reports and suggestions.
+Thanks to [@Centril], [@pds2k12], [@hraban], [@renkun-ken] and [@wfalkwallace] for helping me with bug reports and suggestions.
 
-Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy](https://twitter.com/louisetiennefoy)).
+Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
+
+<!-- references -->
+
+[Default Theme Screenshot]: http://i.imgur.com/NOOomrQ.png
+[Acid Theme Screenshot]: http://i.imgur.com/snmvuB4.png
+[Contrasted UI Screenshot]: http://i.imgur.com/cfYkL92.png
+[Monocyanide screenshot]: http://i.imgur.com/GbB80Aj.png
+[Acid screenshot]: http://i.imgur.com/GbB80Aj.png
+[Alert screenshot]: http://i.imgur.com/fSXNPYH.png
+[Golden screenshot]: http://i.imgur.com/XpNt7rM.png
+[Love screenshot]: http://i.imgur.com/cJPqBtT.png
+[Mint screenshot]: http://i.imgur.com/9PkgNGu.png
+[Purple screenshot]: http://i.imgur.com/YT1QGvH.png
+[Salmon screenshot]: http://i.imgur.com/1SO5oms.png
+[Sky screenshot]: http://i.imgur.com/L8egKdc.png
+[Wood screenshot]: http://i.imgur.com/zTc44p7.png
+[Sidebar file type icons]: http://i.imgur.com/tRszn4V.png
+[Sidebar folder icons]: http://i.imgur.com/QVwmrGh.png
+[Sidebar folder icons]: http://i.imgur.com/Ov5hnv2.png
+[Sidebar folder icons]: http://i.imgur.com/Xz2FqEG.png
+[Tabs height]: http://i.imgur.com/0NCrXVF.png
+[Contrasted UI]: http://i.imgur.com/cfYkL92.png
+[Large scrollbars]: http://i.imgur.com/wfmZdzx.png
+[Screenshot - Ubuntu Mono UI cuts off the tabs font]: http://i.imgur.com/jdKUPoE.png
+
+[Build Status]: https://travis-ci.org/lefoy/cyanide-theme
+[Bountysource]: https://www.bountysource.com/trackers/1612287-cyanide-theme?utm_source=1612287&utm_medium=shield&utm_campaign=TRACKER_BADGE
+[Gittip]: https://www.gittip.com/lefoy/
+[License]: https://github.com/lefoy/cyanide-theme/blob/master/LICENSE
+[Semver]: http://semver.org/spec/v2.0.0.html
+
+[Command Palette]: http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/command_palette.html
+
+[Monokai Extended]: https://github.com/jonschlinkert/sublime-monokai-extended
+[Monocyanide]: https://github.com/Centril/sublime-monocyanide-colorscheme
+
+[grunt]: http://gruntjs.com/
+
+[GitGutter]: https://sublime.wbond.net/packages/GitGutter
+[SublimeLinter3]: https://github.com/SublimeLinter/SublimeLinter3
+
+[Centurion]: https://github.com/allanhortle/Centurion
+[Afterglow]: https://yabatadesign.github.io/afterglow-theme/
+[Spacefunk]: https://github.com/Twiebie/ST-Spacefunk
+[Seti_UI]: https://github.com/ctf0/Seti_ST3
+
+[@Centril]: https://github.com/Centril
+[@pds2k12]: https://github.com/pds2k12
+[@renkun-ken]: https://github.com/renkun-ken
+[@wfalkwallace]: https://github.com/wfalkwallace
+[@louisetiennefoy]: https://twitter.com/louisetiennefoy

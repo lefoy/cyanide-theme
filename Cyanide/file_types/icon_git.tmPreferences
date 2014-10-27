@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
     <key>scope</key>
-    <string>source.gitignore,source.gitconfig,text.git-blame,text.git-commit,text.git-graph</string>
+    <string>source.git, source.gitignore, source.gitconfig, text.git-blame, text.git-commit, text.git-graph</string>
     <key>settings</key>
     <dict>
         <key>icon</key>

@@ -10,7 +10,9 @@
     "load-grunt-config": "*",
     "load-grunt-tasks": "^0.6.0",
     "matchdep": "^0.3.0",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+    "colors": "1.0.3",
+    "grunt-curl": "~2.0.3"
   },
   "dependencies": {
     "time-grunt": "*"

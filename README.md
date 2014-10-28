@@ -5,8 +5,8 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-**NEW: [Monocyanide Colorscheme](#monocyanide-colorscheme)**
-**NEW: [Sidebar file type icons](#sidebar-file-type-icons)**
+**NEW: [Monocyanide Colorscheme](#monocyanide-colorscheme)**<br>
+**NEW: [Sidebar file type icons](#sidebar-file-type-icons)**<br>
 **NEW: [Cyanide Theme Builder](#cyanide-theme-builder)**
 
 ![Default Theme Screenshot]
@@ -22,32 +22,32 @@ Installation
 
 Install the theme with the [Command Palette] and update your `Settings - User` file:
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
-    "theme": "Cyanide.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+"theme": "Cyanide.sublime-theme"
 ```
 
 ### Manual
 
 Clone Cyanide Theme into your `packages` folder. Make sure the foldername is `Theme - Cyanide`:
 
-```shell
-    cd ~/"Library/Application Support/Sublime Text 3/Packages/"
-    git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
+```
+cd ~/"Library/Application Support/Sublime Text 3/Packages/"
+git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
 ```
 
 If you are on Windows, instead run:
 
-```shell
-    cd %AppData%/Sublime Text 3/Packages/
-    git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
+```
+cd %AppData%/Sublime Text 3/Packages/
+git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
 ```
 
 Update your `Settings - User` file to activate the theme:
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
-    "theme": "Cyanide.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
+"theme": "Cyanide.sublime-theme"
 ```
 
 Themes
@@ -57,89 +57,89 @@ Themes
 
 If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that was developed specifically for Cyanide. It works with any of the themes.
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Monocyanide ColorScheme.tmTheme",
+```
+"color_scheme": "Packages/Theme - Cyanide/Monocyanide ColorScheme.tmTheme",
 ```
 
 ![Monocyanide screenshot]
 
 ### Acid theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
-    "theme": "Cyanide - Acid.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
+"theme": "Cyanide - Acid.sublime-theme"
 ```
 
 ![Acid screenshot]
 
 ### Alert theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Alert.tmTheme",
-    "theme": "Cyanide - Alert.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Alert.tmTheme",
+"theme": "Cyanide - Alert.sublime-theme"
 ```
 
 ![Alert screenshot]
 
 ### Golden theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
-    "theme": "Cyanide - Golden.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
+"theme": "Cyanide - Golden.sublime-theme"
 ```
 
 ![Golden screenshot]
 
 ### Love theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Love.tmTheme",
-    "theme": "Cyanide - Love.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Love.tmTheme",
+"theme": "Cyanide - Love.sublime-theme"
 ```
 
 ![Love screenshot]
 
 ### Mint theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Mint.tmTheme",
-    "theme": "Cyanide - Mint.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Mint.tmTheme",
+"theme": "Cyanide - Mint.sublime-theme"
 ```
 
 ![Mint screenshot]
 
 ### Purple theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
-    "theme": "Cyanide - Purple.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
+"theme": "Cyanide - Purple.sublime-theme"
 ```
 
 ![Purple screenshot]
 
 ### Salmon theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
-    "theme": "Cyanide - Salmon.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
+"theme": "Cyanide - Salmon.sublime-theme"
 ```
 
 ![Salmon screenshot]
 
 ### Sky theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Sky.tmTheme",
-    "theme": "Cyanide - Sky.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Sky.tmTheme",
+"theme": "Cyanide - Sky.sublime-theme"
 ```
 
 ![Sky screenshot]
 
 ### Wood theme
 
-```json
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
-    "theme": "Cyanide - Wood.sublime-theme"
+```
+"color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
+"theme": "Cyanide - Wood.sublime-theme"
 ```
 
 ![Wood screenshot]
@@ -154,7 +154,7 @@ These settings go into `Sublime Text -> Preferences -> Settings - User`.
 
 Sublime Text 3 added sidebar icons. Thanks to a great contribution by [@Centril], now also supported in Cyanide!
 
-```json
+```
 "icon_file_type_enable": true
 ```
 
@@ -164,7 +164,7 @@ Sublime Text 3 added sidebar icons. Thanks to a great contribution by [@Centril]
 
 Sidebar folder icons from the Centurion theme.
 
-```json
+```
 "centurion_folder_icons": true
 ```
 
@@ -174,7 +174,7 @@ Sidebar folder icons from the Centurion theme.
 
 Sidebar folder icons from the Afterglow theme.
 
-```json
+```
 "afterglow_folder_icons": true
 ```
 
@@ -184,7 +184,7 @@ Sidebar folder icons from the Afterglow theme.
 
 Sidebar folder icons from the Spacefunk theme.
 
-```json
+```
 "spacefunk_folder_icons": true
 ```
 
@@ -194,13 +194,13 @@ Sidebar folder icons from the Spacefunk theme.
 
 Vary tab height with either `tabs_medium` or `tabs_large`.
 
-```json
+```
 "tabs_medium": true
 ```
 
 or
 
-```json
+```
 "tabs_large": true
 ```
 
@@ -210,7 +210,7 @@ or
 
 Increased contrast for better legibility.
 
-```json
+```
 "contrasted_sidebar": true,
 "contrasted_tabs": true,
 "contrasted_quick_panel": true
@@ -220,7 +220,7 @@ Increased contrast for better legibility.
 
 Or use a lighter alternative:
 
-```json
+```
 "contrasted_light_sidebar": true,
 "contrasted_light_tabs": true,
 "contrasted_light_quick_panel": true
@@ -230,7 +230,7 @@ Or use a lighter alternative:
 
 Change the UI font:
 
-```json
+```
 "ubuntu_mono_ui": true // Ubuntu Mono UI font
 "monaco_ui": true      // Monaco UI font
 "inconsolata_ui": true // Inconsolata UI font
@@ -240,7 +240,7 @@ Change the UI font:
 
 Increased scrollbars size for better control.
 
-```json
+```
 "large_scroll_bars": true
 ```
 
@@ -254,7 +254,7 @@ Create your own custom Cyanide Theme with the Theme Builder. If you don't have [
 
 Go to your Cyanide Theme folder and run:
 
-```shell
+```
 npm install
 ```
 
@@ -263,14 +263,15 @@ Edit the `languages.json` file to add your own custom sidebar icon. Match every 
 
 Save the file, and run:
 
-```shell
+```
 grunt build
 ```
 
 Your new theme is generated. Update the Sublime Text settings to use it.
 
 The tasks that are available are:
-```shell
+
+```
 grunt
     build       # Does all of the below.
     themes      # Builds the theme files, do this when colors.json is updated.

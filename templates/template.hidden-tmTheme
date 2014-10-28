@@ -322,6 +322,168 @@
                     <string>#DA2000</string>
                 </dict>
             </dict>
+            <dict>
+                <key>name</key>
+                <string>File/Dir Symbols</string>
+                <key>scope</key>
+                <string>punctuation.definition.directory.symbol.dired, punctuation.definition.file.symbol.dired, dired.item.parent_dir</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#919aa388</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Dir Slash</string>
+                <key>scope</key>
+                <string>punctuation.definition.directory.slash.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#919aa388</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Dir Name</string>
+                <key>scope</key>
+                <string>string.name.directory.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#919aa388</string>
+                    <key>fontStyle</key>
+                    <string>bold</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Header</string>
+                <key>scope</key>
+                <string>header.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#333333</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Header punctuations</string>
+                <key>scope</key>
+                <string>header.dired punctuation.definition.separator.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#6f798733</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Header Rename Mode Title</string>
+                <key>scope</key>
+                <string>header.dired punctuation.definition.rename_mode</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#{{hex}}</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Marked</string>
+                <key>scope</key>
+                <string>dired.marked</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#FFFFFF</string>
+                    <key>background</key>
+                    <string>#4b96d6</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Help</string>
+                <key>scope</key>
+                <string>help.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>background</key>
+                    <string>#f5f7f8</string>
+                    <key>foreground</key>
+                    <string>#{{hex}}</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Help punctuations</string>
+                <key>scope</key>
+                <string>punctuations.help.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#6f798766</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Help shortcut punctuations</string>
+                <key>scope</key>
+                <string>punctuations.shortcut.help.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#{{hex}}66</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Help shortcut</string>
+                <key>scope</key>
+                <string>key.shortcut.help.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string>bold</string>
+                    <key>foreground</key>
+                    <string>#000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Error</string>
+                <key>scope</key>
+                <string>string.error.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#aa0000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>VCS Modified</string>
+                <key>scope</key>
+                <string>item.modified.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>background</key>
+                    <string>#F09609</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>VCS Untracked</string>
+                <key>scope</key>
+                <string>item.untracked.dired</string>
+                <key>settings</key>
+                <dict>
+                    <key>background</key>
+                    <string>#339933</string>
+                </dict>
+            </dict>
         </array>
         <key>uuid</key>
         <string>DE477E5B-BD4D-46B0-BF80-2EA32A2814D5</string>

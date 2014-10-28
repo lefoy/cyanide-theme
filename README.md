@@ -1,4 +1,4 @@
-[![Build Status]][url: Build Status] [![Bountysource]][url: Bountysource] [![Gittip]][url: Gittip] [![License]][url: License] [![Semver]][url: Semver]
+[![Build Status]][url: Build Status] [![Gittip]][url: Gittip] [![License]][url: License] [![Semver]][url: Semver]
 
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
@@ -329,15 +329,13 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 [Large scrollbars]: http://i.imgur.com/wfmZdzx.png
 [Screenshot - Ubuntu Mono UI cuts off the tabs font]: http://i.imgur.com/jdKUPoE.png
 
-[Build Status]: https://travis-ci.org/lefoy/cyanide-theme.svg?branch=master
+[Build Status]: http://img.shields.io/travis/lefoy/cyanide-theme.svg?style=flat
 [url: Build Status]: https://travis-ci.org/lefoy/cyanide-theme
-[Bountysource]: https://www.bountysource.com/badge/tracker?tracker_id=1612287
-[url: Bountysource]: https://www.bountysource.com/trackers/1612287-cyanide-theme?utm_source=1612287&utm_medium=shield&utm_campaign=TRACKER_BADGE
-[Gittip]: http://img.shields.io/gittip/lefoy.svg
+[Gittip]: http://img.shields.io/gittip/lefoy.svg?style=flat
 [url: Gittip]: https://www.gittip.com/lefoy/
-[License]: http://img.shields.io/badge/license-MIT-blue.svg
+[License]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [url: License]: https://github.com/lefoy/cyanide-theme/blob/master/LICENSE.md
-[Semver]: http://img.shields.io/badge/semver-2.0.0-blue.svg
+[Semver]: http://img.shields.io/badge/semver-2.0.0-blue.svg?style=flat
 [url: Semver]: http://semver.org/spec/v2.0.0.html
 
 [Command Palette]: http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/reference/command_palette.html

@@ -7,6 +7,10 @@ require('colors');
 var _ = require('lodash');
 _.mixin(require('underscore.string').exports());
 
+var bind = function(f) {
+    return Function.prototype.apply.bind(f, null);
+}
+
 module.exports = function(grunt) {
     // Hide 'Running task' text from grunt output
     grunt.log.header = function() {};
@@ -18,19 +22,6 @@ module.exports = function(grunt) {
         colors: grunt.file.readJSON('colors.json'),
         languages: grunt.file.readJSON('languages.json'),
     };
-
-    var externalColorSchemes = {
-            'monocyanide': 'centril',
-            'twilightcyanide': 'centril'
-        },
-        importTask = function(colorscheme) {
-            return 'import-' + colorscheme;
-        },
-        renameTheme = _.curry(function(prefix, dest, src) {
-            var name = grunt.config('theme.name'),
-                filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
-            return src.replace('template', filename).replace('hidden-', '');
-        });
 
     // General purpose functions.
     var share = function(key, data) {
@@ -47,7 +38,32 @@ module.exports = function(grunt) {
         },
         generating = function(msg) {
             grunt.log.subhead('Generating ' + msg + '...');
+        },
+        defaultOr = function(name, base, ext) {
+            return (name === 'default' ? base : base + ' - ' + _.capitalize(name)) + (ext || '');
         };
+
+    var externalColorSchemes = {
+            'monocyanide': 'centril',
+            'twilightcyanide': 'centril'
+        },
+        importTask = function(colorscheme) {
+            return 'import-' + colorscheme;
+        },
+        renameTheme = _.curry(function(prefix, dest, src) {
+            var filename = prefix + grunt.config('renamer')('Cyanide');
+            return src.replace('template', filename).replace('hidden-', '');
+        }),
+        themesReplacements = [{
+            from: '{{name}}',
+            to: '<%= renamer("Cyanide") %>'
+        }, {
+            from: '{{rgb}}',
+            to: '<%= theme.rgb %>'
+        }, {
+            from: '{{hex}}',
+            to: '<%= theme.hex %>'
+        }];
 
     // Tasks options
     var tasks = {
@@ -82,6 +98,17 @@ module.exports = function(grunt) {
             'Twilightcyanide ColorScheme.LICENSE.md',
         ],
         copy: {
+            colorschemes: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        cwd: 'templates',
+                        src: ['template.hidden-tmTheme'],
+                        rename: renameTheme('')
+                    }
+                ]
+            },
             themes: {
                 files: [
                     // theme:
@@ -89,10 +116,7 @@ module.exports = function(grunt) {
                         expand: true,
                         flatten: true,
                         cwd: 'templates',
-                        src: [
-                            'template.sublime-theme',
-                            'template.hidden-tmTheme'
-                        ],
+                        src: ['template.sublime-theme'],
                         rename: renameTheme('')
                     },
                     // widget:
@@ -110,21 +134,22 @@ module.exports = function(grunt) {
             },
         },
         replace: {
+            colorschemes: {
+                overwrite: true,
+                replacements: themesReplacements.concat([{
+                    from: '{{bg_rgb}}',
+                    to: '<%= bg.rgb %>'
+                }, {
+                    from: '{{bg_hex}}',
+                    to: '<%= bg.hex %>'
+                }])
+            },
             themes: {
                 overwrite: true,
-                replacements: [{
-                    from: '{{name}}',
-                    to: '<%= theme.name %>'
-                }, {
-                    from: '{{rgb}}',
-                    to: '<%= theme.rgb %>'
-                }, {
-                    from: '{{hex}}',
-                    to: '<%= theme.hex %>'
-                }, {
+                replacements: themesReplacements.concat([{
                     from: '{{widgetName}}',
-                    to: '<%= theme.widgetName %>'
-                }]
+                    to: '<%= renamer("Widget - Cyanide") %>'
+                }])
             },
             icons: {
                 src: 'templates/icon.hidden-tmPreferences',
@@ -235,33 +260,30 @@ module.exports = function(grunt) {
     // Themes task:
     grunt.registerTask('themes', 'Build custom themes', function() {
         header('Building theme files');
-        grunt.config('colors').colors.forEach(function(theme) {
+
+        var colors = grunt.config('colors');
+        colors.colors.forEach(function(theme) {
             generating(theme.name + ' theme');
 
-            theme.widgetName = theme.name === 'default' ? 'Widget - Cyanide' : 'Widget - Cyanide - ' + theme.name;
-
-            if (theme.name === 'default') {
-                var src = [
-                    'Cyanide.sublime-theme',
-                    'Cyanide.tmTheme',
-                    'Cyanide/Widget - Cyanide.stTheme',
-                    'Cyanide/Widget - Cyanide.sublime-settings'
-                ];
-            } else {
-                var src = [
-                    'Cyanide - ' + theme.name + '.sublime-theme',
-                    'Cyanide - ' + theme.name + '.tmTheme',
-                    'Cyanide/Widget - Cyanide - ' + theme.name + '.stTheme',
-                    'Cyanide/Widget - Cyanide - ' + theme.name + '.sublime-settings'
-                ];
-            }
-
+            // Generate theme & widget:
+            var renamerT = _.partial(defaultOr, theme.name);
+            share('renamer', renamerT);
             share('theme', theme);
-            share('replace.themes.src', src);
-            grunt.task.run([
-                'copy:themes',
-                'replace:themes'
-            ]);
+            share('replace.themes.src', [
+                ['Cyanide', '.sublime-theme'],
+                ['Cyanide/Widget - Cyanide', '.stTheme'],
+                ['Cyanide/Widget - Cyanide', '.sublime-settings']
+            ].map(bind(renamerT)));
+            grunt.task.run(['copy:themes', 'replace:themes']);
+
+            // Generate color schemes:
+            colors.backgrounds.forEach(function(bg) {
+                var renamerB = _.partial(defaultOr, bg.name);
+                share('renamer', _.compose(renamerB, renamerT));
+                share('bg', bg);
+                share('replace.colorschemes.src', [renamerT('Cyanide', renamerB('') + '.tmTheme')]);
+                grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
+            });
         });
     });
 

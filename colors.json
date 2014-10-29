@@ -1,4 +1,21 @@
 {
+  "backgrounds": [
+    {
+      "name": "default",
+      "hex": "0a0a0a",
+      "rgb": "10,10,10"
+    },
+    {
+      "name": "Constrasted",
+      "hex": "121212",
+      "rgb": "18,18,18"
+    },
+    {
+      "name": "Constrasted Light",
+      "hex": "2d2d2d",
+      "rgb": "45,45,45"
+    }
+  ],
   "colors": [
     {
       "name": "default",

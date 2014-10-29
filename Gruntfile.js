@@ -1,6 +1,11 @@
 'use strict';
 
+// colors for terminal
 require('colors');
+
+// utility, lodash
+var _ = require('lodash');
+_.mixin(require('underscore.string').exports());
 
 module.exports = function(grunt) {
     // Hide 'Running task' text from grunt output
@@ -12,6 +17,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         colors: grunt.file.readJSON('colors.json'),
         languages: grunt.file.readJSON('languages.json'),
+    };
+
+    var externalColorSchemes = {
+        'monocyanide': 'centril',
+        'twilightcyanide': 'centril'
     };
 
     var renameTheme = function(src, prefix) {
@@ -28,13 +38,12 @@ module.exports = function(grunt) {
         },
         header = function(msg, before) {
             !before || grunt.log.write('\n' + before.bold);
-            var d = grunt.util.repeat(60, '-');
+            var d = _('-').repeat(60);
             grunt.log.subhead(d + '\n' + msg.grey + '\n' + d);
         },
         generating = function(msg) {
             grunt.log.subhead('Generating ' + msg + '...');
-        },
-        monocyanideRepo = "https://raw.githubusercontent.com/Centril/sublime-monocyanide-colorscheme/master/";
+        };
 
     // Tasks options
     var tasks = {
@@ -65,6 +74,8 @@ module.exports = function(grunt) {
 
             'Monocyanide ColorScheme.CHANGES.md',
             'Monocyanide ColorScheme.LICENSE.md',
+            'Twilightcyanide ColorScheme.CHANGES.md',
+            'Twilightcyanide ColorScheme.LICENSE.md',
         ],
         copy: {
             themes: {
@@ -146,22 +157,33 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        'curl-dir': {
-            monocyanide: {
-                src: [monocyanideRepo + '{Monocyanide ColorScheme.tmTheme,LICENSE.md,CHANGES.md}'],
-                dest: './',
-                router: function(url) {
-                    var fn = url.replace(/^.*[\\\/]/, '');
-                    return fn.replace(/(\w+)\.md$/, 'Monocyanide ColorScheme.$1.md');
-                }
-            }
-        },
+        'curl-dir': {},
         verbosity: {
             hidden: {
                 tasks: ['copy', 'clean', 'curl-dir']
             }
         }
     };
+
+    _.forIn(externalColorSchemes, function(owner, colorscheme) {
+        var urlBase = "https://raw.githubusercontent.com/" + owner + '/sublime-' + colorscheme + '-colorscheme/master/',
+            capitalized = _(colorscheme).capitalize() + ' ColorScheme';
+
+        tasks['curl-dir'][colorscheme] = {
+            src: [urlBase + '{' + capitalized + '.tmTheme,LICENSE.md,CHANGES.md}'],
+            dest: './',
+            router: function(url) {
+                var fn = url.replace(/^.*[\\\/]/, '');
+                return fn.replace(/(\w+)\.md$/, capitalized + '.$1.md');
+            }
+        };
+
+        // register task:
+        grunt.registerTask('import-' + colorscheme, 'Imports ' + capitalized + ' from its repository', function() {
+            generating(capitalized);
+            grunt.task.run('curl-dir:' + colorscheme);
+        });
+    });
 
     // Merge tasks options with config
     grunt.util._.merge(config, tasks);
@@ -176,14 +198,13 @@ module.exports = function(grunt) {
         header('Current version: ' + grunt.config('pkg.version') + '\n' +
             'Github repository: https://github.com/lefoy/cyanide-theme',
             'Cyanide Theme Builder');
-        grunt.task.run(['verbosity', 'clean', 'themes', 'languages', 'monocyanide']);
+        grunt.task.run(['verbosity', 'clean', 'themes', 'languages', 'external-colorschemes']);
     });
 
-    // Monocyanide task:
-    grunt.registerTask('monocyanide', 'Pulls Monocyanide from its repository', function() {
-        header('Building Color Schemes files');
-        generating('Monocyanide Colorsheme');
-        grunt.task.run('curl-dir:monocyanide');
+    // Import all external colorschemes task:
+    grunt.registerTask('external-colorschemes', 'Imports all external from their repositories', function() {
+        header('Importing external Color Schemes');
+        grunt.task.run(_.map(_.keys(externalColorSchemes), function(c) { return 'import-' + c }));
     });
 
     // Languages task:

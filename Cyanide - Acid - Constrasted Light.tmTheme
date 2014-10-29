@@ -15,11 +15,11 @@
     //
 
     //
-    //  Cyanide - Acid Theme
+    //  Cyanide - Acid - Constrasted Light Theme
     //  Custom color (rgb): 182,219,81
     //  Custom color (hex): b6db51
-    //  Background   (rgb): 10,10,10
-    //  Background   (hex): 0a0a0a
+    //  Background   (rgb): 40,40,40
+    //  Background   (hex): 282828
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +36,7 @@
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>#0a0a0a</string>
+                    <string>#282828</string>
                     <key>caret</key>
                     <string>#CCCCCC</string>
                     <key>foreground</key>

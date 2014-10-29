@@ -15,11 +15,11 @@
     //
 
     //
-    //  Cyanide - Acid Theme
-    //  Custom color (rgb): 182,219,81
-    //  Custom color (hex): b6db51
-    //  Background   (rgb): 10,10,10
-    //  Background   (hex): 0a0a0a
+    //  Cyanide - Alert - Black Theme
+    //  Custom color (rgb): 250,47,0
+    //  Custom color (hex): fa2f00
+    //  Background   (rgb): 0,0,0
+    //  Background   (hex): 000000
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,7 +36,7 @@
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>#0a0a0a</string>
+                    <string>#000000</string>
                     <key>caret</key>
                     <string>#CCCCCC</string>
                     <key>foreground</key>
@@ -98,7 +98,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -124,7 +124,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -161,7 +161,7 @@
                     <key>fontStyle</key>
                     <string />
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -174,7 +174,7 @@
                     <key>background</key>
                     <string>#222222</string>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -244,7 +244,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -255,7 +255,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -266,7 +266,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -277,7 +277,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -288,7 +288,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -389,7 +389,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -415,7 +415,7 @@
                     <key>background</key>
                     <string>#f5f7f8</string>
                     <key>foreground</key>
-                    <string>#b6db51</string>
+                    <string>#fa2f00</string>
                 </dict>
             </dict>
             <dict>
@@ -437,7 +437,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#b6db5166</string>
+                    <string>#fa2f0066</string>
                 </dict>
             </dict>
             <dict>

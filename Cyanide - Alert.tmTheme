@@ -15,9 +15,11 @@
     //
 
     //
-    //  Alert Theme
+    //  Cyanide - Alert Theme
     //  Custom color (rgb): 250,47,0
     //  Custom color (hex): fa2f00
+    //  Background   (rgb): 10,10,10
+    //  Background   (hex): 0a0a0a
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

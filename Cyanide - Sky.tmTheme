@@ -15,9 +15,11 @@
     //
 
     //
-    //  Sky Theme
+    //  Cyanide - Sky Theme
     //  Custom color (rgb): 147,214,214
     //  Custom color (hex): 93d6d6
+    //  Background   (rgb): 10,10,10
+    //  Background   (hex): 0a0a0a
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

@@ -99,38 +99,33 @@ module.exports = function(grunt) {
         ],
         copy: {
             colorschemes: {
-                files: [
-                    {
-                        expand: true,
-                        flatten: true,
-                        cwd: 'templates',
-                        src: ['template.hidden-tmTheme'],
-                        rename: renameTheme('')
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    cwd: 'templates',
+                    src: ['template.hidden-tmTheme'],
+                    rename: renameTheme('')
+                }]
             },
             themes: {
-                files: [
+                files: [{
                     // theme:
-                    {
-                        expand: true,
-                        flatten: true,
-                        cwd: 'templates',
-                        src: ['template.sublime-theme'],
-                        rename: renameTheme('')
-                    },
+                    expand: true,
+                    flatten: true,
+                    cwd: 'templates',
+                    src: ['template.sublime-theme'],
+                    rename: renameTheme('')
+                }, {
                     // widget:
-                    {
-                        expand: true,
-                        flatten: true,
-                        cwd: 'templates',
-                        src: [
-                            'template.sublime-settings',
-                            'template.stTheme'
-                        ],
-                        rename: renameTheme('Cyanide/Widget - ')
-                    }
-                ]
+                    expand: true,
+                    flatten: true,
+                    cwd: 'templates',
+                    src: [
+                        'template.sublime-settings',
+                        'template.stTheme'
+                    ],
+                    rename: renameTheme('Cyanide/Widget - ')
+                }]
             },
         },
         replace: {

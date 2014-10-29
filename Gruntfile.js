@@ -173,12 +173,10 @@ module.exports = function(grunt) {
             src: [urlBase + '{' + capitalized + '.tmTheme,LICENSE.md,CHANGES.md}'],
             dest: './',
             router: function(url) {
-                var fn = url.replace(/^.*[\\\/]/, '');
-                return fn.replace(/(\w+)\.md$/, capitalized + '.$1.md');
+                return _(url).strRightBack('/').value().replace(/(\w+)\.md$/, capitalized + '.$1.md');
             }
         };
 
-        // register task:
         grunt.registerTask('import-' + colorscheme, 'Imports ' + capitalized + ' from its repository', function() {
             generating(capitalized);
             grunt.task.run('curl-dir:' + colorscheme);

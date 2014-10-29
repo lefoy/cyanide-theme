@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Stylus</string>
+	<string>Stylus</string>
 	<key>fileTypes</key>
 	<array>
 		<string>styl</string>

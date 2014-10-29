@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Gulpfile Coffee</string>
+	<string>Gulpfile Coffee</string>
 	<key>fileTypes</key>
 	<array>
 		<string>gulpfile.coffee</string>

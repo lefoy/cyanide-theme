@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Procfile</string>
+	<string>Procfile</string>
 	<key>fileTypes</key>
 	<array>
 		<string>Procfile</string>

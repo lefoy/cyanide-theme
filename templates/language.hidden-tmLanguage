@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide {{lang}}</string>
+	<string>{{lang}}</string>
 	<key>fileTypes</key>
 	<array>
 		{{files}}

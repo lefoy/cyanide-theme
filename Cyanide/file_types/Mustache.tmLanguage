@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Mustache</string>
+	<string>Mustache</string>
 	<key>fileTypes</key>
 	<array>
 		<string>mustache</string><string>hbs</string>

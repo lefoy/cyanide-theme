@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Puppet</string>
+	<string>Puppet</string>
 	<key>fileTypes</key>
 	<array>
 		<string>pp</string><string>puppet.conf</string>

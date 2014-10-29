@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Adobe Photoshop</string>
+	<string>Adobe Photoshop</string>
 	<key>fileTypes</key>
 	<array>
 		<string>psd</string>

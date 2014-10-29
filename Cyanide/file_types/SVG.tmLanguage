@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide SVG</string>
+	<string>SVG</string>
 	<key>fileTypes</key>
 	<array>
 		<string>svg</string>

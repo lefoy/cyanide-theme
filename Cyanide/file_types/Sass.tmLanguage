@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Sass</string>
+	<string>Sass</string>
 	<key>fileTypes</key>
 	<array>
 		<string>scss</string><string>scss.erb</string><string>scss.liquid</string>

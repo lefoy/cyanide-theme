@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Git</string>
+	<string>Git</string>
 	<key>fileTypes</key>
 	<array>
 		<string>gitignore</string><string>gitconfig</string><string>gitblame</string><string>gitcommit</string><string>gitgraph</string><string>git-blame</string><string>git-commit</string><string>git-graph</string>

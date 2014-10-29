@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Adobe Illustrator</string>
+	<string>Adobe Illustrator</string>
 	<key>fileTypes</key>
 	<array>
 		<string>ai</string>

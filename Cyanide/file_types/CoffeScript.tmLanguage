@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide CoffeScript</string>
+	<string>CoffeScript</string>
 	<key>fileTypes</key>
 	<array>
 		<string>coffee</string>

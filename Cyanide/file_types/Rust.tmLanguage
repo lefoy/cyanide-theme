@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Rust</string>
+	<string>Rust</string>
 	<key>fileTypes</key>
 	<array>
 		<string>rs</string>

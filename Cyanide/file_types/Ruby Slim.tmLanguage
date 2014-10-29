@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide Ruby Slim</string>
+	<string>Ruby Slim</string>
 	<key>fileTypes</key>
 	<array>
 		<string>slim</string>

@@ -19,7 +19,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyanide AppleScript</string>
+	<string>AppleScript</string>
 	<key>fileTypes</key>
 	<array>
 		<string>scpt</string>

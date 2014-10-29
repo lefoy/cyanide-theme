@@ -20,17 +20,21 @@ module.exports = function(grunt) {
     };
 
     var externalColorSchemes = {
-        'monocyanide': 'centril',
-        'twilightcyanide': 'centril'
-    };
-
-    var renameTheme = function(src, prefix) {
+            'monocyanide': 'centril',
+            'twilightcyanide': 'centril'
+        },
+        importTask = function(colorscheme) {
+            return 'import-' + colorscheme;
+        },
+        renameTheme = _.curry(function(prefix, dest, src) {
             var name = grunt.config('theme.name'),
                 filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
             return src.replace('template', filename).replace('hidden-', '');
-        },
-        // tasks can share anything into grunt.config:
-        share = function(key, data) {
+        });
+
+    // General purpose functions.
+    var share = function(key, data) {
+            // tasks can share anything into grunt.config:
             grunt.registerTask('__taskshare', '', function() {
                 grunt.config(key, data);
             });
@@ -89,9 +93,7 @@ module.exports = function(grunt) {
                             'template.sublime-theme',
                             'template.hidden-tmTheme'
                         ],
-                        rename: function(dest, src) {
-                            return renameTheme(src, '');
-                        }
+                        rename: renameTheme('')
                     },
                     // widget:
                     {
@@ -102,9 +104,7 @@ module.exports = function(grunt) {
                             'template.sublime-settings',
                             'template.stTheme'
                         ],
-                        rename: function(dest, src) {
-                            return renameTheme(src, 'Cyanide/Widget - ');
-                        }
+                        rename: renameTheme('Cyanide/Widget - ')
                     }
                 ]
             },
@@ -165,6 +165,7 @@ module.exports = function(grunt) {
         }
     };
 
+    // Add tasks for importing external colorschemes:
     _.forIn(externalColorSchemes, function(owner, colorscheme) {
         var urlBase = "https://raw.githubusercontent.com/" + owner + '/sublime-' + colorscheme + '-colorscheme/master/',
             capitalized = _(colorscheme).capitalize() + ' ColorScheme';
@@ -177,21 +178,21 @@ module.exports = function(grunt) {
             }
         };
 
-        grunt.registerTask('import-' + colorscheme, 'Imports ' + capitalized + ' from its repository', function() {
+        grunt.registerTask(importTask(colorscheme), 'Imports ' + capitalized + ' from its repository', function() {
             generating(capitalized);
             grunt.task.run('curl-dir:' + colorscheme);
         });
     });
 
     // Merge tasks options with config
-    grunt.util._.merge(config, tasks);
+    _.merge(config, tasks);
 
     require('load-grunt-tasks')(grunt);
 
     // Define grunt tasks:
     grunt.registerTask('default', []);
 
-    // Validate task
+    // Build task:
     grunt.registerTask('build', 'Build custom themes', function() {
         header('Current version: ' + grunt.config('pkg.version') + '\n' +
             'Github repository: https://github.com/lefoy/cyanide-theme',
@@ -202,7 +203,7 @@ module.exports = function(grunt) {
     // Import all external colorschemes task:
     grunt.registerTask('external-colorschemes', 'Imports all external from their repositories', function() {
         header('Importing external Color Schemes');
-        grunt.task.run(_.map(_.keys(externalColorSchemes), function(c) { return 'import-' + c }));
+        grunt.task.run(_.map(_.keys(externalColorSchemes), importTask));
     });
 
     // Languages task:

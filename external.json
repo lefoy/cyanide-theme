@@ -1,0 +1,6 @@
+{
+	"external": [
+		{"name": "Monocyanide", "repo": "centril/sublime-monocyanide-colorscheme", "version": "master"},
+		{"name": "Twilightcyanide", "repo": "centril/sublime-twilightcyanide-colorscheme", "version": "master"}
+	]
+}

@@ -15,9 +15,9 @@
     //
 
     //
-    //  Cyanide - Mint Theme
-    //  Custom color (rgb): 183,199,117
-    //  Custom color (hex): b7c775
+    //  {{name}} Theme
+    //  Custom color (rgb): {{rgb}}
+    //  Custom color (hex): {{hex}}
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

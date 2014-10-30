@@ -15,9 +15,9 @@
     //
 
     //
-    //  Cyanide - Purple Theme
-    //  Custom color (rgb): 217,82,170
-    //  Custom color (hex): d952aa
+    //  {{name}} Theme
+    //  Custom color (rgb): {{rgb}}
+    //  Custom color (hex): {{hex}}
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

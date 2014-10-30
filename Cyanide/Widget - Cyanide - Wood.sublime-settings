@@ -1,5 +1,5 @@
 {
-    "color_scheme": "Packages/Theme - Cyanide/Cyanide/Widget - Cyanide - Wood.stTheme",
+    "color_scheme": "Packages/Theme - Cyanide/Cyanide/{{widgetName}}.stTheme",
     "draw_shadows": false
 }
 

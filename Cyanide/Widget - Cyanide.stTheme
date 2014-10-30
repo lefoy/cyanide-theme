@@ -15,9 +15,9 @@
     //
 
     //
-    //  Cyanide Theme
-    //  Custom color (rgb): 100,178,219
-    //  Custom color (hex): 64b2db
+    //  {{name}} Theme
+    //  Custom color (rgb): {{rgb}}
+    //  Custom color (hex): {{hex}}
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

@@ -1,1 +1,0 @@
-# See: [sublime-twilightcyanide-colorscheme](https://github.com/centril/sublime-twilightcyanide-colorscheme)

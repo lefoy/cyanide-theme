@@ -15,9 +15,9 @@
     //
 
     //
-    //  Cyanide - Alert Theme
-    //  Custom color (rgb): 250,47,0
-    //  Custom color (hex): fa2f00
+    //  {{name}} Theme
+    //  Custom color (rgb): {{rgb}}
+    //  Custom color (hex): {{hex}}
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

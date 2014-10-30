@@ -60,6 +60,16 @@ module.exports = function(grunt) {
         externalTask = function(external) {
             return 'external-import-' + external.id;
         },
+        genColorSchemes = function(func) {
+            var colors = grunt.config('colors');
+            colors.backgrounds.forEach(function(bg) {
+                var renamer = func(_.partial(defaultOr, bg.name));
+                share('renamer', _.partial(renamer, ''));
+                share('bg', bg);
+                share('replace.colorschemes.src', [renamer('') + '.tmTheme']);
+                grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
+            });
+        },
         renameTheme = _.curry(function(prefix, dest, src) {
             var filename = prefix + grunt.config('renamer')();
             return src.replace('template', filename).replace('hidden-', '');
@@ -118,10 +128,8 @@ module.exports = function(grunt) {
         copy: {
             external: copyTask([]),
             colorschemes: copyTask('template.hidden-tmTheme'),
-            themes: _.merge(
-                copyTask('template.sublime-theme'), // theme
-                copyTask(['template.sublime-settings', 'template.stTheme'], renameTheme(widgetPrefix)) // widget
-            )
+            themes: copyTask('template.sublime-theme'),
+            widgets: copyTask(['template.sublime-settings', 'template.stTheme'], renameTheme(widgetPrefix))
         },
         replace: {
             colorschemes: {
@@ -185,15 +193,8 @@ module.exports = function(grunt) {
         grunt.registerTask(task, 'Imports ' + external.name + ' from its repository', function() {
             generating(external.name);
             grunt.task.run('curl:' + task);
-
-            // Generate color schemes:
-            var colors = grunt.config('colors');
-            colors.backgrounds.forEach(function(bg) {
-                var renamer = _.partial(defaultOr, bg.name, external.name);
-                share('renamer', _.partial(renamer, '')); // force over-curry.
-                share('bg', bg);
-                share('replace.colorschemes.src', [renamer('.tmTheme')]);
-                grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
+            genColorSchemes(function(func) {
+                return _.partial(func, external.name);
             });
         });
     });
@@ -262,15 +263,11 @@ module.exports = function(grunt) {
                 [widgetPrefix + humanized, '.stTheme'],
                 [widgetPrefix + humanized, '.sublime-settings']
             ].map(bind(renamerT)));
-            grunt.task.run(['copy:themes', 'replace:themes']);
+            grunt.task.run(['copy:themes', 'copy:widgets', 'replace:themes']);
 
             // Generate color schemes:
-            colors.backgrounds.forEach(function(bg) {
-                var renamer = _.compose(_.partial(defaultOr, bg.name), renamerT);
-                share('renamer', _.partial(renamer, ''));
-                share('bg', bg);
-                share('replace.colorschemes.src', [renamer('') + '.tmTheme']);
-                grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
+            genColorSchemes(function(func) {
+                return _.compose(func, renamerT);
             });
         });
     });

@@ -1,5 +1,7 @@
 {
   "name": "cyanide-theme",
+  "humanized": "Cyanide",
+  "repository": "https://github.com/lefoy/cyanide-theme",
   "version": "2.2.0",
   "devDependencies": {
     "colors": "1.0.3",

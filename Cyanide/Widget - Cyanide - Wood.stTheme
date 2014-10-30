@@ -15,9 +15,9 @@
     //
 
     //
-    //  {{name}} Theme
-    //  Custom color (rgb): {{rgb}}
-    //  Custom color (hex): {{hex}}
+    //  Cyanide - Wood Theme
+    //  Custom color (rgb): 156,104,79
+    //  Custom color (hex): 9c684f
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

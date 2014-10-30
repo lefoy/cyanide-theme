@@ -4,3 +4,4 @@ thumbs.db
 node_modules/
 *.todo
 *.todone
+build/

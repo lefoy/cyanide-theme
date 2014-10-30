@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             return (name === 'default' ? base : base + ' - ' + _.capitalize(name)) + (ext || '');
         };
 
-    var widgetPrefix = humanized + '/Widget - ',
+    var widgetPrefix = humanized + '/Widget - ' + humanized,
         fileTypesDir = humanized + '/file_types/',
         template = function(path) {
             return 'templates/' + (path || '');
@@ -63,15 +63,15 @@ module.exports = function(grunt) {
         genColorSchemes = function(func) {
             var colors = grunt.config('colors');
             colors.backgrounds.forEach(function(bg) {
-                var renamer = func(_.partial(defaultOr, bg.name));
-                share('renamer', _.partial(renamer, ''));
+                var renamer = _.partial(func(_.partial(defaultOr, bg.name)), '');
+                share('renamer', renamer);
                 share('bg', bg);
-                share('replace.colorschemes.src', [renamer('') + '.tmTheme']);
+                share('replace.colorschemes.src', [renamer() + '.tmTheme']);
                 grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
             });
         },
         renameTheme = _.curry(function(prefix, dest, src) {
-            var filename = prefix + grunt.config('renamer')();
+            var filename = grunt.config('renamer')(prefix);
             return src.replace('template', filename).replace('hidden-', '');
         }),
         copyTask = function(sources, renamer, cwd) {
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                     flatten: true,
                     cwd: cwd || template(),
                     src: sources,
-                    rename: renamer || renameTheme('')
+                    rename: renamer || renameTheme(humanized)
                 }]
             };
         },
@@ -255,19 +255,20 @@ module.exports = function(grunt) {
             generating(theme.name + ' theme');
 
             // Generate theme & widget:
-            var renamerT = _.partial(defaultOr, theme.name, humanized);
+            var renamerT = _.partial(defaultOr, theme.name);
             share('renamer', renamerT);
             share('theme', theme);
             share('replace.themes.src', [
                 [humanized, '.sublime-theme'],
-                [widgetPrefix + humanized, '.stTheme'],
-                [widgetPrefix + humanized, '.sublime-settings']
+                [widgetPrefix, '.stTheme'],
+                [widgetPrefix, '.sublime-settings']
             ].map(bind(renamerT)));
             grunt.task.run(['copy:themes', 'copy:widgets', 'replace:themes']);
 
             // Generate color schemes:
+            var renamerC = _.partial(renamerT, humanized);
             genColorSchemes(function(func) {
-                return _.compose(func, renamerT);
+                return _.compose(func, renamerC);
             });
         });
     });

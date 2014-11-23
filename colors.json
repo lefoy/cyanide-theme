@@ -1,4 +1,31 @@
 {
+  "backgrounds": [
+    {
+      "name": "default",
+      "hex": "0a0a0a",
+      "rgb": "10,10,10"
+    },
+    {
+      "name": "Black",
+      "hex": "000000",
+      "rgb": "0,0,0"
+    },
+    {
+      "name": "Constrasted",
+      "hex": "121212",
+      "rgb": "18,18,18"
+    },
+    {
+      "name": "Constrasted Semi",
+      "hex": "191919",
+      "rgb": "25,25,25"
+    },
+    {
+      "name": "Constrasted Light",
+      "hex": "282828",
+      "rgb": "40,40,40"
+    }
+  ],
   "colors": [
     {
       "name": "default",

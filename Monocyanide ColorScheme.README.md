@@ -1,1 +1,0 @@
-# See: [sublime-monocyanide-colorscheme](https://github.com/centril/sublime-monocyanide-colorscheme)

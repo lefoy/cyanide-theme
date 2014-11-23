@@ -15,9 +15,11 @@
     //
 
     //
-    //  Wood Theme
+    //  Cyanide - Wood Theme
     //  Custom color (rgb): 156,104,79
     //  Custom color (hex): 9c684f
+    //  Background   (rgb): 10,10,10
+    //  Background   (hex): 0a0a0a
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

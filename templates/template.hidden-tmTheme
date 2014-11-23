@@ -18,6 +18,8 @@
     //  {{name}} Theme
     //  Custom color (rgb): {{rgb}}
     //  Custom color (hex): {{hex}}
+    //  Background   (rgb): {{bg_rgb}}
+    //  Background   (hex): {{bg_hex}}
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +36,7 @@
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>#0a0a0a</string>
+                    <string>#{{bg_hex}}</string>
                     <key>caret</key>
                     <string>#CCCCCC</string>
                     <key>foreground</key>

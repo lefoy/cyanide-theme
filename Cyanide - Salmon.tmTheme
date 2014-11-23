@@ -15,9 +15,11 @@
     //
 
     //
-    //  Salmon Theme
+    //  Cyanide - Salmon Theme
     //  Custom color (rgb): 255,120,109
     //  Custom color (hex): ff786d
+    //  Background   (rgb): 10,10,10
+    //  Background   (hex): 0a0a0a
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

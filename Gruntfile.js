@@ -1,26 +1,31 @@
 'use strict';
 
+// colors for terminal
 require('colors');
+
+// utility, lodash
+var _ = require('lodash');
+_.mixin(require('underscore.string').exports());
+
+var bind = function(f) {
+    return Function.prototype.apply.bind(f, null);
+}
 
 module.exports = function(grunt) {
     // Hide 'Running task' text from grunt output
     grunt.log.header = function() {};
 
     // Initial config
-    var config = {
-        // Read JSON files
-        pkg: grunt.file.readJSON('package.json'),
-        colors: grunt.file.readJSON('colors.json'),
-        languages: grunt.file.readJSON('languages.json'),
-    };
+    var files  = ['package', 'colors', 'external', 'languages'];
+    var config = _.object(files, _.map(files, function(f) {
+        return grunt.file.readJSON(f + '.json');
+    }));
 
-    var renameTheme = function(src, prefix) {
-            var name = grunt.config('theme.name'),
-                filename = prefix + (name === 'default' ? 'Cyanide' : 'Cyanide - ' + name);
-            return src.replace('template', filename).replace('hidden-', '');
-        },
-        // tasks can share anything into grunt.config:
-        share = function(key, data) {
+    var humanized = config.package.humanized;
+
+    // General purpose functions.
+    var share = function(key, data) {
+            // tasks can share anything into grunt.config:
             grunt.registerTask('__taskshare', '', function() {
                 grunt.config(key, data);
             });
@@ -28,20 +33,78 @@ module.exports = function(grunt) {
         },
         header = function(msg, before) {
             !before || grunt.log.write('\n' + before.bold);
-            var d = grunt.util.repeat(60, '-');
+            var d = _('-').repeat(60);
             grunt.log.subhead(d + '\n' + msg.grey + '\n' + d);
         },
         generating = function(msg) {
             grunt.log.subhead('Generating ' + msg + '...');
         },
-        monocyanideRepo = "https://raw.githubusercontent.com/Centril/sublime-monocyanide-colorscheme/master/";
+        defaultOr = function(name, base, ext) {
+            return (name === 'default' ? base : base + ' - ' + _.capitalize(name)) + (ext || '');
+        };
+
+    var widgetPrefix = humanized + '/Widget - ' + humanized,
+        fileTypesDir = humanized + '/file_types/',
+        template = function(path) {
+            return 'templates/' + (path || '');
+        },
+        fileTypeIcon = function(icon) {
+            return fileTypesDir + 'icon_' + icon + '.tmPreferences';
+        },
+        externalRawUrl = function(external) {
+            return "https://raw.githubusercontent.com/" + external.repo + '/' + external.version  + '/';
+        },
+        externalId = function(external) {
+            return _.slugify(external.name);
+        },
+        externalTask = function(external) {
+            return 'external-import-' + external.id;
+        },
+        genColorSchemes = function(func) {
+            var colors = grunt.config('colors');
+            colors.backgrounds.forEach(function(bg) {
+                var renamer = _.partial(func(_.partial(defaultOr, bg.name)), '');
+                share('renamer', renamer);
+                share('bg', bg);
+                share('replace.colorschemes.src', [renamer() + '.tmTheme']);
+                grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
+            });
+        },
+        renameTheme = _.curry(function(prefix, dest, src) {
+            var filename = grunt.config('renamer')(prefix);
+            return src.replace('template', filename).replace('hidden-', '');
+        }),
+        copyTask = function(sources, renamer, cwd) {
+            return {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    cwd: cwd || template(),
+                    src: sources,
+                    rename: renamer || renameTheme(humanized)
+                }]
+            };
+        },
+        replacements = function(r) {
+            return r.map(function(e) {
+                return {
+                    from: '{{' + e[0] + '}}',
+                    to: _.isString(e[1]) ? '<%= ' + e[1] + ' %>' : e[1]
+                };
+            });
+        },
+        themesReplacements = replacements([
+            ['name', 'renamer(package.humanized)'],
+            ['rgb', 'theme.rgb'],
+            ['hex', 'theme.hex']
+        ]);
 
     // Tasks options
     var tasks = {
         bump: {
             options: {
                 files: ['package.json'],
-                updateConfigs: ['pkg'],
+                updateConfigs: ['package'],
                 commit: true,
                 commitMessage: 'Release v%VERSION%',
                 commitFiles: ['package.json'],
@@ -57,133 +120,104 @@ module.exports = function(grunt) {
         clean: [
             '*.sublime-theme',
             '*.tmTheme',
-
-            'Cyanide/*.stTheme',
-            'Cyanide/*.sublime-settings',
-
-            'Cyanide/file_types/icon_*.tmPreferences',
-
-            'Monocyanide ColorScheme.CHANGES.md',
-            'Monocyanide ColorScheme.LICENSE.md',
+            humanized + '/*.stTheme',
+            humanized + '/*.sublime-settings',
+            fileTypeIcon('*'),
+            'build/'
         ],
         copy: {
-            themes: {
-                files: [
-                    // theme:
-                    {
-                        expand: true,
-                        flatten: true,
-                        cwd: 'templates',
-                        src: [
-                            'template.sublime-theme',
-                            'template.hidden-tmTheme'
-                        ],
-                        rename: function(dest, src) {
-                            return renameTheme(src, '');
-                        }
-                    },
-                    // widget:
-                    {
-                        expand: true,
-                        flatten: true,
-                        cwd: 'templates',
-                        src: [
-                            'template.sublime-settings',
-                            'template.stTheme'
-                        ],
-                        rename: function(dest, src) {
-                            return renameTheme(src, 'Cyanide/Widget - ');
-                        }
-                    }
-                ]
-            },
+            external: copyTask([]),
+            colorschemes: copyTask('template.hidden-tmTheme'),
+            themes: copyTask('template.sublime-theme'),
+            widgets: copyTask(['template.sublime-settings', 'template.stTheme'], renameTheme(widgetPrefix))
         },
         replace: {
+            colorschemes: {
+                overwrite: true,
+                replacements: themesReplacements.concat(replacements([
+                    ['bg_rgb', 'bg.rgb'],
+                    ['bg_hex', 'bg.hex']
+                ]))
+            },
             themes: {
                 overwrite: true,
-                replacements: [{
-                    from: '{{name}}',
-                    to: '<%= theme.name %>'
-                }, {
-                    from: '{{rgb}}',
-                    to: '<%= theme.rgb %>'
-                }, {
-                    from: '{{hex}}',
-                    to: '<%= theme.hex %>'
-                }, {
-                    from: '{{widgetName}}',
-                    to: '<%= theme.widgetName %>'
-                }]
+                replacements: themesReplacements.concat(replacements([
+                    ['widgetName', 'renamer("Widget - " + package.humanized)']
+                ]))
             },
             icons: {
-                src: 'templates/icon.hidden-tmPreferences',
-                replacements: [{
-                    from: '{{icon}}',
-                    to: '<%= icon.icon %>'
-                }, {
-                    from: '{{scopes}}',
-                    to: "<%= icon.scopes.join(', ') %>"
-                }]
+                src: template('icon.hidden-tmPreferences'),
+                replacements: replacements([
+                    ['icon', 'icon.icon'],
+                    ['scopes', "icon.scopes.join(', ')"]
+                ])
             },
             languages: {
-                src: 'templates/language.hidden-tmLanguage',
-                replacements: [{
-                    from: '{{lang}}',
-                    to: '<%= lang.lang %>'
-                }, {
-                    from: '{{scopes}}',
-                    to: "<%= lang.scopes.join(', ') %>"
-                }, {
-                    from: '{{include}}',
-                    to: '<%= lang.include %>'
-                }, {
-                    from: '{{files}}',
-                    to: function() {
+                src: template('language.hidden-tmLanguage'),
+                replacements: replacements([
+                    ['lang', 'lang.lang'],
+                    ['scopes', "lang.scopes.join(', ')"],
+                    ['include', 'lang.include'],
+                    ['files', function() {
                         return grunt.config('lang.files').map(function(f) {
                             return '<string>' + f + '</string>'
                         }).join('')
-                    }
-                }]
+                    }]
+                ])
             }
         },
-        'curl-dir': {
-            monocyanide: {
-                src: [monocyanideRepo + '{Monocyanide ColorScheme.tmTheme,LICENSE.md,CHANGES.md}'],
-                dest: './',
-                router: function(url) {
-                    var fn = url.replace(/^.*[\\\/]/, '');
-                    return fn.replace(/(\w+)\.md$/, 'Monocyanide ColorScheme.$1.md');
-                }
-            }
-        },
+        'curl': {},
         verbosity: {
             hidden: {
-                tasks: ['copy', 'clean', 'curl-dir']
+                tasks: ['copy', 'clean', 'curl']
             }
         }
     };
 
-    // Merge tasks options with config
-    grunt.util._.merge(config, tasks);
+    // Add tasks for importing external colorschemes:
+    config.external.external.forEach(function(external) {
+        external.id = externalId(external);
+        var urlBase = externalRawUrl(external),
+            task    = externalTask(external),
+            dest    = 'build/' + external.id + '.hidden-tmTheme',
+            src     = template('template.hidden-tmTheme');
 
+        // Setup copy & curl tasks:
+        tasks.copy.external.files[0].src.push(dest);
+        tasks['curl'][task] = {
+            dest: dest,
+            src: urlBase + src
+        };
+
+        // Setup generation task:
+        grunt.registerTask(task, 'Imports ' + external.name + ' from its repository', function() {
+            generating(external.name);
+            grunt.task.run('curl:' + task);
+            genColorSchemes(function(func) {
+                return _.partial(func, external.name);
+            });
+        });
+    });
+
+    // Merge tasks options with config & load them.
+    _.merge(config, tasks);
     require('load-grunt-tasks')(grunt);
 
     // Define grunt tasks:
     grunt.registerTask('default', []);
 
-    // Validate task
+    // Build task:
     grunt.registerTask('build', 'Build custom themes', function() {
-        header('Current version: ' + grunt.config('pkg.version') + '\n' +
-            'Github repository: https://github.com/lefoy/cyanide-theme',
-            'Cyanide Theme Builder');
-        grunt.task.run(['verbosity', 'clean', 'themes', 'languages', 'monocyanide']);
+        header('Current version: ' + grunt.config('package.version') + '\n' +
+            'Github repository: ' + grunt.config('package.repository'),
+             humanized + ' Theme Builder');
+        grunt.task.run(['verbosity', 'clean', 'themes', 'languages', 'external-colorschemes']);
     });
 
-    // Monocyanide task:
-    grunt.registerTask('monocyanide', 'Pulls Monocyanide from its repository', function() {
-        header('Building Color Schemes files');
-        generating('Monocyanide Colorsheme');
-        grunt.task.run('curl-dir:monocyanide');
+    // Import all external colorschemes task:
+    grunt.registerTask('external-colorschemes', 'Imports all external from their repositories', function() {
+        header('Importing external Color Schemes');
+        grunt.task.run(_.map(config.external.external, externalTask));
     });
 
     // Languages task:
@@ -196,7 +230,7 @@ module.exports = function(grunt) {
         data.icons.forEach(function(icon) {
             generating('icon_' + icon.icon + '.tmPreferences');
             share('icon', icon);
-            share('replace.icons.dest', 'Cyanide/file_types/icon_' + icon.icon + '.tmPreferences');
+            share('replace.icons.dest', fileTypeIcon(icon.icon));
             grunt.task.run('replace:icons');
         });
 
@@ -207,7 +241,7 @@ module.exports = function(grunt) {
             generating(lang.lang + '.tmLanguage');
             lang.include = lang.scopes.length > 1 ? lang.scopes[0] : '';
             share('lang', lang);
-            share('replace.languages.dest', 'Cyanide/file_types/' + lang.lang + '.tmLanguage');
+            share('replace.languages.dest', fileTypesDir + lang.lang + '.tmLanguage');
             grunt.task.run('replace:languages');
         });
     });
@@ -215,33 +249,27 @@ module.exports = function(grunt) {
     // Themes task:
     grunt.registerTask('themes', 'Build custom themes', function() {
         header('Building theme files');
-        grunt.config('colors').colors.forEach(function(theme) {
+
+        var colors = grunt.config('colors');
+        colors.colors.forEach(function(theme) {
             generating(theme.name + ' theme');
 
-            theme.widgetName = theme.name === 'default' ? 'Widget - Cyanide' : 'Widget - Cyanide - ' + theme.name;
-
-            if (theme.name === 'default') {
-                var src = [
-                    'Cyanide.sublime-theme',
-                    'Cyanide.tmTheme',
-                    'Cyanide/Widget - Cyanide.stTheme',
-                    'Cyanide/Widget - Cyanide.sublime-settings'
-                ];
-            } else {
-                var src = [
-                    'Cyanide - ' + theme.name + '.sublime-theme',
-                    'Cyanide - ' + theme.name + '.tmTheme',
-                    'Cyanide/Widget - Cyanide - ' + theme.name + '.stTheme',
-                    'Cyanide/Widget - Cyanide - ' + theme.name + '.sublime-settings'
-                ];
-            }
-
+            // Generate theme & widget:
+            var renamerT = _.partial(defaultOr, theme.name);
+            share('renamer', renamerT);
             share('theme', theme);
-            share('replace.themes.src', src);
-            grunt.task.run([
-                'copy:themes',
-                'replace:themes'
-            ]);
+            share('replace.themes.src', [
+                [humanized, '.sublime-theme'],
+                [widgetPrefix, '.stTheme'],
+                [widgetPrefix, '.sublime-settings']
+            ].map(bind(renamerT)));
+            grunt.task.run(['copy:themes', 'copy:widgets', 'replace:themes']);
+
+            // Generate color schemes:
+            var renamerC = _.partial(renamerT, humanized);
+            genColorSchemes(function(func) {
+                return _.compose(func, renamerC);
+            });
         });
     });
 

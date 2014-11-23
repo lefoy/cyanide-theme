@@ -15,9 +15,11 @@
     //
 
     //
-    //  default Theme
+    //  Cyanide Theme
     //  Custom color (rgb): 100,178,219
     //  Custom color (hex): 64b2db
+    //  Background   (rgb): 10,10,10
+    //  Background   (hex): 0a0a0a
     //
 -->
 <?xml version="1.0" encoding="UTF-8"?>

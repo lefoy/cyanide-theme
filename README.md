@@ -5,6 +5,8 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
+**NEW: [ColorScheme Background Variations](#colorscheme-background-variations)**<br>
+**NEW: [Twilightcyanide Colorscheme](#twilightcyanide-colorscheme)**<br>
 **NEW: [Monocyanide Colorscheme](#monocyanide-colorscheme)**<br>
 **NEW: [Sidebar file type icons](#sidebar-file-type-icons)**<br>
 **NEW: [Cyanide Theme Builder](#cyanide-theme-builder)**
@@ -58,10 +60,20 @@ Themes
 If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that was developed specifically for Cyanide. It works with any of the themes.
 
 ```
-"color_scheme": "Packages/Theme - Cyanide/Monocyanide ColorScheme.tmTheme",
+"color_scheme": "Packages/Theme - Cyanide/Monocyanide.tmTheme",
 ```
 
 ![Monocyanide screenshot]
+
+### Twilightcyanide Colorscheme
+
+If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that was developed specifically for Cyanide. It works with any of the themes.
+
+```
+"color_scheme": "Packages/Theme - Cyanide/Twilightcyanide.tmTheme",
+```
+
+![Twilightcyanide screenshot]
 
 ### Acid theme
 
@@ -144,6 +156,18 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ![Wood screenshot]
 
+### ColorScheme Background Variations
+
+All colorschemes provided come in 5 flavors where the background of each is different. The variations that are available are:
++ Default (the one with no suffix): `#0a0a0a`
++ Black: `#000000`
++ Contrasted: `#121212`
++ Contrasted Semi: `#191919`
++ Contrasted Light: `#282828`
+
+When words are not enough:
+
+![Background variations screenshot]
 
 Settings
 ------------------------------------------------------------------------
@@ -260,6 +284,7 @@ npm install
 
 Edit the `colors.json` file to add your own custom color.
 Edit the `languages.json` file to add your own custom sidebar icon. Match every new entry with images named `file_type_{icon}.png` (dimensions: `16x16`) and `file_type_{icon}@2x.png` (dimensions: `32x32`) in the icons/ directory.
+Edit the `external.json` file to roll your own custom colorscheme to build. Take a look at the template of the [Monocyanide] colorscheme for how to accomplish this.
 
 Save the file, and run:
 
@@ -276,7 +301,7 @@ grunt
     build       # Does all of the below.
     themes      # Builds the theme files, do this when colors.json is updated.
     languages   # Builds sidebar icon bindings and dummy syntax highlighting.
-    monocyanide # Pulls the latest version of Monocyanide from its repo.
+    external-colorschemes # Pulls the latest version of Monocyanide and Twilightcyanide from their repos and builds them.
 ```
 
 ## Known issues
@@ -311,7 +336,9 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 [Default Theme Screenshot]: http://i.imgur.com/NOOomrQ.png
 [Acid Theme Screenshot]: http://i.imgur.com/snmvuB4.png
 [Contrasted UI Screenshot]: http://i.imgur.com/cfYkL92.png
+[Background variations screenshot]: http://i.imgur.com/KVnYDGw.png
 [Monocyanide screenshot]: http://i.imgur.com/GbB80Aj.png
+[Twilightcyanide screenshot]: http://i.imgur.com/GbB80Aj.png
 [Acid screenshot]: http://i.imgur.com/GbB80Aj.png
 [Alert screenshot]: http://i.imgur.com/fSXNPYH.png
 [Golden screenshot]: http://i.imgur.com/XpNt7rM.png

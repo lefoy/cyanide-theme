@@ -5,17 +5,11 @@ Cyanide Theme for Sublime Text
 
 A minimal dark theme for Sublime Text 3.
 
-**NEW: [ColorScheme Background Variations](#colorscheme-background-variations)**<br>
-**NEW: [Twilightcyanide Colorscheme](#twilightcyanide-colorscheme)**<br>
-**NEW: [Monocyanide Colorscheme](#monocyanide-colorscheme)**<br>
-**NEW: [Sidebar file type icons](#sidebar-file-type-icons)**<br>
-**NEW: [Cyanide Theme Builder](#cyanide-theme-builder)**
+![Default Theme Screenshot 1]
 
-![Default Theme Screenshot]
+![Default Theme Screenshot 2]
 
-![Acid Theme Screenshot]
-
-![Contrasted UI Screenshot]
+![Default Theme Screenshot 3]
 
 Installation
 ------------------------------------------------------------------------
@@ -192,7 +186,7 @@ Sidebar folder icons from the Centurion theme.
 "centurion_folder_icons": true
 ```
 
-![Sidebar folder icons]
+![Sidebar folder icons Centurion]
 
 ### Afterglow sidebar folder icons
 
@@ -202,7 +196,7 @@ Sidebar folder icons from the Afterglow theme.
 "afterglow_folder_icons": true
 ```
 
-![Sidebar folder icons]
+![Sidebar folder icons Afterglow]
 
 ### Spacefunk sidebar folder icons
 
@@ -212,7 +206,7 @@ Sidebar folder icons from the Spacefunk theme.
 "spacefunk_folder_icons": true
 ```
 
-![Sidebar folder icons]
+![Sidebar folder icons Spacefunk]
 
 ### Tabs height
 
@@ -333,12 +327,12 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 
 <!-- references -->
 
-[Default Theme Screenshot]: http://i.imgur.com/NOOomrQ.png
-[Acid Theme Screenshot]: http://i.imgur.com/snmvuB4.png
-[Contrasted UI Screenshot]: http://i.imgur.com/cfYkL92.png
+[Default Theme Screenshot 1]: http://i.imgur.com/CuitnN9.png
+[Default Theme Screenshot 2]: http://i.imgur.com/eHHNKAl.png
+[Default Theme Screenshot 3]: http://i.imgur.com/fBECh69.png
 [Background variations screenshot]: http://i.imgur.com/KVnYDGw.png
-[Monocyanide screenshot]: http://i.imgur.com/GbB80Aj.png
-[Twilightcyanide screenshot]: http://i.imgur.com/GbB80Aj.png
+[Monocyanide screenshot]: http://i.imgur.com/GFDo1B5.png
+[Twilightcyanide screenshot]: http://i.imgur.com/0XDRtaP.png
 [Acid screenshot]: http://i.imgur.com/GbB80Aj.png
 [Alert screenshot]: http://i.imgur.com/fSXNPYH.png
 [Golden screenshot]: http://i.imgur.com/XpNt7rM.png
@@ -348,10 +342,10 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 [Salmon screenshot]: http://i.imgur.com/1SO5oms.png
 [Sky screenshot]: http://i.imgur.com/L8egKdc.png
 [Wood screenshot]: http://i.imgur.com/zTc44p7.png
-[Sidebar file type icons]: http://i.imgur.com/tRszn4V.png
-[Sidebar folder icons]: http://i.imgur.com/QVwmrGh.png
-[Sidebar folder icons]: http://i.imgur.com/Ov5hnv2.png
-[Sidebar folder icons]: http://i.imgur.com/Xz2FqEG.png
+[Sidebar file type icons]: http://i.imgur.com/4ayGssq.png
+[Sidebar folder icons Centurion]: http://i.imgur.com/HHQZmrR.png
+[Sidebar folder icons Afterglow]: http://i.imgur.com/mgMfGKy.png
+[Sidebar folder icons Spacefunk]: http://i.imgur.com/YocMfse.png
 [Tabs height]: http://i.imgur.com/0NCrXVF.png
 [Contrasted UI]: http://i.imgur.com/cfYkL92.png
 [Large scrollbars]: http://i.imgur.com/wfmZdzx.png

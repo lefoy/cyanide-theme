@@ -60,30 +60,31 @@ module.exports = function(grunt) {
         externalTask = function(external) {
             return 'external-import-' + external.id;
         },
-        genColorSchemes = function(func) {
+        genColorSchemes = function(copier, func) {
             var colors = grunt.config('colors');
             colors.backgrounds.forEach(function(bg) {
                 var renamer = _.partial(func(_.partial(defaultOr, bg.name)), '');
                 share('renamer', renamer);
                 share('bg', bg);
-                share('replace.colorschemes.src', [renamer() + '.tmTheme']);
-                grunt.task.run(['copy:colorschemes', 'replace:colorschemes']);
+                share('replace.' + copier + '.src', [renamer() + '.tmTheme']);
+                grunt.task.run(['copy:' + copier, 'replace:' + copier]);
             });
         },
         renameTheme = _.curry(function(prefix, dest, src) {
-            var filename = grunt.config('renamer')(prefix);
-            return src.replace('template', filename).replace('hidden-', '');
+            var ext = _(src).strRight('.').value().replace('hidden-', '');
+            return grunt.config('renamer')(prefix) + '.' + ext;
         }),
-        copyTask = function(sources, renamer, cwd) {
-            return {
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    cwd: cwd || template(),
-                    src: sources,
-                    rename: renamer || renameTheme(humanized)
-                }]
+        copyTask = function(sources, cwd, renamer) {
+            var f = {
+                expand: true,
+                flatten: true,
+                src: sources,
+                rename: renamer || renameTheme(humanized)
             };
+            if ( cwd !== '' ) {
+                f.cwd = cwd || template();
+            }
+            return {files: [f]};
         },
         replacements = function(r) {
             return r.map(function(e) {
@@ -93,8 +94,21 @@ module.exports = function(grunt) {
                 };
             });
         },
+        replacer = function(repls, overwrite, src) {
+            return {
+                overwrite: _.isUndefined(overwrite) ? true : overwrite,
+                src: src || [],
+                replacements: _.reduce(repls, function(result, arr) {
+                    return _.union(result, arr);
+                })
+            }
+        },
+        nameReplacements = replacements([['name', 'renamer(package.humanized)']]),
+        bgReplacements = replacements([
+            ['bg_rgb', 'bg.rgb'],
+            ['bg_hex', 'bg.hex']
+        ]),
         themesReplacements = replacements([
-            ['name', 'renamer(package.humanized)'],
             ['rgb', 'theme.rgb'],
             ['hex', 'theme.hex']
         ]);
@@ -126,35 +140,20 @@ module.exports = function(grunt) {
             'build/'
         ],
         copy: {
-            external: copyTask([]),
+            external: copyTask([], '' ),
             colorschemes: copyTask('template.hidden-tmTheme'),
             themes: copyTask('template.sublime-theme'),
-            widgets: copyTask(['template.sublime-settings', 'template.stTheme'], renameTheme(widgetPrefix))
+            widgets: copyTask(['template.sublime-settings', 'template.stTheme'], template(), renameTheme(widgetPrefix))
         },
         replace: {
-            colorschemes: {
-                overwrite: true,
-                replacements: themesReplacements.concat(replacements([
-                    ['bg_rgb', 'bg.rgb'],
-                    ['bg_hex', 'bg.hex']
-                ]))
-            },
-            themes: {
-                overwrite: true,
-                replacements: themesReplacements.concat(replacements([
-                    ['widgetName', 'renamer("Widget - " + package.humanized)']
-                ]))
-            },
-            icons: {
-                src: template('icon.hidden-tmPreferences'),
-                replacements: replacements([
-                    ['icon', 'icon.icon'],
-                    ['scopes', "icon.scopes.join(', ')"]
-                ])
-            },
-            languages: {
-                src: template('language.hidden-tmLanguage'),
-                replacements: replacements([
+            external: replacer( [nameReplacements, bgReplacements] ),
+            colorschemes: replacer( [nameReplacements, bgReplacements, themesReplacements] ),
+            themes: replacer([nameReplacements, themesReplacements, replacements([
+                ['widgetName', 'renamer("Widget - " + package.humanized)']])]),
+            icons: replacer(
+                [replacements([['icon', 'icon.icon'], ['scopes', "icon.scopes.join(', ')"]])],
+                false, template('icon.hidden-tmPreferences')),
+            languages: replacer([replacements([
                     ['lang', 'lang.lang'],
                     ['scopes', "lang.scopes.join(', ')"],
                     ['include', 'lang.include'],
@@ -163,8 +162,8 @@ module.exports = function(grunt) {
                             return '<string>' + f + '</string>'
                         }).join('')
                     }]
-                ])
-            }
+                ])],
+                false, template('language.hidden-tmLanguage'))
         },
         'curl': {},
         verbosity: {
@@ -193,7 +192,7 @@ module.exports = function(grunt) {
         grunt.registerTask(task, 'Imports ' + external.name + ' from its repository', function() {
             generating(external.name);
             grunt.task.run('curl:' + task);
-            genColorSchemes(function(func) {
+            genColorSchemes('external', function(func) {
                 return _.partial(func, external.name);
             });
         });
@@ -267,7 +266,7 @@ module.exports = function(grunt) {
 
             // Generate color schemes:
             var renamerC = _.partial(renamerT, humanized);
-            genColorSchemes(function(func) {
+            genColorSchemes('colorschemes', function(func) {
                 return _.compose(func, renamerC);
             });
         });

@@ -2,7 +2,7 @@
   "name": "cyanide-theme",
   "humanized": "Cyanide",
   "repository": "https://github.com/lefoy/cyanide-theme",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "devDependencies": {
     "colors": "1.0.3",
     "lodash": "~2.4.1",

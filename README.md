@@ -61,7 +61,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Twilightcyanide Colorscheme
 
-If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that was developed specifically for Cyanide. It works with any of the themes.
+If you like [Twilight], there's a colorscheme called [Twilightcyanide] that was developed specifically for Cyanide. It works with any of the themes.
 
 ```
 "color_scheme": "Packages/Theme - Cyanide/Twilightcyanide.tmTheme",
@@ -364,6 +364,9 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 
 [Monokai Extended]: https://github.com/jonschlinkert/sublime-monokai-extended
 [Monocyanide]: https://github.com/Centril/sublime-monocyanide-colorscheme
+
+[Twilight]: https://github.com/jrnewell/predawn-twilight-theme
+[Twilightcyanide]: https://github.com/Centril/sublime-twilightcyanide-colorscheme
 
 [grunt]: http://gruntjs.com/
 

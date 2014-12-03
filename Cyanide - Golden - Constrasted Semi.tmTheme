@@ -471,8 +471,8 @@
                 <string>item.modified.dired</string>
                 <key>settings</key>
                 <dict>
-                    <key>background</key>
-                    <string>#F09609</string>
+                    <key>foreground</key>
+                    <string>#ffbf3b</string>
                 </dict>
             </dict>
             <dict>
@@ -483,7 +483,7 @@
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>#339933</string>
+                    <string>#ffbf3b</string>
                 </dict>
             </dict>
         </array>

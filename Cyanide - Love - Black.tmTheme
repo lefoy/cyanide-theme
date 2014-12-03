@@ -473,6 +473,8 @@
                 <dict>
                     <key>foreground</key>
                     <string>#f1416b</string>
+                    <key>background</key>
+                    <string>#000000</string>
                 </dict>
             </dict>
             <dict>
@@ -482,8 +484,10 @@
                 <string>item.untracked.dired</string>
                 <key>settings</key>
                 <dict>
+                    <key>foreground</key>
+                    <string>#ffffff</string>
                     <key>background</key>
-                    <string>#f1416b</string>
+                    <string>#000000</string>
                 </dict>
             </dict>
         </array>

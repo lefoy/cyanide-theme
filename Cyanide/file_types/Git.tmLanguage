@@ -28,7 +28,7 @@
 	<array>
 		<dict>
 			<key>include</key>
-			<string></string>
+			<string>text.plain</string>
 		</dict>
 	</array>
 	<key>scopeName</key>

@@ -238,7 +238,7 @@ module.exports = function(grunt) {
         // Generate *.tmLanguage:
         data.languages.forEach(function(lang) {
             generating(lang.lang + '.tmLanguage');
-            lang.include = lang.scopes.length > 1 ? lang.scopes[0] : 'text/plain';
+            lang.include = lang.scopes.length > 1 ? lang.scopes[0] : 'text.plain';
             share('lang', lang);
             share('replace.languages.dest', fileTypesDir + lang.lang + '.tmLanguage');
             grunt.task.run('replace:languages');

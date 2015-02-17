@@ -13,6 +13,7 @@
     {"icon": "git", "scopes": ["source.git", "source.gitignore", "source.gitconfig", "text.git-blame", "text.git-commit", "text.git-graph"]},
     {"icon": "html", "scopes": ["text.html.basic", "text.html", "text.slim"]},
     {"icon": "haskell", "scopes": ["source.haskell"]},
+    {"icon": "haxe", "scopes": ["source.haxe", "source.hxml"]},
     {"icon": "image", "scopes": ["text.xml.svg", "source.svg"]},
     {"icon": "photoshop", "scopes": ["source.photoshop"]},
     {"icon": "illustrator", "scopes": ["source.illustrator"]},

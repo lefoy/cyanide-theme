@@ -342,7 +342,7 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 [Salmon screenshot]: http://i.imgur.com/1SO5oms.png
 [Sky screenshot]: http://i.imgur.com/L8egKdc.png
 [Wood screenshot]: http://i.imgur.com/zTc44p7.png
-[Sidebar file type icons]: http://i.imgur.com/4ayGssq.png
+[Sidebar file type icons]: http://i.imgur.com/1wPpg6E.png
 [Sidebar folder icons Centurion]: http://i.imgur.com/HHQZmrR.png
 [Sidebar folder icons Afterglow]: http://i.imgur.com/mgMfGKy.png
 [Sidebar folder icons Spacefunk]: http://i.imgur.com/YocMfse.png

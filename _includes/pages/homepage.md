@@ -3,17 +3,15 @@
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
 
+[![Join the chat at https://gitter.im/lefoy/cyanide-theme](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lefoy/cyanide-theme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A minimal dark theme for Sublime Text 3.
 
-**NEW: [Monocyanide Colorscheme](#monocyanide-colorscheme)**<br>
-**NEW: [Sidebar file type icons](#sidebar-file-type-icons)**<br>
-**NEW: [Cyanide Theme Builder](#cyanide-theme-builder)**
+![Default Theme Screenshot 1]
 
-![Default Theme Screenshot]
+![Default Theme Screenshot 2]
 
-![Acid Theme Screenshot]
-
-![Contrasted UI Screenshot]
+![Default Theme Screenshot 3]
 
 Installation
 ------------------------------------------------------------------------
@@ -22,7 +20,7 @@ Installation
 
 Install the theme with the [Command Palette] and update your `Settings - User` file:
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
 "theme": "Cyanide.sublime-theme"
 ```
@@ -45,7 +43,7 @@ git clone git@github.com:lefoy/cyanide-theme.git 'Theme - Cyanide'
 
 Update your `Settings - User` file to activate the theme:
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide.tmTheme",
 "theme": "Cyanide.sublime-theme"
 ```
@@ -57,15 +55,25 @@ Themes
 
 If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that was developed specifically for Cyanide. It works with any of the themes.
 
-```json
-"color_scheme": "Packages/Theme - Cyanide/Monocyanide ColorScheme.tmTheme",
+```
+"color_scheme": "Packages/Theme - Cyanide/Monocyanide.tmTheme",
 ```
 
 ![Monocyanide screenshot]
 
+### Twilightcyanide Colorscheme
+
+If you like [Twilight], there's a colorscheme called [Twilightcyanide] that was developed specifically for Cyanide. It works with any of the themes.
+
+```
+"color_scheme": "Packages/Theme - Cyanide/Twilightcyanide.tmTheme",
+```
+
+![Twilightcyanide screenshot]
+
 ### Acid theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Acid.tmTheme",
 "theme": "Cyanide - Acid.sublime-theme"
 ```
@@ -74,7 +82,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Alert theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Alert.tmTheme",
 "theme": "Cyanide - Alert.sublime-theme"
 ```
@@ -83,7 +91,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Golden theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Golden.tmTheme",
 "theme": "Cyanide - Golden.sublime-theme"
 ```
@@ -92,7 +100,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Love theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Love.tmTheme",
 "theme": "Cyanide - Love.sublime-theme"
 ```
@@ -101,7 +109,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Mint theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Mint.tmTheme",
 "theme": "Cyanide - Mint.sublime-theme"
 ```
@@ -110,7 +118,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Purple theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Purple.tmTheme",
 "theme": "Cyanide - Purple.sublime-theme"
 ```
@@ -119,7 +127,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Salmon theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Salmon.tmTheme",
 "theme": "Cyanide - Salmon.sublime-theme"
 ```
@@ -128,7 +136,7 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Sky theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Sky.tmTheme",
 "theme": "Cyanide - Sky.sublime-theme"
 ```
@@ -137,13 +145,25 @@ If you like [Monokai Extended], there's a colorscheme called [Monocyanide] that 
 
 ### Wood theme
 
-```json
+```
 "color_scheme": "Packages/Theme - Cyanide/Cyanide - Wood.tmTheme",
 "theme": "Cyanide - Wood.sublime-theme"
 ```
 
 ![Wood screenshot]
 
+### ColorScheme Background Variations
+
+All colorschemes provided come in 5 flavors where the background of each is different. The variations that are available are:
++ Default (the one with no suffix): `#0a0a0a`
++ Black: `#000000`
++ Contrasted: `#121212`
++ Contrasted Semi: `#191919`
++ Contrasted Light: `#282828`
+
+When words are not enough:
+
+![Background variations screenshot]
 
 Settings
 ------------------------------------------------------------------------
@@ -154,7 +174,7 @@ These settings go into `Sublime Text -> Preferences -> Settings - User`.
 
 Sublime Text 3 added sidebar icons. Thanks to a great contribution by [@Centril], now also supported in Cyanide!
 
-```json
+```
 "icon_file_type_enable": true
 ```
 
@@ -164,43 +184,43 @@ Sublime Text 3 added sidebar icons. Thanks to a great contribution by [@Centril]
 
 Sidebar folder icons from the Centurion theme.
 
-```json
+```
 "centurion_folder_icons": true
 ```
 
-![Sidebar folder icons]
+![Sidebar folder icons Centurion]
 
 ### Afterglow sidebar folder icons
 
 Sidebar folder icons from the Afterglow theme.
 
-```json
+```
 "afterglow_folder_icons": true
 ```
 
-![Sidebar folder icons]
+![Sidebar folder icons Afterglow]
 
 ### Spacefunk sidebar folder icons
 
 Sidebar folder icons from the Spacefunk theme.
 
-```json
+```
 "spacefunk_folder_icons": true
 ```
 
-![Sidebar folder icons]
+![Sidebar folder icons Spacefunk]
 
 ### Tabs height
 
 Vary tab height with either `tabs_medium` or `tabs_large`.
 
-```json
+```
 "tabs_medium": true
 ```
 
 or
 
-```json
+```
 "tabs_large": true
 ```
 
@@ -210,7 +230,7 @@ or
 
 Increased contrast for better legibility.
 
-```json
+```
 "contrasted_sidebar": true,
 "contrasted_tabs": true,
 "contrasted_quick_panel": true
@@ -220,7 +240,7 @@ Increased contrast for better legibility.
 
 Or use a lighter alternative:
 
-```json
+```
 "contrasted_light_sidebar": true,
 "contrasted_light_tabs": true,
 "contrasted_light_quick_panel": true
@@ -230,7 +250,7 @@ Or use a lighter alternative:
 
 Change the UI font:
 
-```json
+```
 "ubuntu_mono_ui": true // Ubuntu Mono UI font
 "monaco_ui": true      // Monaco UI font
 "inconsolata_ui": true // Inconsolata UI font
@@ -240,7 +260,7 @@ Change the UI font:
 
 Increased scrollbars size for better control.
 
-```json
+```
 "large_scroll_bars": true
 ```
 
@@ -260,6 +280,7 @@ npm install
 
 Edit the `colors.json` file to add your own custom color.
 Edit the `languages.json` file to add your own custom sidebar icon. Match every new entry with images named `file_type_{icon}.png` (dimensions: `16x16`) and `file_type_{icon}@2x.png` (dimensions: `32x32`) in the icons/ directory.
+Edit the `external.json` file to roll your own custom colorscheme to build. Take a look at the template of the [Monocyanide] colorscheme for how to accomplish this.
 
 Save the file, and run:
 
@@ -276,7 +297,7 @@ grunt
     build       # Does all of the below.
     themes      # Builds the theme files, do this when colors.json is updated.
     languages   # Builds sidebar icon bindings and dummy syntax highlighting.
-    monocyanide # Pulls the latest version of Monocyanide from its repo.
+    external-colorschemes # Pulls the latest version of Monocyanide and Twilightcyanide from their repos and builds them.
 ```
 
 ## Known issues
@@ -308,10 +329,12 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 
 <!-- references -->
 
-[Default Theme Screenshot]: http://i.imgur.com/NOOomrQ.png
-[Acid Theme Screenshot]: http://i.imgur.com/snmvuB4.png
-[Contrasted UI Screenshot]: http://i.imgur.com/cfYkL92.png
-[Monocyanide screenshot]: http://i.imgur.com/GbB80Aj.png
+[Default Theme Screenshot 1]: http://i.imgur.com/CuitnN9.png
+[Default Theme Screenshot 2]: http://i.imgur.com/eHHNKAl.png
+[Default Theme Screenshot 3]: http://i.imgur.com/fBECh69.png
+[Background variations screenshot]: http://i.imgur.com/KVnYDGw.png
+[Monocyanide screenshot]: http://i.imgur.com/GFDo1B5.png
+[Twilightcyanide screenshot]: http://i.imgur.com/0XDRtaP.png
 [Acid screenshot]: http://i.imgur.com/GbB80Aj.png
 [Alert screenshot]: http://i.imgur.com/fSXNPYH.png
 [Golden screenshot]: http://i.imgur.com/XpNt7rM.png
@@ -321,10 +344,10 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 [Salmon screenshot]: http://i.imgur.com/1SO5oms.png
 [Sky screenshot]: http://i.imgur.com/L8egKdc.png
 [Wood screenshot]: http://i.imgur.com/zTc44p7.png
-[Sidebar file type icons]: http://i.imgur.com/tRszn4V.png
-[Sidebar folder icons]: http://i.imgur.com/QVwmrGh.png
-[Sidebar folder icons]: http://i.imgur.com/Ov5hnv2.png
-[Sidebar folder icons]: http://i.imgur.com/Xz2FqEG.png
+[Sidebar file type icons]: http://i.imgur.com/1wPpg6E.png
+[Sidebar folder icons Centurion]: http://i.imgur.com/HHQZmrR.png
+[Sidebar folder icons Afterglow]: http://i.imgur.com/mgMfGKy.png
+[Sidebar folder icons Spacefunk]: http://i.imgur.com/YocMfse.png
 [Tabs height]: http://i.imgur.com/0NCrXVF.png
 [Contrasted UI]: http://i.imgur.com/cfYkL92.png
 [Large scrollbars]: http://i.imgur.com/wfmZdzx.png
@@ -343,6 +366,9 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 
 [Monokai Extended]: https://github.com/jonschlinkert/sublime-monokai-extended
 [Monocyanide]: https://github.com/Centril/sublime-monocyanide-colorscheme
+
+[Twilight]: https://github.com/jrnewell/predawn-twilight-theme
+[Twilightcyanide]: https://github.com/Centril/sublime-twilightcyanide-colorscheme
 
 [grunt]: http://gruntjs.com/
 

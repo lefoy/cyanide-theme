@@ -27,7 +27,7 @@ Install the theme with the [Command Palette] and update your `Settings - User` f
 
 ### Manual
 
-Clone Cyanide Theme into your `packages` folder. Make sure the foldername is `Theme - Cyanide`:
+Clone Cyanide Theme into your `packages` folder. Make sure the folder name is `Theme - Cyanide`:
 
 ```
 cd ~/"Library/Application Support/Sublime Text 3/Packages/"
@@ -306,7 +306,7 @@ grunt
 
 ![Screenshot - Ubuntu Mono UI cuts off the tabs font]
 
-Unfortunatly, this is a Sublime Text bug. As a work-around, use the `"small_ui_font": true` setting. If this doesn't fix it, please file a new issue on GitHub.
+Unfortunately, this is a Sublime Text bug. As a work-around, use the `"small_ui_font": true` setting. If this doesn't fix it, please file a new issue on GitHub.
 
 ## Plugins support
 

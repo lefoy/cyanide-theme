@@ -11,7 +11,7 @@ const bind = f => Function.prototype.apply.bind(f, null);
 
 module.exports = grunt => {
     // Hide 'Running task' text from grunt output
-    grunt.log.header = function() {};
+    grunt.log.header = () => {};
 
     // Initial config
     const files  = ['package', 'colors', 'external', 'languages'];
@@ -30,7 +30,13 @@ module.exports = grunt => {
             grunt.log.subhead(d + '\n' + msg.grey + '\n' + d);
         },
         generating = msg => grunt.log.subhead('Generating ' + msg + '...'),
-        defaultOr = (name, base, ext) => (name === 'default' ? base : base + ' - ' + _.capitalize(name)) + (ext || '');
+        defaultOr = (name, base, ext) => (name === 'default' ? base : base + ' - ' + _.capitalize(name)) + (ext || ''),
+        runTasks = (title, seq, fn) => { header(title); seq.forEach(fn); },
+        genTasks = (title, tasks, _share) => {
+            generating(title);
+            _share.forEach( d => share( d[0], d[1] ) );
+            grunt.task.run(tasks);
+        };
 
     const widgetPrefix = humanized + '/Widget - ' + humanized,
         fileTypesDir = humanized + '/file_types/',
@@ -39,30 +45,21 @@ module.exports = grunt => {
         externalRawUrl = external => "https://raw.githubusercontent.com/" + external.repo + '/' + external.version  + '/',
         externalId = external => _.slugify(external.name),
         externalTask = external => 'external-import-' + external.id,
-        genColorSchemes = (copier, func) => {
-            const colors = grunt.config('colors');
-            colors.backgrounds.forEach( bg => {
+        genColorSchemes = (copier, func) => grunt.config('colors').backgrounds.forEach( bg => {
                 const renamer = _.partial(func(_.partial(defaultOr, bg.name)), '');
                 share('renamer', renamer);
                 share('bg', bg);
                 share('replace.' + copier + '.src', [renamer() + '.tmTheme']);
                 grunt.task.run(['copy:' + copier, 'replace:' + copier]);
-            });
-        },
+            }),
         renameTheme = _.curry( (prefix, dest, src) => 
             grunt.config('renamer')(prefix) + '.' + _(src).strRight('.').value().replace('hidden-', '') ),
-        copyTask = (sources, cwd, renamer) => {
-            const f = {
+        copyTask = (sources, cwd, renamer) => ({files: [_.merge( cwd == '' ? {} : {cwd: cwd || template()}, {
                 expand: true,
                 flatten: true,
                 src: sources,
                 rename: renamer || renameTheme(humanized)
-            };
-            if ( cwd !== '' ) {
-                f.cwd = cwd || template();
-            }
-            return {files: [f]};
-        },
+        })]}),
         replacements = r => r.map(e => ({
             from: '{{' + e[0] + '}}',
             to: _.isString(e[1]) ? '<%= ' + e[1] + ' %>' : e[1]
@@ -70,18 +67,11 @@ module.exports = grunt => {
         replacer = (repls, overwrite, src) => ({
             overwrite: _.isUndefined(overwrite) ? true : overwrite,
             src: src || [],
-             replacements: _.reduce(repls, (result, arr) => _.union(result, arr) )
-        
+            replacements: _.reduce(repls, (result, arr) => _.union(result, arr) )
         }),
         nameReplacements = replacements([['name', 'renamer(package.humanized)']]),
-        bgReplacements = replacements([
-            ['bg_rgb', 'bg.rgb'],
-            ['bg_hex', 'bg.hex']
-        ]),
-        themesReplacements = replacements([
-            ['rgb', 'theme.rgb'],
-            ['hex', 'theme.hex']
-        ]);
+        bgReplacements = replacements(['rgb', 'hex'].map( v => ['bg_' + v, 'bg.' + v])),
+        themesReplacements = replacements(['rgb', 'hex'].map( v => [v, 'theme.' + v]));
 
     // Tasks options
     const tasks = {
@@ -156,8 +146,7 @@ module.exports = grunt => {
 
         // Setup generation task:
         grunt.registerTask(task, 'Imports ' + external.name + ' from its repository', () => {
-            generating(external.name);
-            grunt.task.run('curl:' + task);
+            genTasks(external.name, ['curl:' + task], [] );
             genColorSchemes('external', func => _.partial(func, external.name));
         });
     });
@@ -187,52 +176,34 @@ module.exports = grunt => {
     grunt.registerTask('languages', 'Build language files', () => {
         const data = grunt.config('languages');
 
-        header('Building icon_*.tmPreferences files');
-
         // Generate icon_*.tmPreferences:
-        data.icons.forEach(icon => {
-            generating('icon_' + icon.icon + '.tmPreferences');
-            share('icon', icon);
-            share('replace.icons.dest', fileTypeIcon(icon.icon));
-            grunt.task.run('replace:icons');
-        });
-
-        header('Building dummy *.tmLanguage files');
+        runTasks('Building icon_*.tmPreferences files', data.icons, icon =>
+            genTasks('icon_' + icon.icon + '.tmPreferences', ['replace:icons'], 
+                [['icon', icon], ['replace.icons.dest', fileTypeIcon(icon.icon)]]));
 
         // Generate *.tmLanguage:
-        data.languages.forEach(lang => {
-            generating(lang.lang + '.tmLanguage');
+        runTasks('Building dummy *.tmLanguage files', data.languages, lang => {
             lang.include = lang.scopes.length > 1 ? lang.scopes[0] : 'text.plain';
-            share('lang', lang);
-            share('replace.languages.dest', fileTypesDir + lang.lang + '.tmLanguage');
-            grunt.task.run('replace:languages');
+            genTasks(lang.lang + '.tmLanguage', ['replace:languages'], [['lang', lang],
+                ['replace.languages.dest', fileTypesDir + lang.lang + '.tmLanguage']]);
         });
     });
 
     // Themes task:
-    grunt.registerTask('themes', 'Build custom themes', () => {
-        header('Building theme files');
-
-        const colors = grunt.config('colors');
-        colors.colors.forEach(theme => {
-            generating(theme.name + ' theme');
-
+    grunt.registerTask('themes', 'Build custom themes', () =>
+        runTasks('Building theme files', grunt.config('colors').colors, theme => {
             // Generate theme & widget:
             const renamerT = _.partial(defaultOr, theme.name);
-            share('renamer', renamerT);
-            share('theme', theme);
-            share('replace.themes.src', [
-                [humanized, '.sublime-theme'],
-                [widgetPrefix, '.stTheme'],
-                [widgetPrefix, '.sublime-settings']
-            ].map(bind(renamerT)));
-            grunt.task.run(['copy:themes', 'copy:widgets', 'replace:themes']);
+            genTasks(theme.name + ' theme', ['copy:themes', 'copy:widgets', 'replace:themes'], [
+                ['renamer', renamerT], ['theme', theme], ['replace.themes.src', [
+                    [humanized, '.sublime-theme'],
+                    [widgetPrefix, '.stTheme'],
+                    [widgetPrefix, '.sublime-settings']
+                ].map(bind(renamerT))]]);
 
             // Generate color schemes:
-            const renamerC = _.partial(renamerT, humanized);
-            genColorSchemes('colorschemes', func => _.compose(func, renamerC) );
-        });
-    });
+            genColorSchemes('colorschemes', func => _.compose(func, _.partial(renamerT, humanized)) );
+        }));
 
     // Load grunt config
     grunt.initConfig(config);

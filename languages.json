@@ -80,7 +80,6 @@
     {"lang": "Jade", "scopes": ["source.css", "source.jade"], "files": ["jade"]},
     {"lang": "Ruby Slim", "scopes": ["source.css", "text.slim"], "files": ["slim"]},
     {"lang": "Less", "scopes": ["source.css", "source.less"], "files": ["less"]},
-    {"lang": "PostCSS", "scopes": ["source.css", "source.pcss", "source.postcss"], "files": ["pcss", "postcss"]},
     {"lang": "SCSS", "scopes": ["source.css", "source.scss"], "files": ["sass", "sass.erb", "sass.liquid"]},
     {"lang": "Sass", "scopes": ["source.css", "source.sass"], "files": ["scss", "scss.erb", "scss.liquid"]},
     {"lang": "Puppet", "scopes": ["source.css", "source.puppet"], "files": ["pp", "puppet.conf"]},

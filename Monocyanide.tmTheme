@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     //   Monocyanide ColorScheme for Sublime Text
     //   https://github.com/centril/sublime-monocyanide-colorscheme
@@ -20,7 +21,6 @@
     //  Background   (hex): 0a0a0a
     //
 -->
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>

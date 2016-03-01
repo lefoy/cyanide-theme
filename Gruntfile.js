@@ -52,7 +52,7 @@ module.exports = grunt => {
                 share('replace.' + copier + '.src', [renamer() + '.tmTheme']);
                 grunt.task.run(['copy:' + copier, 'replace:' + copier]);
             }),
-        renameTheme = _.curry( (prefix, dest, src) => 
+        renameTheme = _.curry( (prefix, dest, src) =>
             grunt.config('renamer')(prefix) + '.' + _(src).strRight('.').value().replace('hidden-', '') ),
         copyTask = (sources, cwd, renamer) => ({files: [_.merge( cwd == '' ? {} : {cwd: cwd || template()}, {
                 expand: true,
@@ -117,7 +117,7 @@ module.exports = grunt => {
                     ['lang', 'lang.lang'],
                     ['scopes', "lang.scopes.join(', ')"],
                     ['include', 'lang.include'],
-                    ['files', () => grunt.config('lang.files').map(f => '<string>' + f + '</string>').join('')]    
+                    ['files', () => grunt.config('lang.files').map(f => '<string>' + f + '</string>').join('')]
                 ])],
                 false, template('language.hidden-tmLanguage'))
         },
@@ -178,15 +178,15 @@ module.exports = grunt => {
 
         // Generate icon_*.tmPreferences:
         runTasks('Building icon_*.tmPreferences files', data.icons, icon =>
-            genTasks('icon_' + icon.icon + '.tmPreferences', ['replace:icons'], 
+            genTasks('icon_' + icon.icon + '.tmPreferences', ['replace:icons'],
                 [['icon', icon], ['replace.icons.dest', fileTypeIcon(icon.icon)]]));
 
         // Generate *.tmLanguage:
-        runTasks('Building dummy *.tmLanguage files', data.languages, lang => {
-            lang.include = lang.scopes.length > 1 ? lang.scopes[0] : 'text.plain';
-            genTasks(lang.lang + '.tmLanguage', ['replace:languages'], [['lang', lang],
-                ['replace.languages.dest', fileTypesDir + lang.lang + '.tmLanguage']]);
-        });
+        // runTasks('Building dummy *.tmLanguage files', data.languages, lang => {
+        //     lang.include = lang.scopes.length > 1 ? lang.scopes[0] : 'text.plain';
+        //     genTasks(lang.lang + '.tmLanguage', ['replace:languages'], [['lang', lang],
+        //         ['replace.languages.dest', fileTypesDir + lang.lang + '.tmLanguage']]);
+        // });
     });
 
     // Themes task:

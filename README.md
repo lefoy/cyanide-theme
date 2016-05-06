@@ -1,4 +1,4 @@
-[![Build Status]][url: Build Status] [![Gittip]][url: Gittip] [![License]][url: License] [![Semver]][url: Semver]
+[![Release]][url: Release] [![License]][url: License] [![Semver]][url: Semver]
 
 Cyanide Theme for Sublime Text
 ------------------------------------------------------------------------
@@ -353,10 +353,8 @@ Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 [Large scrollbars]: http://i.imgur.com/wfmZdzx.png
 [Screenshot - Ubuntu Mono UI cuts off the tabs font]: http://i.imgur.com/jdKUPoE.png
 
-[Build Status]: http://img.shields.io/travis/lefoy/cyanide-theme.svg?style=flat
-[url: Build Status]: https://travis-ci.org/lefoy/cyanide-theme
-[Gittip]: http://img.shields.io/gittip/lefoy.svg?style=flat
-[url: Gittip]: https://www.gittip.com/lefoy/
+[Release]: https://img.shields.io/github/release/lefoy/cyanide-theme.svg?style=flat
+[url: Release]: https://github.com/lefoy/cyanide-theme/releases
 [License]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [url: License]: https://github.com/lefoy/cyanide-theme/blob/master/LICENSE.md
 [Semver]: http://img.shields.io/badge/semver-2.0.0-blue.svg?style=flat

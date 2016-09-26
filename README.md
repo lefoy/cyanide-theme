@@ -327,7 +327,7 @@ Thanks to [@Centril], [@pds2k12], [@hraban], [@renkun-ken] and [@wfalkwallace] f
 
 Like this theme? I'd love to hear! Contact me on Twitter ([@louisetiennefoy]).
 
-<!-- references -->
+<!-- References -->
 
 [Default Theme Screenshot 1]: http://i.imgur.com/CuitnN9.png
 [Default Theme Screenshot 2]: http://i.imgur.com/eHHNKAl.png

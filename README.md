@@ -5,6 +5,8 @@ Cyanide Theme for Sublime Text
 
 [![Join the chat at https://gitter.im/lefoy/cyanide-theme](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lefoy/cyanide-theme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+[![Join the chat at https://gitter.im/lefoy/cyanide-theme](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lefoy/cyanide-theme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A minimal dark theme for Sublime Text 3.
 
 ![Default Theme Screenshot 1]

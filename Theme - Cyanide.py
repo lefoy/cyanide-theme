@@ -54,8 +54,7 @@ class ActivateCyanideThemeCommand(sublime_plugin.TextCommand):
         self.save_settings(self.theme)
 
     def on_highlighted_scheme(self, index):
-        if index != 0:
-            self.set_scheme(self.get_scheme(self.selected_schemes[index]))
+        self.set_scheme(self.get_scheme(self.selected_schemes[index]))
 
     def get_scheme(self, scheme):
         return "Packages/Theme - Cyanide/{0}.tmTheme".format(scheme)

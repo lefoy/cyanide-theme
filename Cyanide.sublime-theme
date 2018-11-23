@@ -325,7 +325,7 @@
     },
     {
         "class": "quick_panel_path_label",
-        "fg": [130,130,130,0],
+        "fg": [130,130,130,255],
         "match_fg": [220,220,220],
         "selected_fg": [255,255,255],
         "selected_match_fg": [255,255,255]
